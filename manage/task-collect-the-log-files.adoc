@@ -1,0 +1,32 @@
+---
+permalink: manage/task-collect-the-log-files.html 
+sidebar: sidebar 
+keywords: collecting, the, log, files, 
+summary: 'VSC 그래픽 사용자 인터페이스(GUI)에서 제공하는 옵션을 통해 VMware vSphere용 Virtual Storage Console의 로그 파일을 수집할 수 있습니다. 기술 지원 부서에서 문제 해결을 위해 로그 파일을 수집하도록 요청할 수 있습니다.' 
+---
+= 로그 파일을 수집합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC 그래픽 사용자 인터페이스(GUI)에서 제공하는 옵션을 통해 VMware vSphere용 Virtual Storage Console의 로그 파일을 수집할 수 있습니다. 기술 지원 부서에서 문제 해결을 위해 로그 파일을 수집하도록 요청할 수 있습니다.
+
+VASA Provider 로그 파일이 필요한 경우 * Vendor Provider Control Panel * 화면에서 지원 번들을 생성할 수 있습니다. 이 페이지는 가상 어플라이언스의 콘솔에서 액세스할 수 있는 VASA Provider 유지 보수 메뉴의 일부입니다.
+
+https://vm_ip:9083[]
+
+VSC GUI의 ""VSC 로그 내보내기" 기능을 사용하여 VSC 로그 파일을 수집할 수 있습니다. VASA Provider가 설정된 VSC 로그 번들을 수집할 경우 VSC 로그 번들에는 VP 로그도 포함됩니다. 다음 단계에서는 VSC 로그 파일을 수집하는 방법을 설명합니다.
+
+.단계
+. Virtual Storage Console 홈 페이지에서 Configuration [Export VSC Logs] 메뉴를 클릭합니다.
++
+이 작업은 몇 분 정도 걸릴 수 있습니다.
+
+. 메시지가 나타나면 파일을 로컬 컴퓨터에 저장합니다.
++
+그러면 기술 지원 부서에 '.zip' 파일을 보낼 수 있습니다.
+
+

@@ -1,0 +1,47 @@
+---
+permalink: deploy/task-register-oncommand-api-services-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: virtual, volume, datastores, registering, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'ONTAP 9.6 이하를 사용하는 경우, VVOL 대시보드는 VVol VM 및 데이터 저장소 보고서에 대한 데이터를 가져오기 위해 VASA Provider에 등록한 경우에만 VVol(VMware Virtual Volumes) 데이터 저장소 및 가상 시스템의 세부 정보를 표시할 수 있습니다.' 
+---
+= VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 등록하십시오
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.6 이하를 사용하는 경우, VVOL 대시보드는 VVol VM 및 데이터 저장소 보고서에 대한 데이터를 가져오기 위해 VASA Provider에 등록한 경우에만 VVol(VMware Virtual Volumes) 데이터 저장소 및 가상 시스템의 세부 정보를 표시할 수 있습니다.
+
+에서 2.1 이상 버전을 다운로드해야 합니다.
+
+[NOTE]
+====
+VVOL 대시보드에는 SAN VVOL 데이터 저장소와 가상 머신이 ONTAP 9.3 이상을 사용하여 구성된 경우에만 성능 메트릭이 표시됩니다.
+
+====
+.단계
+. VSC(Virtual Storage Console) * 홈 * 페이지에서 * 설정 * 을 클릭합니다.
+. 관리 설정 * 탭에서 * 확장 관리 * 를 클릭합니다.
+. 활성화하려면 * OnCommand API 서비스 등록 * 슬라이더를 사용합니다.
+. 에 대한 IP 주소, 서비스 포트 및 자격 증명을 입력합니다.
++
+또한 다음과 같은 수정 사항을 위해 * VASA Provider Extensions 관리 * 대화 상자를 사용할 수도 있습니다.
+
++
+** 자격 증명이 변경된 경우 등록을 업데이트합니다.
+** VVol 대시보드가 더 이상 필요하지 않을 때 등록을 취소하려면
++
+VASA 공급자 등록을 제거하려면 * OnCommand API 서비스 등록 * 확인란의 선택을 해제해야 합니다.
+
+
+
+. 적용 * 을 클릭합니다.
++
+VVOL 대시보드는 의 등록이 완료된 후에만 ONTAP 9.6 또는 이전 버전의 SAN VVOL 데이터 저장소에 대한 메트릭을 표시합니다.
+
+
+
+* 관련 정보 *
+
+https://mysupport.netapp.com/site/["NetApp 지원"^]

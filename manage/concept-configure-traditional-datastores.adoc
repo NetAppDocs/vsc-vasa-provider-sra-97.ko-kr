@@ -1,0 +1,14 @@
+---
+permalink: manage/concept-configure-traditional-datastores.html 
+sidebar: sidebar 
+keywords: configuring, traditional, datastores, and, virtual, machines, 
+summary: 'VSC(Virtual Storage Console)를 사용하여 vCenter Server에서 데이터 저장소와 가상 머신을 구성할 수 있습니다. VSC에서 프로비저닝한 데이터 저장소와 가상 머신이 VSC의 대시보드에 표시됩니다. 따라서 이러한 데이터 저장소와 가상 머신을 쉽게 모니터링하고 관리할 수 있습니다.' 
+---
+= 기존 데이터 저장소 및 가상 머신을 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(Virtual Storage Console)를 사용하여 vCenter Server에서 데이터 저장소와 가상 머신을 구성할 수 있습니다. VSC에서 프로비저닝한 데이터 저장소와 가상 머신이 VSC의 대시보드에 표시됩니다. 따라서 이러한 데이터 저장소와 가상 머신을 쉽게 모니터링하고 관리할 수 있습니다.

@@ -1,0 +1,113 @@
+---
+permalink: deploy/reference-considerations-for-deploying-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: considerations, requirements, deploying, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스를 구축하기 전에 구축 계획을 수립하고 해당 환경에서 VSC, VASA Provider, SRA를 구성하는 방법을 결정하는 것이 좋습니다.' 
+---
+= VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 시 고려 사항 및 요구 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스를 구축하기 전에 구축 계획을 수립하고 해당 환경에서 VSC, VASA Provider, SRA를 구성하는 방법을 결정하는 것이 좋습니다.
+
+다음 표는 VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축하기 전에 고려해야 할 사항에 대한 개요입니다.
+
+[cols="1a,1a"]
+|===
+| 고려 사항 | 설명 
+
+
+ a| 
+VSC, VASA Provider, SRA를 위한 가상 어플라이언스 최초 구축
+ a| 
+VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축하면 VSC 기능이 자동으로 설치됩니다. link:concept-deploy-or-upgrade-ontap-tools.html["VSC, VASA Provider, SRA 구축 또는 업그레이드"^]
+
+link:concept-installation-workflow-for-new-users.html["VSC, VASA Provider, SRA 가상 어플라이언스 신규 사용자를 위한 구축 워크플로우"^]
+
+
+
+ a| 
+기존 VSC 배포에서 업그레이드
+ a| 
+VSC, VASA Provider, SRA를 위해 기존 VSC 구축에서 가상 어플라이언스로 업그레이드하는 절차는 VSC 버전과 VSC, VASA Provider, SRA 구축 여부에 따라 달라집니다. 자세한 내용은 배포 워크플로 및 업그레이드 섹션을 참조하십시오. link:concept-installation-workflow-for-existing-users-of-vsc.html["기존 VSC, VASA Provider, SRA 사용자를 위한 구축 워크플로우"^]
+
+업그레이드 전 모범 사례:
+
+* 사용 중인 스토리지 시스템과 해당 자격 증명에 대한 정보를 기록해야 합니다.
++
+업그레이드 후에는 모든 스토리지 시스템이 자동으로 검색되었으며 올바른 자격 증명이 있는지 확인해야 합니다.
+
+* 표준 VSC 역할을 수정한 경우 해당 역할을 복사하여 변경 사항을 저장해야 합니다.
++
+VSC 서비스는 VSC 서비스를 다시 시작할 때마다 표준 역할을 현재 기본값으로 덮어씁니다.
+
+
+
+
+
+ a| 
+VSC용 SSL 인증서를 재생성하는 중입니다
+ a| 
+VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축하면 SSL 인증서가 자동으로 생성됩니다. 사이트별 인증서를 만들려면 SSL 인증서를 다시 생성해야 할 수 있습니다. link:task-regenerate-an-ssl-certificate-for-vsc.html["에 대한 SSL 인증서를 다시 생성합니다"^]
+
+
+
+ a| 
+ESXi 서버 값 설정
+ a| 
+대부분의 ESXi 서버 값이 기본적으로 설정되어 있지만 값을 확인하는 것이 좋습니다. 이러한 값은 내부 테스트를 기반으로 합니다. 환경에 따라 성능을 향상시키려면 일부 값을 변경해야 할 수 있습니다.
+
+* link:task-configure-esx-server-multipathing-and-timeout-settings.html["ESXi 서버 경로 다중화 및 시간 초과 설정을 구성합니다"^]
+* link:reference-esx-host-values-set-by-vsc-for-vmware-vsphere.html["VMware vSphere용 Virtual Storage Console을 사용하여 설정된 ESXi 호스트 값"^]
+
+
+
+
+ a| 
+게스트 운영 체제 시간 초과 값
+ a| 
+게스트 운영 체제(게스트 OS) 시간 초과 스크립트는 지원되는 Linux, Solaris 및 Windows 게스트 운영 체제에 대한 SCSI I/O 시간 초과 값을 설정하여 올바른 페일오버 동작을 제공합니다.
+
+|===
+다음 표는 VSC, VASA Provider, SRA를 위해 가상 어플라이언스를 구성하는 데 필요한 사항을 간략하게 보여줍니다.
+
+[cols="1a,1a"]
+|===
+| 고려 사항 | 설명 
+
+
+ a| 
+역할 기반 액세스 제어(RBAC) 요구사항
+ a| 
+VSC는 vCenter Server RBAC와 ONTAP RBAC를 모두 지원합니다. vCenter Server에 VSC를 등록하는 데 사용되는 계정('_https_:/<appliance_ip>: 8143/Register.html' 사용)은 vCenter Server 관리자(vCenter Server 관리자 또는 관리자 역할에 할당됨)여야 합니다. 관리자로 VSC를 실행하려는 경우 모든 작업에 필요한 모든 권한과 권한이 있어야 합니다.
+
+귀사에서 vSphere 객체에 대한 액세스를 제한해야 하는 경우, vCenter Server 요구사항을 충족하기 위해 표준 VSC 역할을 생성하여 사용자에게 할당할 수 있습니다.
+
+VSC, VASA 공급자, SRA를 위해 가상 어플라이언스와 함께 제공된 JSON 파일을 사용하여 ONTAP System Manager를 통해 권장 ONTAP 역할을 생성할 수 있습니다.
+
+사용자가 올바른 권한 및 권한이 없는 작업을 수행하려고 하면 작업 옵션이 회색으로 표시됩니다.
+
+* link:concept-standard-roles-packaged-with-virtual-appliance-for-vsc-vp-and-sra.html["VSC, VASA Provider, SRA를 위해 가상 어플라이언스와 함께 패키지로 제공되는 표준 역할입니다"^]
+* link:concept-recommended-ontap-roles-when-using-vsc-for-vmware-vsphere.html["VMware vSphere용 VSC를 사용할 때의 권장 ONTAP 역할"^]
+
+
+
+
+ a| 
+ONTAP 버전입니다
+ a| 
+스토리지 시스템에서 ONTAP 9.1, 9.3, 9.5, 9.6 또는 9.7을 실행해야 합니다.
+
+
+
+ a| 
+스토리지 용량 프로필
+ a| 
+스토리지 기능 프로파일을 사용하거나 알람을 설정하려면 VASA Provider for ONTAP를 설정해야 합니다. VASA Provider를 활성화한 후 VVol(VMware Virtual Volumes) 데이터 저장소를 구성하고 스토리지 기능 프로필 및 알람을 생성하고 관리할 수 있습니다.
+
+이 경보는 볼륨 또는 애그리게이트는 거의 전체 용량에 달하거나 데이터 저장소가 연결된 스토리지 용량 프로파일을 준수하지 않을 때 경고합니다.
+
+|===

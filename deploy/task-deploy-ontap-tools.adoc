@@ -1,0 +1,100 @@
+---
+permalink: deploy/task-deploy-ontap-tools.html 
+sidebar: sidebar 
+keywords: deploying, the, virtual, appliance, for vsc, vasa, provider, and sra, 
+summary: '고객 환경에 VSC(가상 스토리지 콘솔), VASA Provider, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구축하고 어플라이언스를 사용할 수 있도록 필요한 매개 변수를 지정해야 합니다.' 
+---
+= VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+고객 환경에 VSC(가상 스토리지 콘솔), VASA Provider, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구축하고 어플라이언스를 사용할 수 있도록 필요한 매개 변수를 지정해야 합니다.
+
+.시작하기 전에
+* 지원되는 vCenter Server 릴리즈를 실행 중이어야 합니다.
++
+[NOTE]
+====
+VSC, VASA Provider 및 SRA를 위한 가상 어플라이언스는 vCenter Server의 Windows 구축 또는 VMware vCSA(vCenter Server Virtual Appliance) 구축에 등록할 수 있습니다.
+
+====
++
+https://mysupport.netapp.com/matrix/imt.jsp?components=97563;&solution=56&isHWU&src=IMT["상호 운용성 매트릭스 툴: VSC 9.7"^]
+
+* vCenter Server 환경을 구성하고 설정해야 합니다.
+* 가상 머신에 대해 ESXi 호스트를 설정해야 합니다.
+* 당신은 반드시 .ova 파일을 다운로드했어야만 합니다.
+* vCenter Server 인스턴스에 대한 관리자 로그인 자격 증명이 있어야 합니다.
+* VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축하는 동안 브라우저 캐시 문제를 방지하려면 vSphere Client의 모든 브라우저 세션에서 로그아웃하고 닫아야 하며 브라우저 캐시를 삭제해야 합니다.
++
+xref:task-clean-the-vsphere-cached-downloaded-plug-in-packages.adoc[vSphere 캐시된 다운로드 플러그인 패키지를 청소합니다]
+
+* ICMP(Internet Control Message Protocol)를 활성화해야 합니다.
++
+ICMP가 비활성화되어 있으면 VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 초기 구성에 실패하고 VSC 및 VASA Provider 서비스는 구축 후 시작될 수 없습니다. 구축 후에는 VSC 및 VASA Provider 서비스를 수동으로 설정해야 합니다.
+
+
+
+VSC, VASA Provider, SRA를 위해 가상 어플라이언스를 새로 설치하는 경우 VASA Provider가 기본적으로 설정됩니다. 하지만 가상 어플라이언스의 이전 릴리즈에서 업그레이드하는 경우 VASA Provider의 상태는 그대로 유지되며 VASA Provider를 수동으로 설정해야 할 수 있습니다.
+
+link:task-enable-vasa-provider-for-configuring-virtual-datastores.html["가상 데이터 저장소를 구성하기 위해 VASA Provider를 설정합니다"]
+
+.단계
+. vSphere Client에 로그인합니다.
+. Home[호스트 및 클러스터] 메뉴를 선택합니다.
+. 필요한 데이터 센터를 마우스 오른쪽 단추로 클릭한 다음 * OVA 템플릿 배포 * 를 클릭합니다.
+. VSC, VASA Provider, SRA 구축 파일을 제공할 방법을 선택하고 * Next * 를 클릭합니다.
++
+[cols="1a,1a"]
+|===
+| 위치 | 조치 
+
+
+ a| 
+URL
+ a| 
+VSC, VASA Provider, SRA용 가상 어플라이언스에 대한 '.ova' 파일의 URL을 제공합니다.
+
+
+
+ a| 
+폴더
+ a| 
+저장된 위치에서 VSC, VASA Provider 및 SRA용 가상 어플라이언스에 대한 '.ova' 파일을 선택합니다.
+
+|===
+. 세부 정보를 입력하여 구축 마법사를 사용자 지정합니다.
++
+을 참조하십시오 link:reference-deploment-customization-requirements.html["배포 사용자 지정 고려 사항"] 을 참조하십시오.
+
+. 구성 데이터를 검토한 후 * Next * 를 클릭하여 배포를 마칩니다.
++
+배포가 완료될 때까지 기다리면 * 작업 * 탭에서 배포 진행률을 볼 수 있습니다.
+
+. 가상 어플라이언스 가상 머신의 전원을 켠 다음 가상 어플라이언스를 실행하는 가상 머신의 콘솔을 엽니다.
+. 구축 완료 후 VSC, VASA Provider, SRA 서비스가 실행되고 있는지 확인합니다.
+. VSC, VASA Provider, SRA를 위한 가상 어플라이언스가 vCenter Server에 등록되지 않은 경우, '+https://appliance_ip:8143/Register.html+` 를 사용하여 VSC 인스턴스를 등록합니다.
+. VSC, VASA Provider, SRA를 위해 구축된 가상 어플라이언스를 보려면 vSphere Client에서 로그아웃한 후 다시 로그인하십시오.
++
+vSphere Client에서 플러그인을 업데이트하는 데 몇 분 정도 걸릴 수 있습니다.
+
++
+[NOTE]
+====
+로그인 후에도 플러그인을 볼 수 없는 경우 vSphere Client 캐시를 정리해야 합니다. xref:task-clean-the-vsphere-cached-downloaded-plug-in-packages.adoc[vSphere 캐시된 다운로드 플러그인 패키지를 청소합니다]
+
+====
+
+
+++++
+
+[NOTE]
+====
+ONTAP 9.6 이하를 사용하는 경우 VVOL 대시보드를 보려면 를 다운로드하여 설치해야 합니다. 그러나 ONTAP 9.7의 경우 VASA Provider에 등록할 필요가 없습니다.
+
+====
+xref:task-register-oncommand-api-services-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.adoc[VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 등록하십시오]

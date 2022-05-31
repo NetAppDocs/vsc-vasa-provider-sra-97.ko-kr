@@ -1,0 +1,33 @@
+---
+permalink: manage/task-protect-non-protected-virtual-machines.html 
+sidebar: sidebar 
+keywords: virtual, machines, configuring, protection, protecting, unprotected, virtual, machines, 
+summary: 복제를 사용하지 않도록 설정한 상태에서 VM 스토리지 정책을 사용하여 생성된 기존의 보호되지 않은 가상 머신에 대한 보호를 구성할 수 있습니다. 보호를 제공하려면 VM 스토리지 정책을 변경하고 복제 그룹을 할당해야 합니다. 
+---
+= 보호되지 않는 가상 머신을 보호합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+복제를 사용하지 않도록 설정한 상태에서 VM 스토리지 정책을 사용하여 생성된 기존의 보호되지 않은 가상 머신에 대한 보호를 구성할 수 있습니다. 보호를 제공하려면 VM 스토리지 정책을 변경하고 복제 그룹을 할당해야 합니다.
+
+SVM에 IPv4 및 IPv6 LIF가 모두 있는 경우 IPv6 LIF를 비활성화하고 나중에 재해 복구 워크플로우를 수행해야 합니다.
+
+.단계
+. 필요한 가상 머신을 클릭하고 기본 VM 스토리지 정책으로 구성되었는지 확인합니다.
+. 선택한 가상 머신을 마우스 오른쪽 버튼으로 클릭하고 menu: VM Policies [Edit VM Storage Policies] 를 클릭합니다.
+. VM 스토리지 정책 * 드롭다운에서 복제가 활성화된 VM 스토리지 정책을 선택합니다.
+. Replication group * 드롭다운에서 복제 그룹을 선택한 다음 * OK * 를 클릭합니다.
++
+가상 머신의 요약 정보를 확인하여 가상 머신이 보호되는지 확인합니다.
+
++
+[NOTE]
+====
+VSC, VASA Provider, SRA를 위한 가상 어플라이언스 릴리즈는 보호된 가상 시스템의 핫 클론을 지원하지 않습니다. 가상 머신의 전원을 끈 다음 클론 작업을 수행해야 합니다.
+
+====
+

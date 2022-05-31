@@ -1,0 +1,26 @@
+---
+permalink: manage/reference-error-while-accessing-the-vsc-summary-page-of-virtual-appliance.html 
+sidebar: sidebar 
+keywords: error, while, accessing, the, vsc, summary, page, of, virtual, appliance, 
+summary: 'VSC(가상 스토리지 콘솔), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구축한 후 VSC 요약 페이지에 액세스하려고 하면 /opt/NetApp/vscserver/etc/vscserver/etc/vsc/performance.json(해당 파일 또는 디렉토리 없음) 오류 메시지가 표시될 수 있습니다.' 
+---
+= 가상 어플라이언스의 VSC 요약 페이지에 액세스하는 동안 오류가 발생했습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(가상 스토리지 콘솔), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구축한 후 VSC 요약 페이지에 액세스하려고 하면 "/opt/NetApp/vscserver/etc/vscserver/etc/vsc/performance.json(해당 파일 또는 디렉토리 없음)" 오류 메시지가 표시될 수 있습니다.
+
+
+
+== 설명
+
+VSC, VASA Provider, SRA용 가상 어플라이언스를 구축한 후 VSC 대시보드에 액세스하려고 하면 스케줄러 초기화 프로세스가 완료되지 않아 오류가 발생할 수 있습니다.
+
+
+
+== 해결 방법
+
+성능 스케줄러 초기화 프로세스가 완료될 때까지 가상 어플라이언스 구축 후 몇 초 동안 기다린 다음 를 클릭합니다 image:../media/dashboard-refresh-icon.gif[""] 버튼을 클릭하여 최신 데이터를 가져옵니다.

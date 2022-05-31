@@ -1,0 +1,51 @@
+---
+permalink: deploy/task-upgrade-storage-replication-adapter.html 
+sidebar: sidebar 
+keywords: sra, upgrade, upgrading, storage, replication, adapter, 
+summary: 'VSC, VASA Provider, SRA를 위해 가상 어플라이언스를 업그레이드하거나 최신 버전의 가상 어플라이언스를 배포한 후에는 SRA(스토리지 복제 어댑터)를 업그레이드해야 합니다.' 
+---
+= 스토리지 복제 어댑터를 업그레이드합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC, VASA Provider, SRA를 위해 가상 어플라이언스를 업그레이드하거나 최신 버전의 가상 어플라이언스를 배포한 후에는 SRA(스토리지 복제 어댑터)를 업그레이드해야 합니다.
+
+.단계
+. 어댑터에 따라 다음 절차 중 하나를 사용하여 최신 어댑터로 업그레이드해야 합니다.
++
+[cols="1a,1a"]
+|===
+| * 대상... * | 다음을 수행합니다. 
+
+
+ a| 
+* Windows *
+ a| 
+.. SRM Windows Server에 로그인합니다.
+.. SRM 서버에서 기존 SRA_.msi_installer를 제거합니다.
+.. 시스템 경로를 'C:\Program Files\VMware\VMware vCenter Site Recovery Manager\external\perl\c\bin'으로 변경합니다
+.. NetApp Support 사이트에서 다운로드한 _.msi_installer를 두 번 클릭하고 화면에 표시되는 지침을 따릅니다.
+.. VSC, VASA Provider, SRA를 위해 구축된 가상 어플라이언스의 IP 주소와 암호를 입력합니다.
+
+
+
+
+ a| 
+어플라이언스 기반 어댑터*
+ a| 
+.. SRM 어플라이언스 관리 페이지에 로그인합니다.
+.. 스토리지 복제 어댑터 * 를 클릭하고 * 삭제 * 를 클릭하여 기존 SRA를 제거합니다.
+.. 메뉴: 새 어댑터 [찾아보기] 를 클릭합니다.
+.. NetApp Support 사이트에서 다운로드한 최신 SRA tarball 파일을 클릭하여 선택하고 * Install * 을 클릭합니다.
+.. SRM 어플라이언스에서 SRA를 구성합니다.
++
+xref:task-configure-sra-on-srm-appliance.adoc[SRM 어플라이언스에서 SRA를 구성합니다]
+
+
+
+|===
+

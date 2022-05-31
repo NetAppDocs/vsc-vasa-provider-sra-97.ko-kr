@@ -1,0 +1,44 @@
+---
+permalink: deploy/task-install-the-nfs-vaai-plug-in.html 
+sidebar: sidebar 
+keywords: installing, the, nfs, vaai, plug-in, 
+summary: '가상 스토리지 콘솔(VSC), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스의 GUI를 사용하여 VMware VAAI(vStorage APIs for Array Integration)용 NFS 플러그인을 설치할 수 있습니다.' 
+---
+= NFS VAAI 플러그인을 설치합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+가상 스토리지 콘솔(VSC), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스의 GUI를 사용하여 VMware VAAI(vStorage APIs for Array Integration)용 NFS 플러그인을 설치할 수 있습니다.
+
+.시작하기 전에
+* 에서 VAAI용 NFS 플러그인('.vib')의 설치 패키지를 다운로드해야 합니다.
++
+https://mysupport.netapp.com/site/["NetApp 지원"^]
+
+* ESXi 호스트 6.5 이상과 ONTAP 9.1 이상을 설치해야 합니다.
+* ESXi 호스트의 전원을 켜고 NFS 데이터 저장소를 마운트해야 합니다.
+* "다카무버.HardwareAcceleratedMove", "다카무버.HardwareAcceleratedInit", "VMFS3.HardwareAcceleratedLocking" 호스트 설정의 값을 ""1"로 설정해야 합니다.
++
+이러한 값은 * 권장 설정 * 대화 상자가 업데이트될 때 ESXi 호스트에서 자동으로 설정됩니다.
+
+* 'vserver NFS modify -vserver vserver_name -vStorage enabled' 명령을 사용하여 에서 vStorage 옵션을 활성화해야 합니다.
+
+
+.단계
+. 에서 다운로드한 '.vib' 파일의 이름을 NetApp NasPlugin.vib로 변경하여 VSC에서 사용하는 미리 정의된 이름과 일치시킵니다.
+. VSC 홈 페이지에서 * 설정 * 을 클릭합니다.
+. NFS VAAI Tools * 탭을 클릭합니다.
+. 기존 버전 * 섹션에서 * 변경 * 을 클릭합니다.
+. 이름이 바뀐 '.vib' 파일을 찾아 선택한 다음 * 업로드 * 를 클릭하여 가상 어플라이언스에 파일을 업로드합니다.
+. ESXi 호스트에 설치 * 섹션에서 NFS VAAI 플러그인을 설치할 ESXi 호스트를 선택한 다음 * 설치 * 를 클릭합니다.
++
+화면의 지시에 따라 설치를 완료해야 합니다. vSphere Web Client의 Tasks 섹션에서 설치 진행률을 모니터링할 수 있습니다.
+
+. 설치가 완료되면 ESXi 호스트를 재부팅합니다.
++
+ESXi 호스트를 재부팅하면 VSC가 NFS VAAI 플러그인을 자동으로 감지합니다. 플러그인을 활성화하기 위해 추가 단계를 수행할 필요가 없습니다.
+
+

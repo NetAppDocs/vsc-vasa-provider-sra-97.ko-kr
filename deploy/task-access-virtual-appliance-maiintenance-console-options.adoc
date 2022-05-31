@@ -1,0 +1,111 @@
+---
+permalink: deploy/task-access-virtual-appliance-maiintenance-console-options.html 
+sidebar: sidebar 
+keywords: accessing, maintenance, console, options, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스의 유지보수 콘솔을 사용하여 애플리케이션, 시스템, 네트워크 구성을 관리할 수 있습니다. 관리자 암호 및 유지보수 암호를 변경할 수 있습니다. 또한 지원 번들을 생성하고, 다양한 로그 수준을 설정하고, TLS 구성을 확인 및 관리하고, 원격 진단을 시작할 수 있습니다.' 
+---
+= VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 유지보수 콘솔 옵션에 액세스합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스의 유지보수 콘솔을 사용하여 애플리케이션, 시스템, 네트워크 구성을 관리할 수 있습니다. 관리자 암호 및 유지보수 암호를 변경할 수 있습니다. 또한 지원 번들을 생성하고, 다양한 로그 수준을 설정하고, TLS 구성을 확인 및 관리하고, 원격 진단을 시작할 수 있습니다.
+
+VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축한 후에는 VMware 툴을 설치해야 합니다.
+
+.이 작업에 대해
+* VSC, VASA Provider, SRA를 위해 가상 어플라이언스의 유지보수 콘솔에 로그인하려면 구축 중에 구성한 사용자 이름과 암호로 "maint"를 사용해야 합니다.
+* 원격 진단을 활성화하는 동안 "dIAG" 사용자의 암호를 설정해야 합니다.
+
+
+.단계
+. 구축된 가상 어플라이언스의 * 요약 * 탭에 액세스합니다.
+. 을 클릭합니다 image:../media/launch-maintenance-console.gif[""] 를 눌러 유지보수 콘솔을 시작합니다.
++
+다음 유지보수 콘솔 옵션에 액세스할 수 있습니다.
+
++
+** * 응용 프로그램 구성 *
++
+다음 옵션을 사용할 수 있습니다.
+
++
+*** 서버 상태 요약을 표시합니다
+*** Virtual Storage Console 서비스를 시작합니다
+*** Virtual Storage Console 서비스를 중지합니다
+*** VASA Provider 및 SRA 서비스를 시작합니다
+*** VASA Provider 및 SRA 서비스를 중지합니다
+*** '관리자' 사용자 암호를 변경합니다
+*** 인증서를 다시 생성합니다
+*** 키 저장소 및 인증서를 하드 리셋합니다
+*** 데이터베이스를 하드 리셋합니다
+*** Virtual Storage Console 서비스의 로그 레벨을 변경합니다
+*** VASA Provider 및 SRA 서비스의 로그 레벨을 변경합니다
+*** TLS 구성을 표시합니다
+*** TLS 프로토콜을 활성화합니다
+*** TLS 프로토콜을 비활성화합니다
+
+
+** * 시스템 구성 *
++
+다음 옵션을 사용할 수 있습니다.
+
++
+*** 가상 머신을 재부팅합니다
+*** 가상 머신을 종료합니다
+*** '성자' 사용자 암호를 변경합니다
+*** 시간대를 변경합니다
+*** NTP 서버를 변경합니다
++
+NTP 서버에 IPv6 주소를 제공할 수 있습니다.
+
+*** SSH 액세스를 설정/해제합니다
+*** jail 디스크 크기 증가(/jail)
+*** 업그레이드
+*** VMware Tools를 설치합니다
+
+
+** * 네트워크 구성 *
++
+다음 옵션을 사용할 수 있습니다.
+
++
+*** IP 주소 설정을 표시합니다
+*** IP 주소 설정을 변경합니다
++
+이 옵션을 사용하여 IP 주소 사후 배포를 IPv6로 변경할 수 있습니다.
+
+*** 도메인 이름 검색 설정을 표시합니다
+*** 도메인 이름 검색 설정을 변경합니다
+*** 정적 경로를 표시합니다
+*** 정적 경로를 변경합니다
++
+이 옵션을 사용하여 IPv6 경로를 추가할 수 있습니다.
+
+*** 변경 사항을 커밋합니다
+*** 호스트에 Ping을 보냅니다
++
+이 옵션을 사용하여 IPv6 호스트에 ping을 수행할 수 있습니다.
+
+*** 기본 설정을 복원합니다
+
+
+** * 지원 및 진단 *
++
+다음 옵션을 사용할 수 있습니다.
+
++
+*** 지원 번들을 생성합니다
+*** 진단 셸에 액세스합니다
+*** 원격 진단 액세스를 활성화합니다
+
+
+
+
+
+
+* 관련 정보 *
+
+xref:concept-virtual-storage-console-and-vasa-provider-log-files.adoc[VSC 및 VASA 공급자 로그 파일]

@@ -1,0 +1,14 @@
+---
+permalink: manage/concept-manage-datastore.html 
+sidebar: sidebar 
+keywords: managing, traditional, and, vvols, datastores, 
+summary: 'VSC 인터페이스를 사용하여 기존 및 VVol(VMware Virtual Volumes) 데이터 저장소를 모두 관리하고 데이터 저장소 작업을 마운트, 크기 조정, 편집 및 제거할 수 있습니다.' 
+---
+= 기존 및 VVOL 데이터 저장소를 관리합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC 인터페이스를 사용하여 기존 및 VVol(VMware Virtual Volumes) 데이터 저장소를 모두 관리하고 데이터 저장소 작업을 마운트, 크기 조정, 편집 및 제거할 수 있습니다.

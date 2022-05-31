@@ -1,0 +1,27 @@
+---
+permalink: manage/task-mount-datastores-on-host.html 
+sidebar: sidebar 
+keywords: mounting, datastore, on, additional, hosts, 
+summary: 데이터 저장소를 마운트하면 추가 호스트에 대한 스토리지 액세스가 제공됩니다. VMware 환경에 호스트를 추가한 후 추가 호스트에 데이터 저장소를 마운트할 수 있습니다. 
+---
+= 추가 호스트에 데이터 저장소를 마운트합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+데이터 저장소를 마운트하면 추가 호스트에 대한 스토리지 액세스가 제공됩니다. VMware 환경에 호스트를 추가한 후 추가 호스트에 데이터 저장소를 마운트할 수 있습니다.
+
+ESXi가 호스팅하는 모든 네트워크의 서브넷 세부 정보가 'Kaminoprefs.xml'에 입력되어 있는지 확인해야 합니다.
+
+VSC 9.6 구축 및 설정 가이드 _ 에서 서로 다른 서브넷 간에 데이터 저장소 마운트 활성화 섹션을 참조하십시오.
+
+.단계
+. vSphere Client * Home * 페이지에서 * Hosts and Clusters * 를 클릭합니다.
+. 탐색 창에서 호스트가 포함된 데이터 센터를 선택합니다.
+. 추가 호스트에 대해 2단계를 반복합니다.
+. 호스트를 마우스 오른쪽 버튼으로 클릭하고 NetApp VSC [Mount Datastores] 메뉴를 선택합니다.
+. 마운트할 데이터 저장소를 선택한 다음 * 확인 * 을 클릭합니다.
+

@@ -1,0 +1,46 @@
+---
+permalink: deploy/concept-ontap-role-based-access-control-feature-for-virtual-appliance.html 
+sidebar: sidebar 
+keywords: ontap, role-based, access, control, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'ONTAP RBAC(역할 기반 액세스 제어)를 사용하여 특정 스토리지 시스템에 대한 액세스를 제어하고 해당 스토리지 시스템에서 사용자가 수행할 수 있는 작업을 제어할 수 있습니다. VMware vSphere용 가상 스토리지 콘솔에서 ONTAP RBAC는 vCenter Server RBAC와 함께 사용하여 특정 사용자가 특정 스토리지 시스템의 개체에 대해 수행할 수 있는 VSC(가상 스토리지 콘솔) 작업을 결정합니다.' 
+---
+= VSC, VASA 공급자, SRA를 위한 가상 어플라이언스에 대한 ONTAP 역할 기반 액세스 제어
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP RBAC(역할 기반 액세스 제어)를 사용하여 특정 스토리지 시스템에 대한 액세스를 제어하고 해당 스토리지 시스템에서 사용자가 수행할 수 있는 작업을 제어할 수 있습니다. VMware vSphere용 가상 스토리지 콘솔에서 ONTAP RBAC는 vCenter Server RBAC와 함께 사용하여 특정 사용자가 특정 스토리지 시스템의 개체에 대해 수행할 수 있는 VSC(가상 스토리지 콘솔) 작업을 결정합니다.
+
+VSC에서는 VSC 내에서 설정한 자격 증명(사용자 이름 및 암호)을 사용하여 각 스토리지 시스템을 인증하고 해당 스토리지 시스템에서 수행할 수 있는 스토리지 작업을 결정합니다. VSC는 스토리지 시스템마다 하나의 자격 증명 세트를 사용합니다. 이러한 자격 증명을 통해 해당 스토리지 시스템에서 수행할 수 있는 VSC 작업을 결정합니다. 즉, 개별 VSC 사용자에 대한 자격 증명이 아니라 VSC에 대한 자격 증명입니다.
+
+ONTAP RBAC는 스토리지 시스템에 액세스하고 가상 시스템 프로비저닝과 같은 스토리지와 관련된 VSC 작업을 수행하는 경우에만 적용됩니다. 특정 스토리지 시스템에 적합한 ONTAP RBAC 권한이 없는 경우 해당 스토리지 시스템에 호스팅된 vSphere 객체에서 작업을 수행할 수 없습니다. ONTAP RBAC와 VSC별 권한을 함께 사용하여 사용자가 수행할 수 있는 VSC 작업을 제어할 수 있습니다.
+
+* 스토리지 시스템에 상주하는 스토리지 또는 vCenter Server 객체를 모니터링하고 구성합니다
+* 스토리지 시스템에 상주하는 vSphere 객체를 프로비저닝합니다
+
+
+VSC별 권한과 함께 ONTAP RBAC를 사용하면 스토리지 관리자가 관리할 수 있는 스토리지 중심의 보안 계층을 제공합니다. 따라서 ONTAP RBAC와 단독으로 또는 vCenter Server RBAC가 지원하는 것보다 세분화된 액세스 제어를 사용할 수 있습니다. 예를 들어 vCenter Server RBAC에서는 vCenterUserA가 데이터 저장소를 프로비저닝하지 못하도록 하면서 vCenterUserB가 스토리지에 데이터 저장소를 프로비저닝하도록 할 수 있습니다. 특정 스토리지 시스템의 스토리지 시스템 자격 증명이 스토리지 생성을 지원하지 않는 경우 vCenterUserB와 vCenterUserA는 해당 스토리지 시스템에서 데이터 저장소를 프로비저닝할 수 없습니다.
+
+VSC 작업을 시작할 때 VSC는 먼저 해당 작업에 대한 올바른 vCenter Server 권한이 있는지 확인합니다. vCenter Server의 권한이 부족하여 작업을 수행할 수 없는 경우, 초기 vCenter Server 보안 검사를 통과하지 못했기 때문에 VSC에서 해당 스토리지 시스템에 대한 ONTAP 권한을 확인할 필요가 없습니다. 따라서 스토리지 시스템에 액세스할 수 없습니다.
+
+vCenter Server의 사용 권한이 충분하면 VSC는 스토리지 시스템 자격 증명(사용자 이름 및 암호)과 연결된 ONTAP RBAC 권한(ONTAP 역할)을 확인합니다. 해당 스토리지 시스템에서 VSC 작업에 필요한 스토리지 작업을 수행할 수 있는 충분한 권한이 있는지 확인합니다. 올바른 ONTAP 권한이 있으면 스토리지 시스템에 액세스하여 VSC 작업을 수행할 수 있습니다. ONTAP 역할에 따라 스토리지 시스템에서 수행할 수 있는 VSC 작업이 결정됩니다.
+
+각 스토리지 시스템에는 하나의 ONTAP 권한 세트가 연결되어 있습니다.
+
+ONTAP RBAC와 vCenter Server RBAC를 모두 사용하면 다음과 같은 이점이 있습니다.
+
+* 보안
++
+관리자는 세분화된 vCenter Server 객체 레벨과 스토리지 시스템 레벨에서 어떤 작업을 수행할 수 있는지 제어할 수 있습니다.
+
+* 감사 정보
++
+대부분의 경우 VSC는 스토리지 시스템에 대한 감사 추적을 제공하므로 스토리지 수정을 수행한 vCenter Server 사용자에게 이벤트를 다시 추적할 수 있습니다.
+
+* 사용 편의성
++
+모든 컨트롤러 자격 증명을 한 곳에서 유지 관리할 수 있습니다.
+
+

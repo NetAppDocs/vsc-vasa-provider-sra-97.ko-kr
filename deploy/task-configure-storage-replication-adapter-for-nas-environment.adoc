@@ -1,0 +1,38 @@
+---
+permalink: deploy/task-configure-storage-replication-adapter-for-nas-environment.html 
+sidebar: sidebar 
+keywords: configuring, storage, replication, adapter, nas, environment, 
+summary: 'VMware vCenter SRM(Site Recovery Manager)용 SRA(Storage Replication Adapter)를 실행하기 전에 스토리지 시스템을 구성해야 합니다.' 
+---
+= NAS 환경에 대한 스토리지 복제 어댑터를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vCenter SRM(Site Recovery Manager)용 SRA(Storage Replication Adapter)를 실행하기 전에 스토리지 시스템을 구성해야 합니다.
+
+보호 사이트 및 복구 사이트에 다음 프로그램을 설치해야 합니다.
+
+* SRM
++
+SRM 설치에 대한 설명서는 VMware 사이트에서 찾을 수 있습니다.
+
++
+https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager 설명서"^]
+
+* SRA
++
+어댑터는 SRM 및 SRA 서버에 설치됩니다.
+
+
+
+.단계
+. 보호 사이트의 데이터 저장소에 vCenter Server에 등록된 가상 머신이 포함되어 있는지 확인합니다.
+. 보호 사이트의 ESXi 호스트가 에서 NFS 내보내기 볼륨을 마운트했는지 확인합니다.
+. Array Manager* 마법사를 사용하여 SRM에 어레이를 추가할 때 NFS 내보내기가 있는 IP 주소, 호스트 이름 또는 FQDN과 같은 유효한 주소가 * NFS 주소 * 필드에 지정되어 있는지 확인합니다.
+. 복구 사이트의 각 ESXi 호스트에서 "ping" 명령을 사용하여 호스트에서 NFS 내보내기를 지원하는 데 사용되는 IP 주소를 액세스할 수 있는 VMkernel 포트가 있는지 확인합니다.
+
+
+https://mysupport.netapp.com/site/["NetApp 지원"^]

@@ -1,0 +1,30 @@
+---
+permalink: manage/task-mount-a-vvol-datastore.html 
+sidebar: sidebar 
+keywords: Mount, vVol, datastore, 
+summary: 'VVOL 데이터 저장소 마운트 대화 상자를 사용하여 하나 이상의 추가 호스트에 VVol(VMware Virtual Volumes) 데이터 저장소를 마운트할 수 있습니다. 데이터 저장소를 마운트하면 추가 호스트에 대한 스토리지 액세스가 가능합니다.' 
+---
+= VVOL 데이터 저장소를 마운트합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VVOL 데이터 저장소 마운트 대화 상자를 사용하여 하나 이상의 추가 호스트에 VVol(VMware Virtual Volumes) 데이터 저장소를 마운트할 수 있습니다. 데이터 저장소를 마운트하면 추가 호스트에 대한 스토리지 액세스가 가능합니다.
+
+.단계
+. vSphere Client * Home * 페이지에서 * Hosts and Clusters * 를 클릭합니다.
+. 마운트할 데이터 저장소를 마우스 오른쪽 버튼으로 클릭한 다음 메뉴, NetApp VSC [VVOL 데이터 저장소 마운트]를 선택합니다.
++
+Mount VVol Datastore * 대화 상자가 표시되며 데이터 센터에서 데이터 저장소를 마운트할 수 있는 호스트 목록을 제공합니다. 목록에는 데이터 저장소가 이미 마운트되어 있는 호스트, ESX 5.x 이하를 실행하는 호스트 또는 데이터 저장소 프로토콜을 지원하지 않는 호스트가 포함되지 않습니다. 예를 들어, 호스트가 FC 프로토콜을 지원하지 않는 경우 FC 데이터 저장소를 호스트에 마운트할 수 없습니다.
+
++
+[NOTE]
+====
+vSphere Client에서 vCenter Server에 대한 마운트 대화 상자를 제공하지만 이 작업에는 항상 VASA Provider 대화 상자를 사용해야 합니다. VASA Provider는 ONTAP 소프트웨어를 실행하는 스토리지 시스템에 대한 액세스를 설정합니다.
+
+====
+. 데이터 저장소를 마운트할 호스트를 선택한 다음 * OK * 를 클릭합니다.
+

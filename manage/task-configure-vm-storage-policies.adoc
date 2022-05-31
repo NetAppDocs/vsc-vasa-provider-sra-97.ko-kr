@@ -1,0 +1,36 @@
+---
+permalink: manage/task-configure-vm-storage-policies.html 
+sidebar: sidebar 
+keywords: configuring, vm, storage, policies, 
+summary: VVol 데이터스토어에 구성된 가상 머신을 관리하고 가상 디스크에 대한 복제와 같은 서비스를 사용하도록 VM 스토리지 정책을 구성해야 합니다. 기존 데이터 저장소의 경우 이러한 VM 스토리지 정책을 사용하는 것은 선택 사항입니다. 
+---
+= VM 스토리지 정책을 구성합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VVol 데이터스토어에 구성된 가상 머신을 관리하고 가상 디스크에 대한 복제와 같은 서비스를 사용하도록 VM 스토리지 정책을 구성해야 합니다. 기존 데이터 저장소의 경우 이러한 VM 스토리지 정책을 사용하는 것은 선택 사항입니다.
+
+vSphere 웹 클라이언트는 기본 스토리지 정책을 제공합니다. 그러나 정책을 만들고 이를 가상 머신에 할당할 수 있습니다.
+
+.단계
+. vSphere Client 페이지에서 메뉴 [Policies and Profiles] 를 클릭합니다.
+. menu:VM Storage Policies[Create VM Storage Policy]를 클릭합니다.
+. VM 스토리지 정책 생성 페이지에서 다음 세부 정보를 제공합니다.
++
+.. VM 스토리지 정책의 이름과 설명을 입력합니다.
+.. "NetApp clustered Data ONTAP.vp.vVol" 스토리지 * 에 대한 규칙 활성화 를 선택합니다.
+.. Placement * 탭에서 필요한 저장 용량 프로필을 선택합니다.
+.. 복제를 활성화하려면 * 사용자 정의 * 옵션을 선택합니다.
+.. 규칙 추가 * 를 클릭하여 * 비동기식 * 복제 및 필수 * SnapMirror 일정 * 을 선택한 다음 * 다음 * 을 클릭합니다.
+.. 나열된 호환 가능한 데이터 저장소를 확인한 다음 * 스토리지 호환성 * 탭에서 * 다음 * 을 클릭합니다.
++
+데이터 보호 FlexVol 볼륨이 있는 VVOL 데이터 저장소의 경우 호환되는 데이터 저장소 검사는 수행되지 않습니다.
+
+
+
+. 검토 및 완료 * 탭에서 VM 스토리지 정책 선택을 검토한 다음 * 마침 * 을 클릭합니다.
+

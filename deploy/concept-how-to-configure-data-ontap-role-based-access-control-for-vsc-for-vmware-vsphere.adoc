@@ -1,0 +1,91 @@
+---
+permalink: deploy/concept-how-to-configure-data-ontap-role-based-access-control-for-vsc-for-vmware-vsphere.html 
+sidebar: sidebar 
+keywords: configure, ontap, role-based, access, control, vsc, vmware, vsphere, 
+summary: 'VSC(VMware vSphere)용 가상 스토리지 콘솔에서 역할 기반 액세스 제어를 사용하려면 스토리지 시스템에서 RBAC(ONTAP 역할 기반 액세스 제어)를 구성해야 합니다. ONTAP RBAC 기능을 사용하여 액세스 권한이 제한된 사용자 지정 사용자 계정을 하나 이상 생성할 수 있습니다.' 
+---
+= VMware vSphere용 VSC에 대한 ONTAP 역할 기반 액세스 제어를 구성하는 방법
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(VMware vSphere)용 가상 스토리지 콘솔에서 역할 기반 액세스 제어를 사용하려면 스토리지 시스템에서 RBAC(ONTAP 역할 기반 액세스 제어)를 구성해야 합니다. ONTAP RBAC 기능을 사용하여 액세스 권한이 제한된 사용자 지정 사용자 계정을 하나 이상 생성할 수 있습니다.
+
+VSC 및 SRA는 클러스터 수준 또는 수준에서 스토리지 시스템에 액세스할 수 있습니다. 클러스터 레벨에서 스토리지 시스템을 추가하는 경우 필요한 모든 기능을 제공하려면 admin 사용자의 자격 증명을 제공해야 합니다. 세부 정보를 직접 추가하여 스토리지 시스템을 추가하는 경우 ""vsadmin" 사용자에게 특정 작업을 수행하는 데 필요한 역할 및 기능이 모두 포함되어 있지 않습니다.
+
+VASA Provider는 클러스터 레벨에서만 스토리지 시스템에 액세스할 수 있습니다. 특정 스토리지 컨트롤러에 VASA Provider가 필요한 경우 VSC 또는 SRA를 사용하는 경우에도 클러스터 레벨에서 VSC에 스토리지 시스템을 추가해야 합니다.
+
+새 사용자를 생성하고 클러스터 또는 을 VSC, VASA 공급자 및 SRA에 연결하려면 다음을 수행해야 합니다.
+
+* 클러스터 관리자 또는 관리자 역할을 생성합니다
++
+[NOTE]
+====
+다음 중 하나를 사용하여 이러한 역할을 만들 수 있습니다.
+
+** ONTAP 시스템 관리자 9.7 이상
+
+
+link:task-configure-user-role-and-privileges.html["사용자 역할 및 권한을 구성합니다"^]
+
+** RBAC ONTAP용 사용자 작성자 도구(ONTAP 9.6 이하를 사용하는 경우)
+
+
+link:https://community.netapp.com/t5/Virtualization-Articles-and-Resources/RBAC-User-Creator-tool-for-VSC-VASA-Provider-and-Storage-Replication-Adapter-7-0/ta-p/133203/t5/Virtualization-Articles-and-Resources/How-to-use-the-RBAC-User-Creator-for-Data-ONTAP/ta-p/86601["VSC, VASA 공급자 및 VMware vSphere용 스토리지 복제 어댑터 7.0용 RBAC 사용자 작성 툴"^]
+
+====
+* 할당된 역할과 ONTAP를 사용하여 적절한 애플리케이션 세트를 가진 사용자를 생성합니다
++
+VSC용 스토리지 시스템을 구성하려면 이러한 스토리지 시스템 자격 증명이 필요합니다. VSC에 자격 증명을 입력하여 VSC용 스토리지 시스템을 구성할 수 있습니다. 이러한 자격 증명을 사용하여 스토리지 시스템에 로그인할 때마다 자격 증명을 생성하는 동안 ONTAP에서 설정한 VSC 기능에 대한 권한이 부여됩니다.
+
+* 스토리지 시스템을 VSC에 추가하고 방금 생성한 사용자의 자격 증명을 제공합니다
+
+
+
+
+== VSC 역할
+
+VSC는 ONTAP 권한을 다음 VSC 역할 세트로 분류합니다.
+
+* 탐색
++
+연결된 모든 스토리지 컨트롤러를 검색할 수 있습니다
+
+* 스토리지 생성
++
+볼륨 및 LUN(Logical Unit Number) 생성 지원
+
+* 스토리지 수정
++
+스토리지 시스템의 크기 조정 및 중복 제거를 설정합니다
+
+* 스토리지 폐기
++
+볼륨 및 LUN을 소멸하도록 설정합니다
+
+
+
+
+
+== VASA 공급자 역할
+
+클러스터 수준에서는 정책 기반 관리만 생성할 수 있습니다. 스토리지 용량 프로필을 사용하여 정책을 기반으로 스토리지를 관리할 수 있습니다.
+
+
+
+== SRA 역할
+
+SRA에서는 ONTAP 권한을 클러스터 수준 또는 수준에서 SAN 또는 NAS 역할로 분류합니다. 이를 통해 사용자는 SRM 작업을 실행할 수 있습니다.
+
+[NOTE]
+====
+ONTAP 명령을 사용하여 역할과 권한을 수동으로 구성하려면 기술 자료 문서를 참조해야 합니다.
+
+====
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/VSC%2C_VASA%2C_and_SRA_7.0_ONTAP_RBAC_Configuration_Version_1["VSC, VASA 및 SRA 7.0 ONTAP RBAC 구성"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/Roll_up_of_all_commands_for_VSC_and_SRA_for_SVM_level["SVM 레벨에서 VSC 및 SRA를 위한 모든 명령 롤업"^]
+
+
+VSC는 클러스터를 VSC에 추가할 때 ONTAP RBAC 역할의 초기 권한 검증을 수행합니다. 직접 스토리지 IP를 추가한 경우 VSC에서 초기 검증을 수행하지 않습니다. VSC는 나중에 작업 워크플로에서 권한을 확인하고 적용합니다.

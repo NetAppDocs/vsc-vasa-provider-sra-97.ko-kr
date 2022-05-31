@@ -1,0 +1,66 @@
+---
+permalink: deploy/task-clean-the-vsphere-cached-downloaded-plug-in-packages.html 
+sidebar: sidebar 
+keywords: clean, up, browser, cache, cleaning, the, vsphere, cached, downloaded, plug-in, packages, 
+summary: VSC, VASA Provider 및 SRA용 가상 어플라이언스를 구축 또는 업그레이드한 후 플러그인이 자동으로 업데이트되지 않는 경우 vCenter Server 플러그인 문제를 해결하려면 브라우저와 vCenter Server에서 캐시된 다운로드 플러그인 패키지를 정리해야 합니다. 
+---
+= vSphere 캐시된 다운로드 플러그인 패키지를 청소합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC, VASA Provider, SRA용 가상 어플라이언스를 구축 또는 업그레이드한 후 플러그인이 자동으로 업데이트되지 않는 경우 vCenter Server 플러그인 문제를 해결하려면 브라우저와 vCenter Server에서 캐시된 다운로드 플러그인 패키지를 정리해야 합니다.
+
+.단계
+. 기존 vSphere 웹 클라이언트 또는 vSphere Client에서 로그아웃합니다.
+. 브라우저 캐시를 제거합니다.
+. vSphere Client 캐시된 플러그인 패키지를 제거합니다.
++
+[cols="1a,1a"]
+|===
+| 사용 중인 경우... | 다음을 수행합니다. 
+
+
+ a| 
+Windows vCenter Server를 참조하십시오
+ a| 
+다음 com.netapp.vasa.vvol.webclient-x.x.x.xxxx, com.netapp.nvpf.webclient-x.x.x.xxxx 및 com.netapp.vsch5-x.x.x.xxxx 폴더를 제거합니다( 참조).
+
+** vSphere Web Client 경로: C:\ProgramData\VMware\vCenterServer\cfg\vSphere-client\VC-packages\vSphere-client-enesity
+** vSphere Client(HTML5) 경로: C:\ProgramData\VMware\vCenterServer\cfg\vSphere-UI\VC-packages\vSphere-client-enesity
+
+
+
+
+ a| 
+VCSA
+ a| 
+.. VCSA 어플라이언스에 SSH로 연결합니다.
+.. "cd /etc/vmware/vsphere-client/vc-packages/vsphere-client-environment"를 사용하여 디렉토리를 vCenter 웹 클라이언트 UI 확장 디렉토리로 변경합니다
+.. 다음 명령을 사용하여 캐시된 플러그인 패키지를 제거합니다.
++
+*** rm-rf com.netapp.vasa.vvol.webclient-x.x.x.xxxx`
+*** rm-rf com.netapp.nvpf.webclient-x.x.x.xxxx`
+*** rm-rf com.netapp.vsch5-x.x.x.xxxx`
+
+
+.. 'cd /etc/vmware/vsphere-ui/vc-packages/vsphere-client-environment'를 사용하여 디렉토리를 vCenter Client(HTML5) UI 확장 디렉토리로 변경합니다
+.. 다음 명령을 사용하여 캐시된 플러그인 패키지를 제거합니다.
++
+*** rm-rf com.netapp.vasa.vvol.webclient-x.x.x.xxxx`
+*** rm-rf com.netapp.nvpf.webclient-x.x.x.xxxx`
+*** rm-rf com.netapp.vsch5-x.x.x.xxxx`
+
+
+
+
+|===
+. 다음 명령을 사용하여 vSphere에 로그인하고 vSphere Web Client 및 vSphere Client 서비스를 다시 시작합니다.
++
+** 'Service-control--stop vSphere-client vSphere-UI'
+** 'Service-control -- start vSphere-client vSphere-UI'
+
+
+

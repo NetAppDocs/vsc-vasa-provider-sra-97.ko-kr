@@ -1,0 +1,48 @@
+---
+permalink: deploy/task-refresh-the-storage-system-display.html 
+sidebar: sidebar 
+keywords: refreshing, the, storage, system, display, 
+summary: 'VMware vSphere용 Virtual Storage Console에서 제공하는 업데이트 기능을 사용하여 스토리지 시스템에 대한 정보를 업데이트하고 VSC(가상 스토리지 콘솔)를 통해 스토리지 시스템을 강제로 검색할 수 있습니다.' 
+---
+= 스토리지 시스템 디스플레이를 새로 고칩니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere용 Virtual Storage Console에서 제공하는 업데이트 기능을 사용하여 스토리지 시스템에 대한 정보를 업데이트하고 VSC(가상 스토리지 콘솔)를 통해 스토리지 시스템을 강제로 검색할 수 있습니다.
+
+"refresh" 옵션은 인증 오류가 발생한 후 스토리지 시스템의 기본 자격 증명을 변경한 경우에 유용합니다. 스토리지 시스템에서 ""인증 실패 상태"를 보고한 후 스토리지 시스템 자격 증명을 변경한 경우에는 항상 업데이트 작업을 수행해야 합니다. 업데이트 작업 중에 VSC는 새 자격 증명을 사용하여 스토리지 시스템에 연결하려고 시도합니다.
+
+시스템 설정에 따라 이 작업을 완료하는 데 시간이 오래 걸릴 수 있습니다.
+
+.단계
+. VMware vSphere Client * Home * 페이지에서 * Storage Systems * 를 클릭합니다.
+. 업데이트를 시작합니다.
++
+[cols="1a,1a"]
+|===
+| 이 위치가... | 클릭... 
+
+
+ a| 
+가상 스토리지 콘솔
+ a| 
+모두 다시 검색 * 아이콘
+
+
+
+ a| 
+데이터 센터
+ a| 
+데이터 센터를 마우스 오른쪽 단추로 클릭한 다음 NetApp VSC [호스트 및 스토리지 데이터 업데이트] 메뉴를 클릭합니다.
+
+|===
+. 호스트 및 스토리지 데이터 업데이트 * 대화 상자에서 * 확인 * 을 클릭합니다.
++
+데이터 센터의 호스트 및 스토리지 시스템 수에 따라 검색에 몇 분이 걸릴 수 있습니다. 이 검색 작업은 백그라운드에서 작동합니다.
+
+. 성공 * 대화 상자에서 * 확인 * 을 클릭합니다.
+

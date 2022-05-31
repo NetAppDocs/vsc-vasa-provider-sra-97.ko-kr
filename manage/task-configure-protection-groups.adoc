@@ -1,0 +1,61 @@
+---
+permalink: manage/task-configure-protection-groups.html 
+sidebar: sidebar 
+keywords: configuring, protection, groups, 
+summary: 보호 사이트에서 가상 컴퓨터 그룹을 보호하려면 보호 그룹을 만들어야 합니다. 
+---
+= 보호 그룹을 구성합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+보호 사이트에서 가상 컴퓨터 그룹을 보호하려면 보호 그룹을 만들어야 합니다.
+
+소스 사이트와 타겟 사이트가 모두 다음에 대해 구성되어 있는지 확인해야 합니다.
+
+* 동일한 버전의 SRM이 설치되었습니다
+* 복제가 활성화되고 데이터 저장소가 마운트된 VVOL 데이터 저장소
+* 비슷한 스토리지 용량 프로필
+* SRM에서 매핑되어야 하는 복제 기능이 있는 유사한 VM 스토리지 정책
+* 가상 머신
+* 페어링된 보호 및 복구 사이트
+* 소스 및 대상 데이터 저장소를 해당 사이트에 마운트해야 합니다
+
+
+.단계
+. vCenter Server에 로그인한 다음 menu: Site Recovery [Protection Groups](사이트 복구 [보호 그룹]) 를 클릭합니다.
+. 보호 그룹 * 창에서 * 신규 * 를 클릭합니다.
+. 보호 그룹, 방향에 대한 이름과 설명을 지정하고 * next * 를 클릭합니다.
+. Type * 필드에서 다음 중 하나를 선택합니다.
++
+[cols="1a,1a"]
+|===
+| 대상... | 필드 옵션 입력... 
+
+
+ a| 
+* 기존 데이터 저장소 *
+ a| 
+데이터 저장소 그룹(스토리지 기반 복제)
+
+
+
+ a| 
+* VVOL 데이터 저장소 *
+ a| 
+가상 볼륨(VVOL 복제)
+
+|===
++
+복제가 활성화된 SVM에 대한 장애 도메인은 더 이상 없습니다. 문제없이 피어링 만 구현한 SVM이 표시됩니다.
+
+. Replication groups * 탭에서 설정된 스토리지 쌍 또는 가상 머신이 구성된 복제 그룹을 선택한 후 * NEXT * 를 클릭합니다.
++
+복제 그룹의 모든 가상 머신이 보호 그룹에 추가됩니다.
+
+. 기존 복구 계획을 선택하거나 * Add to new recovery plan * 을 클릭하여 새 계획을 생성합니다.
+. Ready to Complete * 탭에서 생성한 보호 그룹의 세부 정보를 검토한 다음 * Finish * 를 클릭합니다.
+

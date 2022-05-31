@@ -1,0 +1,43 @@
+---
+permalink: deploy/reference-configure-storage-replication-adapter-for-highly-scaled-environment.html 
+sidebar: sidebar 
+keywords: configuration, storage, replication, adapter, highly, scaled, environment, 
+summary: 'SRA(Storage Replication Adapter)에 권장되는 설정에 따라 스토리지 시간 초과 간격을 구성하여 고도로 확장된 환경에서 최적의 성능을 발휘하도록 해야 합니다.' 
+---
+= 확장성이 뛰어난 환경을 위한 스토리지 복제 어댑터 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SRA(Storage Replication Adapter)에 권장되는 설정에 따라 스토리지 시간 초과 간격을 구성하여 고도로 확장된 환경에서 최적의 성능을 발휘하도록 해야 합니다.
+
+
+
+== 저장소 공급자 설정
+
+* 'torageProvider.esignatureTimeout' 설정의 값을 900초에서 12000초로 늘려야 합니다.
+* 'torageProvider.autoResignatureMode` 옵션을 활성화해야 합니다.
+
+
+스토리지 공급자 설정 수정에 대한 자세한 내용은 VMware 설명서를 참조하십시오.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["VMware vSphere 설명서: 스토리지 공급자 설정 변경"^]
+
+
+
+== 저장소 설정
+
+고도로 확장된 환경의 경우 'torage.commandTimeout` 시간 제한 간격 값을 12,000초로 설정해야 합니다.
+
+[NOTE]
+====
+지정된 시간 제한 간격이 최대값입니다. 최대 시간 초과에 도달할 때까지 기다릴 필요가 없습니다. 대부분의 명령이 설정된 최대 시간 제한 간격 내에 완료됩니다.
+
+====
+https://kb.netapp.com/app/answers/answer_view/a_id/1001111["NetApp 기술 자료 답변 1001111: ONTAP용 NetApp 스토리지 복제 어댑터 4.0/7.X 사이징 가이드"^]
+
+자세한 내용은 SAN Provider 설정 수정에 대한 VMware 설명서를 참조하십시오.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["VMware Site Recovery Manager 설명서: 스토리지 설정 변경"^]

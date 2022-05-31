@@ -1,0 +1,42 @@
+---
+permalink: manage/task-pair-protected-and-recovery-sites.html 
+sidebar: sidebar 
+keywords: pairing, protected, recovery, sites, 
+summary: 'SRA(Storage Replication Adapter)가 스토리지 시스템을 검색할 수 있도록 vSphere Client를 사용하여 생성한 보호 사이트와 복구 사이트를 페어링해야 합니다.' 
+---
+= 보호 사이트와 복구 사이트 페어링
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SRA(Storage Replication Adapter)가 스토리지 시스템을 검색할 수 있도록 vSphere Client를 사용하여 생성한 보호 사이트와 복구 사이트를 페어링해야 합니다.
+
+.시작하기 전에
+* 보호 및 복구 사이트에 SRM(Site Recovery Manager)을 설치해야 합니다.
+* 보호 및 복구 사이트에 SRA를 설치해야 합니다.
+
+
+SnapMirror 팬아웃 구성은 소스 볼륨이 서로 다른 두 대상에 복제되는 구성입니다. SRM이 대상에서 가상 시스템을 복구해야 하는 경우 복구 중에 문제가 발생합니다.
+
+[NOTE]
+====
+SRA(Storage Replication Adapter)는 팬아웃 SnapMirror 구성을 지원하지 않습니다.
+
+====
+.단계
+. vSphere Client 홈 페이지에서 * Site Recovery * 를 두 번 클릭한 다음 * Sites * 를 클릭합니다.
+. 메뉴: 개체 [동작 > 사이트 페어링]을 클릭합니다.
+. 사이트 복구 관리자 서버 페어링 * 대화 상자에서 보호된 사이트의 플랫폼 서비스 컨트롤러 주소를 입력한 후 * 다음 * 을 클릭합니다.
+. vCenter Server * 선택 섹션에서 다음을 수행합니다.
++
+.. 보호 사이트의 vCenter Server가 페어링하는 데 일치하는 후보로 나타나는지 확인합니다.
+.. SSO 관리 자격 증명을 입력한 다음 * 마침 * 을 클릭합니다.
+
+
+. 메시지가 표시되면 * 예 * 를 클릭하여 보안 인증서를 수락합니다.
+
+
+보호된 사이트와 복구 사이트가 모두 개체 대화 상자에 나타납니다.

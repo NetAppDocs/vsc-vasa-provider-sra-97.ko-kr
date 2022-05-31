@@ -1,0 +1,40 @@
+---
+permalink: deploy/concept-guidelines-for-using-vsc-standard-roles.html 
+sidebar: sidebar 
+keywords: guidelines, using, VSC standard roles 
+summary: 표준 Virtual Storage Console for VMware vSphere 역할을 사용하는 경우 따라야 할 몇 가지 지침이 있습니다. 
+---
+= VSC 표준 역할 사용 지침
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+표준 Virtual Storage Console for VMware vSphere 역할을 사용하는 경우 따라야 할 몇 가지 지침이 있습니다.
+
+표준 역할을 직접 수정해서는 안 됩니다. VSC를 업그레이드하면 VSC를 업그레이드할 때마다 변경 사항을 덮어쓰게 됩니다. VSC를 업그레이드할 때마다 설치 관리자가 표준 역할 정의를 업데이트합니다. 이렇게 하면 현재 VSC 버전뿐만 아니라 지원되는 모든 vCenter Server 버전에 대해서도 역할을 수행할 수 있습니다.
+
+그러나 표준 역할을 사용하여 사용자 환경에 맞는 역할을 만들 수 있습니다. 이렇게 하려면 VSC 표준 역할을 복사한 다음 복사된 역할을 편집해야 합니다. VSC Windows 서비스를 다시 시작하거나 업그레이드한 경우에도 새 역할을 생성하여 이 역할을 유지할 수 있습니다.
+
+VSC 표준 역할을 사용하는 방법에는 다음과 같은 것이 있습니다.
+
+* 모든 VSC 작업에 표준 VSC 역할을 사용합니다.
++
+이 시나리오에서는 표준 역할이 사용자가 VSC 작업을 수행하는 데 필요한 모든 권한을 제공합니다.
+
+* 역할을 결합하여 사용자가 수행할 수 있는 작업을 확장합니다.
++
+표준 VSC 역할이 환경에 너무 세밀하게 제공하는 경우, 여러 역할을 포함하는 상위 레벨 그룹을 생성하여 역할을 확장할 수 있습니다.
+
++
+사용자가 추가적인 기본 vCenter Server 권한이 필요한 VSC 이외의 다른 작업을 수행해야 하는 경우, 이러한 권한을 제공하는 역할을 생성하여 그룹에도 추가할 수 있습니다.
+
+* 보다 세분화된 역할을 만듭니다.
++
+표준 VSC 역할보다 더 제한적인 역할을 구축해야 하는 경우 VSC 역할을 사용하여 새 역할을 생성할 수 있습니다.
+
++
+이 경우 필요한 VSC 역할을 클론 생성한 다음, 클론 복제된 역할을 편집하여 사용자에게 필요한 권한만 갖게 됩니다.
+
+

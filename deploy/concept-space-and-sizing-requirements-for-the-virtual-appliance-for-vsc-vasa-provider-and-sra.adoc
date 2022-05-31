@@ -1,0 +1,29 @@
+---
+permalink: deploy/concept-space-and-size-requirements-for-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: virtual, storage, console, storage, replication, adapter, space, sizing, requirements, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스를 구축하기 전에 구축 패키지의 공간 요구사항과 일부 기본 호스트 시스템 요구사항을 숙지하십시오.' 
+---
+= VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 공간 및 크기 요구사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스를 구축하기 전에 구축 패키지의 공간 요구사항과 일부 기본 호스트 시스템 요구사항을 숙지하십시오.
+
+* * 설치 패키지 공간 요구 사항 *
++
+** 씬 프로비저닝된 설치의 경우 2.1GB
+** 씩 프로비저닝 설치의 경우 54.0GB
+
+
+* * 호스트 시스템 사이징 요구사항 *
++
+** ESXi 6.5U2 이상
+** 권장 메모리: 12GB RAM
+** 권장 CPU: 2
+
+
+

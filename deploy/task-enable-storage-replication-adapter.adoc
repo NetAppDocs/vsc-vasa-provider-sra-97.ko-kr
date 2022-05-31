@@ -1,0 +1,69 @@
+---
+permalink: deploy/task-enable-storage-replication-adapter.html 
+sidebar: sidebar 
+keywords: enabling, storage, replication, adapter, 
+summary: 'VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스는 SRA 기능을 VSC와 함께 사용하여 재해 복구를 구성할 수 있도록 하는 옵션을 제공합니다.' 
+---
+= 스토리지 복제 어댑터를 활성화합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스는 SRA 기능을 VSC와 함께 사용하여 재해 복구를 구성할 수 있도록 하는 옵션을 제공합니다.
+
+.시작하기 전에
+* vCenter Server 인스턴스를 설정하고 ESXi를 구성해야 합니다.
+* VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축해야 합니다.
+* SRM(Site Recovery Manager) 재해 복구 솔루션을 구성하려면 SRA 플러그인의 '.msi' 파일이나 SRM 어플라이언스의 '.tar.gz' 파일을 다운로드해야 합니다.
++
+https://docs.vmware.com/en/Site-Recovery-Manager/8.2/com.vmware.srm.install_config.doc/GUID-B3A49FFF-E3B9-45E3-AD35-093D896596A0.html["Site Recovery Manager 설치 및 구성 사이트 복구 관리자 8.2"^] 자세한 정보가 있습니다.
+
+
+
+VASA Provider 및 SRA 기능을 유연하게 사용하면 기업에 필요한 워크플로만 실행할 수 있습니다.
+
+.단계
+. VMware vSphere의 웹 사용자 인터페이스에 로그인합니다.
+. vSphere Client에서 메뉴 [Virtual Storage Console] 을 클릭합니다.
+. 설정 * 을 클릭합니다.
+. 관리 설정 * 탭에서 * 기능 관리 * 를 클릭합니다.
+. Manage Capabilities* 대화 상자에서 사용할 SRA 확장을 선택합니다.
+. VSC, VASA Provider, SRA 및 관리자 암호를 위한 가상 어플라이언스의 IP 주소를 입력한 다음 * Apply * 를 클릭합니다.
+. SRA를 배포하려면 다음 방법 중 하나를 사용할 수 있습니다.
++
+[cols="1a,1a"]
+|===
+| 옵션을 선택합니다 | 설명 
+
+
+ a| 
+Windows SRM의 경우
+ a| 
+.. SRA 플러그인에 대해 다운로드한 '.msi' 설치 프로그램을 두 번 클릭합니다.
+.. 화면의 지침을 따릅니다.
+.. 배포된 가상 어플라이언스의 IP 주소와 암호를 입력합니다.
+
+
+
+
+ a| 
+SRM 어플라이언스의 경우
+ a| 
+.. SRM 어플라이언스 페이지에 액세스한 다음 SRM 어플라이언스의 * 스토리지 복제 어댑터 * 페이지로 이동합니다.
+.. 새 어댑터 * 를 클릭합니다.
+.. SRA 플러그인용 .tar.gz 설치 프로그램을 SRM에 업로드합니다.
+.. 어댑터를 다시 검색하여 SRM * 스토리지 복제 어댑터 * 페이지에서 세부 정보가 업데이트되었는지 확인합니다.
+
+
+|===
++
+선택한 확장을 구성할 수 있는지 확인하려면 vSphere Client에서 로그아웃한 다음 다시 로그인해야 합니다.
+
+
+
+* 관련 정보 *
+
+xref:concept-configure-storage-replication-adapter-for-disaster-recovery.adoc[재해 복구를 위해 스토리지 복제 어댑터를 구성합니다]

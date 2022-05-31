@@ -1,0 +1,14 @@
+---
+permalink: deploy/concept-requirements-for-deploying-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: requirements, deploying, virtual, appliance, vsc, vasa, provider, sra, 
+summary: '가상 스토리지 콘솔(VSC), VASA 공급자, SRA(Storage Replication Adapter)용 가상 어플라이언스를 구축하기 전에 구축 요구사항을 숙지하고 수행할 작업을 결정해야 합니다. 작업에 따라 VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축을 위한 구축 모델을 선택할 수 있습니다.' 
+---
+= VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 요구사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+가상 스토리지 콘솔(VSC), VASA 공급자, SRA(Storage Replication Adapter)용 가상 어플라이언스를 구축하기 전에 구축 요구사항을 숙지하고 수행할 작업을 결정해야 합니다. 작업에 따라 VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축을 위한 구축 모델을 선택할 수 있습니다.

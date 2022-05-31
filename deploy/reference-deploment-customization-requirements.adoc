@@ -1,0 +1,59 @@
+---
+permalink: deploy/reference-deploment-customization-requirements.html 
+sidebar: sidebar 
+keywords: deployment, customization, considerations, 
+summary: VSC, VASA Provider, SRA를 위해 가상 어플라이언스 구축을 사용자 지정하는 동안 몇 가지 제한 사항을 고려해야 합니다. 
+---
+= 배포 사용자 지정 고려 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC, VASA Provider, SRA를 위해 가상 어플라이언스 구축을 사용자 지정하는 동안 몇 가지 제한 사항을 고려해야 합니다.
+
+
+
+== 어플라이언스 관리자 사용자 암호입니다
+
+관리자 암호에 공백을 사용해서는 안 됩니다.
+
+
+
+== 어플라이언스 유지 관리 콘솔 자격 증명
+
+"성자" 사용자 이름을 사용하여 유지보수 콘솔에 액세스해야 합니다. 배포 중에 "성자" 사용자의 암호를 설정할 수 있습니다. VSC, VASA Provider 및 SRA를 위해 가상 어플라이언스의 유지보수 콘솔에 있는 * Application Configuration * 메뉴를 사용하여 암호를 변경할 수 있습니다.
+
+
+
+== vCenter Server 관리자 자격 증명
+
+VSC, VASA Provider, SRA용 가상 어플라이언스를 구축하는 동안 vCenter Server에 대한 관리자 자격 증명을 설정할 수 있습니다.
+
+vCenter Server의 암호가 변경되면 구축 중에 제공한 VSC, VASA Provider 및 SRA용 가상 어플라이언스의 IP 주소가 되는 "_https_://<IP>:8143/Register.html" URL을 사용하여 관리자 암호를 업데이트할 수 있습니다.
+
+
+
+== vCenter Server IP 주소입니다
+
+* VSC, VASA Provider, SRA를 위해 가상 어플라이언스를 등록하려는 vCenter Server 인스턴스의 IP 주소(IPv4 또는 IPv6)를 제공해야 합니다.
++
+생성되는 VSC 및 VASA 인증서의 유형은 구축 과정에서 제공한 IP 주소(IPv4 또는 IPv6)에 따라 달라집니다. VSC, VASA Provider, SRA용 가상 어플라이언스를 구축하는 동안 정적 IP 세부 정보를 입력하지 않고 DHCP를 입력하지 않으면 네트워크는 IPv4 및 IPv6 주소를 모두 제공합니다.
+
+* vCenter Server에 등록하는 데 사용되는 VSC, VASA Provider 및 SRA IP 주소를 위한 가상 어플라이언스는 구축 마법사에 입력된 vCenter Server IP 주소(IPv4 또는 IPv6) 유형에 따라 달라집니다.
++
+vCenter Server 등록 중에 사용된 것과 동일한 유형의 IP 주소를 사용하여 VSC 및 VASA 인증서가 모두 생성됩니다.
+
+
+
+[NOTE]
+====
+IPv6은 vCenter Server 6.7 이상에서만 지원됩니다.
+
+====
+
+
+== 어플라이언스 네트워크 속성입니다
+
+DHCP를 사용하지 않는 경우 VSC, VASA Provider, SRA 및 기타 네트워크 매개 변수에 대해 가상 어플라이언스의 정적 IP 주소와 함께 유효한 DNS 호스트 이름(비정규형)을 지정합니다. 이러한 매개 변수는 모두 올바른 설치 및 작동에 필요합니다.

@@ -1,0 +1,24 @@
+---
+permalink: deploy/task-configure-vasa-provider-to-work-with-ssh.html 
+sidebar: sidebar 
+keywords: configuring, vasa, provider, work, with, ssh, 
+summary: 'VSC(가상 스토리지 콘솔), VASA Provider, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구성하여 보안 액세스를 위해 SSH를 사용하도록 VASA Provider를 설정할 수 있습니다.' 
+---
+= SSH와 함께 작동하도록 VASA Provider를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(가상 스토리지 콘솔), VASA Provider, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구성하여 보안 액세스를 위해 SSH를 사용하도록 VASA Provider를 설정할 수 있습니다.
+
+SSH를 구성할 때는 유지보수 사용자로 로그인해야 합니다. 이는 VASA Provider에 대한 루트 액세스가 비활성화되었기 때문입니다. 다른 로그인 자격 증명을 사용하는 경우 SSH를 사용하여 VASA Provider에 액세스할 수 없습니다.
+
+.단계
+. vCenter Server에서 VSC, VASA Provider, SRA를 위한 콘솔을 엽니다.
+. 유지보수 사용자로 로그인합니다.
+. 시스템 구성 * 을 선택하려면 "3"을 입력합니다.
+. "6"을 입력하여 * SSH 액세스 활성화 * 를 선택합니다.
+. 확인 대화 상자에 y를 입력합니다.
+

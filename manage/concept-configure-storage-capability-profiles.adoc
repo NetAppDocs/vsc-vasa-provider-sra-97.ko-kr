@@ -1,0 +1,14 @@
+---
+permalink: manage/concept-configure-storage-capability-profiles.html 
+sidebar: sidebar 
+keywords: creating, storage, capability, profiles, provider 
+summary: VASA Provider for ONTAP를 사용하면 스토리지 기능 프로파일을 생성하여 스토리지에 매핑할 수 있습니다. 따라서 스토리지 전체에서 일관성을 유지할 수 있습니다. 또한 VASA Provider를 사용하여 스토리지와 스토리지 용량 프로필 간의 규정 준수를 확인할 수도 있습니다. 
+---
+= 스토리지 용량 프로필을 생성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VASA Provider for ONTAP를 사용하면 스토리지 기능 프로파일을 생성하여 스토리지에 매핑할 수 있습니다. 따라서 스토리지 전체에서 일관성을 유지할 수 있습니다. 또한 VASA Provider를 사용하여 스토리지와 스토리지 용량 프로필 간의 규정 준수를 확인할 수도 있습니다.

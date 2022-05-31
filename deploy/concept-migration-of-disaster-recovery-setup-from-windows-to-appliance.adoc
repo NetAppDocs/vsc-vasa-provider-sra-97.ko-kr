@@ -1,0 +1,26 @@
+---
+permalink: deploy/concept-migration-of-disaster-recovery-setup-from-windows-to-appliance.html 
+sidebar: sidebar 
+keywords: migration, windows, SRM, appliance, 
+summary: '재해 복구에 Windows 기반 SRM(Site Recovery Manager)을 사용하고 동일한 설정에 SRM 어플라이언스를 사용하려는 경우 Windows 재해 복구 설정을 어플라이언스 기반 SRM으로 마이그레이션해야 합니다.' 
+---
+= Windows SRM에서 SRM 어플라이언스로 마이그레이션
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+재해 복구에 Windows 기반 SRM(Site Recovery Manager)을 사용하고 동일한 설정에 SRM 어플라이언스를 사용하려는 경우 Windows 재해 복구 설정을 어플라이언스 기반 SRM으로 마이그레이션해야 합니다.
+
+재해 복구 마이그레이션과 관련된 단계는 다음과 같습니다.
+
+. VSC, VASA Provider 및 SRA를 위한 기존 가상 어플라이언스를 9.7.1 릴리즈로 업그레이드합니다.
++
+link:task-upgrade-to-the-9-7-1-virtual-appliance-for-vsc-vasa-provider-and-sra.html["VSC, VASA Provider, SRA를 위한 9.7.1 가상 어플라이언스로 업그레이드하십시오"^]
+
+. Windows 기반 스토리지 복제 어댑터를 어플라이언스 기반 SRA로 마이그레이션
+. Windows SRM 데이터를 SRM 어플라이언스로 마이그레이션
+
+
+https://docs.vmware.com/en/Site-Recovery-Manager/8.2/com.vmware.srm.install_config.doc/GUID-F39A84D3-2E3D-4018-97DD-5D7F7E041B43.html["여기를 클릭하십시오"^] 를 참조하십시오.

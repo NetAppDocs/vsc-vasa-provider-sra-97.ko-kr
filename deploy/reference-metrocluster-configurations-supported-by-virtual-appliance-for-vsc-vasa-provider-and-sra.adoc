@@ -1,0 +1,46 @@
+---
+permalink: deploy/reference-metrocluster-configurations-supported-by-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: metroCluster, configurations, supported, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'VSC(가상 스토리지 콘솔), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스는 ONTAP용 MetroCluster IP 및 FC 구성을 사용하는 환경을 지원합니다. 대부분의 지원은 자동입니다. 하지만 MetroCluster 환경을 VSC 및 VASA 공급자와 함께 사용하면 몇 가지 차이점이 있을 수 있습니다.' 
+---
+= VSC, VASA 공급자, SRA를 위한 가상 어플라이언스가 지원하는 MetroCluster 구성
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(가상 스토리지 콘솔), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스는 ONTAP용 MetroCluster IP 및 FC 구성을 사용하는 환경을 지원합니다. 대부분의 지원은 자동입니다. 하지만 MetroCluster 환경을 VSC 및 VASA 공급자와 함께 사용하면 몇 가지 차이점이 있을 수 있습니다.
+
+
+
+== MetroCluster 구성 및 VSC를 누릅니다
+
+VSC는 운영 사이트와 2차 사이트에서 스토리지 시스템 컨트롤러를 검색하는지 확인해야 합니다. 일반적으로 VSC는 스토리지 컨트롤러를 자동으로 검색합니다. 클러스터 관리 LIF를 사용하는 경우, VSC가 두 사이트에서 클러스터를 검색했는지 확인하는 것이 좋습니다. 그렇지 않으면 스토리지 컨트롤러를 VSC에 수동으로 추가할 수 있습니다. VSC에서 스토리지 컨트롤러에 연결하는 데 사용하는 사용자 이름과 암호 쌍을 수정할 수도 있습니다.
+
+전환이 발생하면 보조 사이트의 이(가) 대신 사용됩니다. 이들 이름에 ''-mc' 접미사가 붙어 있습니다. 데이터 저장소 프로비저닝과 같은 작업을 수행하는 동안 전환 작업이 발생하면 데이터 저장소가 상주하는 의 이름이 ""-mc" 접미사를 포함하도록 변경됩니다. 스위치백 이 발생하고 기본 사이트 재시작 컨트롤에서 이 접미사가 삭제됩니다.
+
+[NOTE]
+====
+MetroCluster 구성을 VSC에 직접 추가한 경우 전환 후 SVM 이름의 변경("-mc" 접미사 추가)이 반영되지 않습니다. 다른 모든 스위치오버 작업은 정상적으로 계속 실행됩니다.
+
+====
+스위치오버 또는 스위치백을 수행할 때 VSC에서 클러스터를 자동으로 감지하여 검색하는 데 몇 분 정도 걸릴 수 있습니다. 데이터 저장소 프로비저닝과 같은 VSC 작업을 수행하는 동안 이 문제가 발생하면 지연이 발생할 수 있습니다.
+
+
+
+== MetroCluster 구성 및 VASA 공급자
+
+VASA Provider는 MetroCluster 구성을 사용하는 환경을 자동으로 지원합니다. VASA Provider 환경에서는 전환이 투명합니다. VASA Provider에 직접 추가할 수 없습니다.
+
+[NOTE]
+====
+VASA Provider는 전환 후 보조 사이트의 이름에 ""-mc" 접미사를 추가하지 않습니다.
+
+====
+
+
+== MetroCluster 구성 및 SRA
+
+SRA는 MetroCluster 구성을 지원하지 않습니다.

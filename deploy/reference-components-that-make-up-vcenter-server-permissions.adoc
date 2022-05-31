@@ -1,0 +1,109 @@
+---
+permalink: deploy/reference-components-that-make-up-vcenter-server-permissions.html 
+sidebar: sidebar 
+keywords: components, vcenter, server, permissions, 
+summary: vCenter Server는 권한이 아닌 권한을 인식합니다. 각 vCenter Server 권한은 세 가지 구성 요소로 구성됩니다. 
+---
+= vCenter Server 권한의 구성 요소입니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vCenter Server는 권한이 아닌 권한을 인식합니다. 각 vCenter Server 권한은 세 가지 구성 요소로 구성됩니다.
+
+vCenter Server에는 다음과 같은 구성 요소가 있습니다.
+
+* 하나 이상의 권한(역할)
++
+권한은 사용자가 수행할 수 있는 작업을 정의합니다.
+
+* vSphere 객체입니다
++
+개체는 작업의 대상입니다.
+
+* 사용자 또는 그룹
++
+사용자 또는 그룹은 작업을 수행할 수 있는 사용자를 정의합니다.
+
+
+
+다음 다이어그램에서 볼 수 있듯이 사용 권한을 가지려면 세 가지 요소가 모두 있어야 합니다.
+
+[NOTE]
+====
+이 다이어그램에서 회색 상자는 vCenter Server에 있는 구성 요소를 나타내고 흰색 상자는 vCenter Server가 실행 중인 운영 체제에 있는 구성 요소를 나타냅니다.
+
+====
+image::../media/permission-updated-graphic.png[권한이 업데이트된 그래픽]
+
+
+
+== 권한
+
+VMware vSphere용 Virtual Storage Console은 다음과 같은 두 가지 유형의 권한을 갖습니다.
+
+* 기본 vCenter Server 권한
++
+이러한 권한은 vCenter Server와 함께 제공됩니다.
+
+* VSC별 권한
++
+이러한 권한은 특정 VSC 작업에 대해 정의됩니다. VSC에만 적용됩니다.
+
+
+
+VSC 작업을 수행하려면 VSC별 권한과 vCenter Server 기본 권한이 모두 필요합니다. 이러한 권한은 사용자에게 ""역할""을 구성합니다. 권한은 여러 권한을 가질 수 있습니다. 이러한 권한은 vCenter Server에 로그인한 사용자를 위한 것입니다.
+
+[NOTE]
+====
+vCenter Server RBAC를 사용하여 작업을 단순화하기 위해 VSC는 VSC 작업을 수행하는 데 필요한 모든 VSC별 및 기본 권한을 포함하는 여러 표준 역할을 제공합니다.
+
+====
+권한 내에서 권한을 변경하면 해당 권한과 연결된 사용자가 로그아웃한 다음 로그인하여 업데이트된 권한을 활성화해야 합니다.
+
+[cols="1a,1a,1a"]
+|===
+| 권한 | 역할 | 작업 
+
+
+ a| 
+메뉴: NetApp Virtual Storage Console [보기]
+ a| 
+* VSC 관리자
+* VSC 프로비저닝
+* VSC 읽기 전용
+
+ a| 
+모든 VSC 및 VASA 공급자 관련 작업에는 보기 권한이 필요합니다.
+
+
+
+ a| 
+메뉴: NetApp Virtual Storage Console [Policy Based Management > Management] 또는 메뉴: privilege.nvpfVSC.VASAGroup.com.netapp.nvpf.label[Management]
+ a| 
+VSC 관리자
+ a| 
+스토리지 기능 프로필 및 임계값 설정과 관련된 VSC 및 VASA 공급자 작업
+
+|===
+
+
+== vSphere 객체
+
+사용 권한은 vCenter Server, ESXi 호스트, 가상 머신, 데이터 저장소, 데이터 센터 등의 vSphere 객체와 연결됩니다. 및 폴더. 모든 vSphere 객체에 권한을 할당할 수 있습니다. vSphere 객체에 할당된 권한에 따라 vCenter Server는 해당 객체에 대해 수행할 수 있는 작업을 결정합니다. VSC 관련 작업의 경우 다른 엔티티가 아닌 루트 폴더 레벨(vCenter Server)에서만 사용 권한이 할당 및 검증됩니다. VAAI 플러그인 작업을 제외하고 관련 ESXi에 대해 사용 권한이 확인됩니다.
+
+
+
+== 사용자 및 그룹
+
+Active Directory(또는 로컬 vCenter Server 머신)를 사용하여 사용자 및 사용자 그룹을 설정할 수 있습니다. 그런 다음 vCenter Server 권한을 사용하여 이러한 사용자 또는 그룹에 액세스 권한을 부여하여 특정 VSC 작업을 수행할 수 있도록 할 수 있습니다.
+
+[NOTE]
+====
+이러한 vCenter Server 권한은 VSC 관리자가 아니라 VSC vCenter 사용자에게 적용됩니다. 기본적으로 VSC 관리자는 제품에 대한 모든 액세스 권한을 가지며 권한을 부여하지 않습니다.
+
+====
+사용자 및 그룹에 할당된 역할이 없습니다. vCenter Server 권한의 일부이기 때문에 역할에 액세스할 수 있습니다.

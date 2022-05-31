@@ -1,0 +1,18 @@
+---
+permalink: deploy/concept-configure-storage-replication-adapter-for-disaster-recovery.html 
+sidebar: sidebar 
+keywords: configuring, storage, replication, adapter, disaster, recovery, 
+summary: '재해 복구를 위해 vCenter Server를 구성하려면 VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스를 구축한 후 SRA(Storage Replication Adapter)를 활성화해야 합니다. 가상 어플라이언스 배포는 기본적으로 VSC를 설치합니다. 가상 어플라이언스를 구축한 후에는 vCenter Server에 대한 SRA를 활성화해야 합니다.' 
+---
+= 재해 복구를 위해 스토리지 복제 어댑터를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+재해 복구를 위해 vCenter Server를 구성하려면 VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스를 구축한 후 SRA(Storage Replication Adapter)를 활성화해야 합니다. 가상 어플라이언스 배포는 기본적으로 VSC를 설치합니다. 가상 어플라이언스를 구축한 후에는 vCenter Server에 대한 SRA를 활성화해야 합니다.
+
+* 관련 정보 *
+
+xref:task-enable-storage-replication-adapter.adoc[스토리지 복제 어댑터를 활성화합니다]

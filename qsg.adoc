@@ -1,0 +1,258 @@
+---
+sidebar: sidebar 
+permalink: qsg.html 
+keywords: qsg, ontap tools for vmware vsphere, quick start guide, installing 
+summary: 구축 요구 사항에 대한 개요와 Virtual Storage Console, VASA Provider 및 VMware vSphere용 스토리지 복제 어댑터를 구축하기 위한 단계별 지침을 제공합니다. 
+---
+= 빠른 시작
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:experimental: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+VMware vSphere용 VSC(Virtual Storage Console)는 VASA Provider 및 SRA(Storage Replication Adapter) 확장과 함께 번들로 제공되는 단일 vCenter Server 플러그인입니다. VSC는 ESXi 호스트 설정을 구성하고 모범 사례를 사용하여 ONTAP 스토리지를 프로비저닝하므로 모든 ONTAP vSphere 환경에 권장됩니다. VASA Provider는 가상 볼륨(VVol) 지원에 필요하며 SRA는 VMware Site Recovery Manager와 함께 작동합니다.
+
+
+
+== 설치 준비 중
+
+플러그인을 가상 어플라이언스로 구축하면 각 제품을 vCenter Server에 별도로 설치 및 등록하는 수고를 줄일 수 있습니다.
+
+
+
+=== 구현할 수 있습니다
+
+VSC, VASA Provider 및 SRA를 위한 가상 어플라이언스는 Windows vCenter Server 또는 VMware vCenter Server Virtual Appliance(vCSA)와 함께 사용할 수 있습니다. 지원되는 ESXi 및 vSphere 시스템에 VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축해야 합니다.
+
+
+
+=== 공간 및 호스트 사이징 요구사항
+
+[cols="2*"]
+|===
+| 시스템 | 최소 요구 사항 
+
+
+ a| 
+공간
+ a| 
+* 씬 프로비저닝된 설치의 경우 2.1GB
+* 씩 프로비저닝 설치의 경우 54.0GB
+
+
+
+
+ a| 
+호스트 사이징
+ a| 
+* 권장 메모리: 12GB
+* 권장 CPU: 2
+
+
+|===
+
+
+=== 라이센스 요구 사항
+
+[cols="2*"]
+|===
+| 라이센스 | 설명 
+
+
+ a| 
+SnapMirror를 참조하십시오
+ a| 
+(선택 사항) SRA에 대한 페일오버 작업을 수행하는 데 필요합니다.
+
+
+
+| 플랙스클론  a| 
+(선택 사항) SRA 및 VASA Provider의 VVol 운영을 위한 테스트 페일오버 작업을 수행하는 데 필요합니다.
+
+|===
+
+
+=== 추가 요구 사항
+
+[cols="2*"]
+|===
+| 추가 요구 사항 | 설명 열 
+
+
+ a| 
+9083
+ a| 
+VASA Provider와 SRA 모두 이 포트를 사용하여 vCenter Server와 통신합니다. 이 포트는 TCP/IP 설정을 얻는 데도 필요합니다.
+
+
+
+ a| 
+443
+ a| 
+자격 증명을 구성한 방법에 따라 VMware vCenter Server와 스토리지 시스템은 이 포트에서 보안 통신을 수신합니다.
+
+
+
+ a| 
+8143
+ a| 
+VSC는 이 포트에서 보안 통신을 수신합니다.
+
+
+
+ a| 
+7
+ a| 
+VSC는 내성을 확인하기 위해 ONTAP에 에코 요청을 전송하며 스토리지 시스템을 추가할 때만 필요하며 나중에 비활성화할 수 있습니다.
+
+|===
+[cols="2*"]
+|===
+| 스토리지, 호스트 및 애플리케이션 | 버전 요구 사항 
+
+
+ a| 
+ONTAP
+ a| 
+ONTAP 9.1, 9.3, 9.5, 9.6, 9.7.
+
+
+
+ a| 
+VMware vSphere, vCenter Server, ESXi 호스트, SRM(Site Recovery Manager), 플러그인 애플리케이션 및 데이터베이스
+ a| 
+상호 운용성 매트릭스 툴을 참조하십시오
+
+* https://imt.netapp.com/matrix/imt.jsp?components=97563;&solution=56&isHWU&src=IMT["상호 운용성 매트릭스 툴: VSC 9.7.1"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=97564;&solution=376&isHWU&src=IMT["상호 운용성 매트릭스 툴: VASA Provider 9.7.1"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=97565;&solution=576&isHWU&src=IMT["상호 운용성 매트릭스 툴: SRA 9.7.1"^]
+
+
+|===
+
+
+=== VSC, VASA 공급자, SRA 요구사항을 위한 가상 어플라이언스
+
+다음 항목이 있어야 합니다.
+
+* vCenter Server 환경을 구성하고 설정합니다.
+* '.ova' 파일을 다운로드했습니다.
+* vCenter Server 인스턴스에 대한 로그인 자격 증명입니다.
+* vSphere Web Client의 모든 브라우저 세션에서 로그아웃하고 닫혔고, VSC, VASA Provider 및 SRA용 가상 어플라이언스를 구축하는 동안 브라우저 캐시 문제를 방지하기 위해 브라우저 캐시를 삭제했습니다.
+* 가상 어플라이언스에서 ICMP 핑에 응답하기 위해 사용할 기본 게이트웨이를 구성했습니다.
+* 가상 어플라이언스에 대한 유효한 DNS 호스트 이름입니다.
+* VVOL 대시보드를 보려면 ONTAP 9.6 이하 버전용 OnCommand API 서비스를 다운로드하고 설치했습니다. ONTAP 9.7을 사용하는 경우 VASA Provider를 통해 OnCommand API 서비스를 등록할 필요가 없습니다.
+
+
+
+
+=== SRA에 대한 선택적 요구 사항
+
+VMware Site Recovery Manager와 함께 사용할 가상 어플라이언스를 구축하는 경우 다음이 필요합니다.
+
+* SRM(Site Recovery Manager) 재해 복구 솔루션을 구성하려는 경우에만 SRA 플러그인의 '.msi' 파일을 다운로드했습니다.
+* SRM 어플라이언스를 사용하는 경우 SRA에 대한 '.tar.gz' 파일을 다운로드했습니다.
+
+
+
+
+== VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축합니다
+
+. 에서 '.ova' 파일을 다운로드합니다 https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support 사이트"^] ONTAP 툴을 구축하는 vSphere 클라이언트 시스템으로
++
+SRA를 배포하는 경우 소스 사이트와 대상 사이트 모두에 '.ova' 파일을 배포해야 합니다.
+
+. vSphere Web Client에 로그인하고 Home [Host & Clusters] 메뉴를 선택합니다.
+. 필요한 데이터 센터를 마우스 오른쪽 단추로 클릭한 다음 * Deploy OVF template * 을 클릭합니다.
+. ".ova" 파일의 URL을 입력하거나 ".ova" 파일이 저장된 폴더를 찾은 후 * 다음 * 을 클릭합니다.
+. 필수 세부 정보를 입력하여 구축을 완료합니다.
++
+작업 * 탭에서 배포 진행 상황을 보고 배포가 완료될 때까지 기다릴 수 있습니다.
+
+. 구축 완료 후 VSC, VASA Provider, SRA 서비스가 실행되고 있는지 확인합니다.
+
+
+
+
+=== SRM에 SRA를 배포합니다
+
+SRA는 Windows SRM 서버 또는 8.2 SRM 어플라이언스에 배포할 수 있습니다.
+
+
+
+==== Windows SRM 서버에 SRA를 설치합니다
+
+. NetApp Support 사이트에서 SRA 플러그인의 '.msi' 설치 프로그램을 다운로드합니다.
+. SRA 플러그인에 대해 다운로드한 '.msi' 설치 프로그램을 두 번 클릭하고 화면의 지침을 따릅니다.
+. 배포된 가상 어플라이언스의 IP 주소와 암호를 입력하여 SRM 서버에 SRA 플러그인 설치를 완료합니다.
+
+
+
+
+==== SRM 어플라이언스에서 SRA를 업로드 및 구성합니다
+
+. 에서 '.tar.gz' 파일을 다운로드합니다 https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support 사이트"^].
+. SRM 어플라이언스 화면에서 메뉴: 스토리지 복제 어댑터 [새 어댑터] 를 클릭합니다.
+. SRM에 .tar.gz 파일을 업로드합니다.
+. 어댑터를 다시 검색하여 SRM 스토리지 복제 어댑터 페이지에서 세부 정보가 업데이트되었는지 확인합니다.
+. putty를 사용하여 SRM 어플라이언스에 관리자 계정을 사용하여 로그인합니다.
+. 루트 사용자로 전환합니다: 'u root'
+. 로그 위치에 명령을 입력하여 SRA Docker에서 사용하는 Docker ID를 docker ps -l로 가져옵니다
+. 컨테이너 ID: docker exec -it -u SRM <컨테이너 ID>sh'에 로그인합니다
+. ONTAP 도구로 SRM 구성 IP 주소 및 암호: " perl command.pl -i <va-ip>administrator <va-password>" 저장 자격 증명이 저장되었음을 확인하는 성공 메시지가 표시됩니다.
+
+
+
+
+==== SRA 자격 증명을 업데이트합니다
+
+. 다음을 사용하여 /SRM/SRA/conf 디렉토리의 내용을 삭제합니다.
++
+.. 'cd/srm/srs/conf'
+.. rm-rf *
+
+
+. perl 명령을 실행하여 새 자격 증명으로 SRA를 구성합니다.
++
+.. "CD/SRM/SRA/"
+.. "perl command.pl -i <va-ip>administrator <va-password>"
+
+
+
+
+
+
+==== VASA Provider 및 SRA를 활성화합니다
+
+. 구축 중에 지정한 IP 주소를 사용하여 vSphere 웹 클라이언트에 로그인합니다.
+. 가상 스토리지 콘솔 * 아이콘을 클릭하고 배포 중에 지정된 사용자 이름과 암호를 입력한 다음 * 로그인 * 을 클릭합니다.
+. OTV의 왼쪽 창에서 설정 [관리 설정 > 기능 관리]를 선택하고 필요한 기능을 활성화합니다.
++
+
+NOTE: VASA Provider는 기본적으로 설정되어 있습니다. VVOL 데이터 저장소의 복제 기능을 사용하려면 * VVol 복제 활성화 * 전환 버튼을 사용합니다.
+
+. VSC, VASA Provider, SRA용 가상 어플라이언스의 IP 주소와 관리자 암호를 입력한 다음 * Apply * 를 클릭합니다.
++
+추가 구성, 스토리지 시스템 추가 및 vSphere 객체에 대한 역할 기반 액세스 제어 설정에 대한 자세한 내용은 Virtual Storage Console, VASA Provider 및 Storage Replication Adapter for VMware vSphere Deployment and Setup Guide를 참조하십시오.
+
+
+
+
+
+== 추가 정보를 찾을 수 있는 위치
+
+* https://www.netapp.com/support-and-training/documentation/ontap-tools-for-vmware-vsphere-documentation/?&access=a["Virtual Storage Console, VASA Provider 및 Storage Replication Adapter for VMware vSphere Resources 페이지 를 참조하십시오"^]
+* https://docs.netapp.com/vapp-97/index.jsp["Virtual Storage Console, VASA Provider 및 Storage Replication Adapter for VMware vSphere 설명서 를 참조하십시오"^]
+* https://docs.vmware.com/en/Site-Recovery-Manager/8.2/com.vmware.srm.install_config.doc/GUID-B3A49FFF-E3B9-45E3-AD35-093D896596A0.html["VMware 사이트 복구 관리자 8.2"^]
+* https://docs.netapp.com/us-en/ontap/["ONTAP 9 설명서"^]
+

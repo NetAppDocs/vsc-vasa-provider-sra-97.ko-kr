@@ -1,0 +1,54 @@
+---
+permalink: deploy/reference-set-ipv4-or-ipv6.html 
+sidebar: sidebar 
+keywords: setting, ipv4, ipv6, 
+summary: VSC에 추가된 모든 스토리지 시스템에서 IPv4 또는 IPv6를 지원하도록 설정할 수 있는 새로운 옵션이 기본 설정 파일 kaminoprefs.xml 에 추가되었습니다. 
+---
+= IPv4 또는 IPv6를 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC에 추가된 모든 스토리지 시스템에서 IPv4 또는 IPv6를 지원하도록 설정할 수 있는 기본 설정 파일 ' kaminoprefs.xml'에 새로운 옵션이 추가되었습니다.
+
+* default.override.option.provision.mount.datastore.address.family` 매개 변수가 데이터 저장소 프로비저닝을 위해 선호되는 데이터 LIF 프로토콜을 설정하기 위해 "kaminoprefs.xml" 기본 설정 파일에 추가되었습니다.
++
+이 기본 설정은 VSC에 추가된 모든 스토리지 시스템에 적용됩니다.
+
+* 새 옵션의 값은 IPv4 IPv6 없음.
+* 기본적으로 이 값은 "없음"으로 설정됩니다.
+
+
+[cols="1a,1a"]
+|===
+| 값 | 설명 
+
+
+ a| 
+없음
+ a| 
+* 프로비저닝은 스토리지 추가에 사용되는 클러스터 또는 관리 LIF의 유형과 동일한 IPv6 또는 IPv4 주소 유형의 데이터 LIF를 사용하여 수행됩니다.
+* 동일한 IPv6 또는 IPv4 주소 유형의 데이터 LIF가 에 없으면 다른 유형의 데이터 LIF를 통해 프로비저닝이 수행됩니다(가능한 경우).
+
+
+
+
+ a| 
+IPv4
+ a| 
+* 프로비저닝은 선택된 IPv4 데이터 LIF를 사용하여 이루어집니다.
+* 에 IPv4 데이터 LIF가 없으면 에서 사용할 수 있는 경우 IPv6 데이터 LIF를 통해 프로비저닝이 수행됩니다.
+
+
+
+
+ a| 
+IPv6
+ a| 
+* 프로비저닝은 선택된 IPv6 데이터 LIF를 사용하여 이루어집니다.
+* 에 IPv6 데이터 LIF가 없으면 에서 사용할 수 있는 경우 IPv4 데이터 LIF를 통해 프로비저닝이 수행됩니다.
+
+
+|===

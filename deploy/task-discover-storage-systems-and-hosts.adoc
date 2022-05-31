@@ -1,0 +1,42 @@
+---
+permalink: deploy/task-discover-storage-systems-and-hosts.html 
+sidebar: sidebar 
+keywords: discovering, storage, systems, hosts, 
+summary: 'vSphere Client에서 VSC(VSC)를 처음 실행하면 ESXi 호스트, 해당 LUN 및 NFS 엑스포트, 해당 LUN 및 내보내기를 소유하는 NetApp 스토리지 시스템이 발견됩니다.' 
+---
+= 스토리지 시스템 및 호스트를 검색합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vSphere Client에서 VSC(VSC)를 처음 실행하면 ESXi 호스트, 해당 LUN 및 NFS 엑스포트, 해당 LUN 및 내보내기를 소유하는 NetApp 스토리지 시스템이 발견됩니다.
+
+.시작하기 전에
+* 모든 ESXi 호스트의 전원을 켜고 연결해야 합니다.
+* 검색할 모든 가 실행 중이어야 하며, 각 클러스터 노드에 사용 중인 스토리지 프로토콜(NFS, iSCSI 또는 FC)에 대해 구성된 데이터 LIF가 하나 이상 있어야 합니다.
+
+
+언제든지 새 스토리지 시스템을 발견하거나 기존 스토리지 시스템에 대한 정보를 업데이트하여 최신 용량 및 구성 정보를 얻을 수 있습니다. VSC에서 스토리지 시스템에 로그인하는 데 사용하는 자격 증명을 수정할 수도 있습니다.
+
+스토리지 시스템을 검색하는 동안 VSC는 vCenter Server 인스턴스에서 관리되는 ESXi 호스트에서 정보를 수집합니다.
+
+.단계
+. vSphere Client * Home * 페이지에서 * Hosts and Clusters * 를 선택합니다.
+. 필요한 데이터 센터를 마우스 오른쪽 버튼으로 클릭하고 NetApp VSC [호스트 및 스토리지 데이터 업데이트] 메뉴를 선택합니다.
++
+VSC에서 이 작업에 시간이 오래 걸릴 수 있음을 알려 주는 Confirm(확인) 대화 상자를 표시합니다.
+
+. 확인 * 을 클릭합니다.
+. ""인증 실패"" 상태인 검색된 스토리지 컨트롤러를 선택하고 menu:actions [Modify] 를 클릭합니다.
+. 스토리지 시스템 수정 * 대화 상자에 필요한 정보를 입력합니다.
+. "인증 실패" 상태의 모든 스토리지 컨트롤러에 대해 4단계와 5단계를 반복합니다.
+
+
+검색 프로세스가 완료되면 다음을 수행합니다.
+
+* VSC를 사용하여 * 어댑터 설정 * 열, * MPIO 설정 * 열 또는 * NFS 설정 * 열에 경고 아이콘을 표시하는 호스트의 ESXi 호스트 설정을 구성합니다.
+* 스토리지 시스템 자격 증명을 제공합니다.
+

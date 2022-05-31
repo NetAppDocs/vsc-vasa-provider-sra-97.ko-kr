@@ -1,0 +1,42 @@
+---
+permalink: manage/reference-thick-provision-fails-for-vvol-datastores-on-ontap-9-4.html 
+sidebar: sidebar 
+keywords: thick, provisioning, of, VVols, fails, for, ONTAP, 9.4, storage, systems, 
+summary: 'VVOL 데이터 저장소에 ONTAP 9.4 스토리지 시스템에서 씩 프로비저닝된 FlexVol 볼륨이 포함되어 있지 않으면 VVOL(가상 볼륨)의 일반 프로비저닝이 실패합니다.' 
+---
+= ONTAP 9.4 스토리지 시스템에서 VVOL의 일반 프로비저닝이 실패합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VVOL 데이터 저장소에 ONTAP 9.4 스토리지 시스템에서 씩 프로비저닝된 FlexVol 볼륨이 포함되어 있지 않으면 VVOL(가상 볼륨)의 일반 프로비저닝이 실패합니다.
+
+
+
+== 문제
+
+VVOL을 프로비저닝하는 동안 다음과 같은 오류 메시지가 나타날 수 있습니다.
+
+[listing]
+----
+com.netapp.vasa.vvol.exceptions.OutOfResourceException: Unable to find a location
+for a vvol of size 4,096 in storage container vvol_nfs_new - Checked 1 places.
+Specific reasons were vvol_nfs_new | Final Score: 0 | 100 -> 0 : FlexVol of
+vvol_nfs_new does not support required storage profile, details [FlexVolume with
+name vvol_nfs_new is not thick provisioned]
+----
+
+
+== 원인
+
+이 오류는 VVOL에 씩 프로비저닝된 FlexVol 볼륨이 없는 경우에 발생합니다.
+
+
+
+== 해결 방법
+
+. VVOL에 대해 씩 프로비저닝을 활성화한 상태에서 스토리지 기능이 있는 새 FlexVol 볼륨을 추가합니다.
+. FlexVol 볼륨을 사용하여 새 가상 머신을 생성합니다.
+

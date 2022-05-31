@@ -1,0 +1,41 @@
+---
+permalink: deploy/concept-supported-storage-system-and-applications.html 
+sidebar: sidebar 
+keywords: supported, storage, system, licensing, applications, virtual, appliance, vsc, vasa, provider, sra, 
+summary: 'VSC(가상 스토리지 콘솔), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구축하기 전에 기본 스토리지 시스템 요구사항, 애플리케이션 요구사항, 라이센스 요구사항을 알아야 합니다.' 
+---
+= VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 스토리지 시스템, 라이센스 및 애플리케이션을 지원합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(가상 스토리지 콘솔), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구축하기 전에 기본 스토리지 시스템 요구사항, 애플리케이션 요구사항, 라이센스 요구사항을 알아야 합니다.
+
+(IMT)에는 지원되는 버전의 ONTAP, vCenter Server, ESXi 호스트, 플러그인 애플리케이션 및 SRM(사이트 복구 관리자)에 대한 최신 정보가 포함되어 있습니다.
+
+* https://imt.netapp.com/matrix/imt.jsp?components=97563;&solution=56&isHWU&src=IMT["상호 운용성 매트릭스 툴: VSC 9.7.1"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=97564;&solution=376&isHWU&src=IMT["상호 운용성 매트릭스 툴: VASA Provider 9.7.1"^]
+* https://imt.netapp.com/matrix/imt.jsp?components=97565;&solution=576&isHWU&src=IMT["상호 운용성 매트릭스 툴: SRA 9.7.1"^]
+
+
+VVol(VMware Virtual Volumes) 데이터 저장소에 대한 가상 머신 스냅샷 작업 및 클론 작업을 수행하려면 FlexClone 라이센스를 활성화해야 합니다.
+
+SRA(Storage Replication Adapter)에는 다음 라이센스가 필요합니다.
+
+* SnapMirror 라이센스
++
+SRA에 대한 페일오버 작업을 수행하려면 SnapMirror 라이센스를 활성화해야 합니다.
+
+* FlexClone 라이센스
++
+SRA에 대한 테스트 페일오버 작업을 수행하려면 FlexClone 라이센스를 활성화해야 합니다.
+
+
+
+데이터 저장소에 대한 IOPS를 보려면 스토리지 입출력 제어를 설정하거나 스토리지 입출력 제어 구성에서 스토리지 입출력 통계 수집 해제 확인란을 선택 취소해야 합니다. VMware의 Enterprise Plus 라이센스가 있는 경우에만 스토리지 I/O 제어를 활성화할 수 있습니다.
+
+* https://kb.vmware.com/s/article/1022091["VMware KB 문서 1022091: 스토리지 I/O 제어 문제 해결"^]
+* https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-37CC0E44-7BC7-479C-81DC-FFFC21C1C4E3.html["VMware vSphere 설명서: 스토리지 입출력 제어 요구 사항"^]
+

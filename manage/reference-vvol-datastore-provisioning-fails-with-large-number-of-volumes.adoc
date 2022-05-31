@@ -1,0 +1,29 @@
+---
+permalink: manage/reference-vvol-datastore-provision-fails-with-large-number-of-volumes.html 
+sidebar: sidebar 
+keywords: VVol, datastore, provisioning, fails, with, large, number, of, volumes, 
+summary: 많은 수의 볼륨에서 VVOL 데이터 저장소 프로비저닝이 실패합니다 
+---
+= 많은 수의 볼륨에서 VVOL 데이터 저장소 프로비저닝이 실패합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 문제
+
+VVOL 데이터 저장소를 6개 이상의 볼륨으로 프로비저닝하려고 하면 VVOL 데이터 저장소를 프로비저닝하지 못합니다.
+
+
+
+== 원인
+
+VSC 및 VASA 공급자 간의 소켓 시간 초과로 인해 VVOL 데이터 저장소 프로비저닝이 실패합니다.
+
+
+
+== 수정 조치
+
+6개 미만의 볼륨으로 VVol 데이터 저장소를 생성하거나 * Expand VVol Datastore * 옵션을 사용하여 용량 할당 후 VVol 데이터 저장소 크기를 늘려야 합니다.

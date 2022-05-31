@@ -1,0 +1,29 @@
+---
+permalink: deploy/task-configure-sra-on-srm-appliance.html 
+sidebar: sidebar 
+keywords: configuring, sra, srm, appliance, 
+summary: 'SRM 어플라이언스를 배포한 후에는 SRM 어플라이언스에 SRA를 구성해야 합니다. SRA를 성공적으로 구성하면 SRM 어플라이언스가 재해 복구 관리를 위해 SRA와 통신할 수 있습니다. SRM 어플라이언스와 SRA 간의 통신을 활성화하려면 VSC, VASA Provider 및 SRA 자격 증명(IP 주소 및 관리자 암호)을 SRM 어플라이언스에 저장해야 합니다.' 
+---
+= SRM 어플라이언스에서 SRA를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SRM 어플라이언스를 배포한 후에는 SRM 어플라이언스에 SRA를 구성해야 합니다. SRA를 성공적으로 구성하면 SRM 어플라이언스가 재해 복구 관리를 위해 SRA와 통신할 수 있습니다. SRM 어플라이언스와 SRA 간의 통신을 활성화하려면 VSC, VASA Provider 및 SRA 자격 증명(IP 주소 및 관리자 암호)을 SRM 어플라이언스에 저장해야 합니다.
+
+tar.gz 파일을 SRM 어플라이언스에 업로드해야 합니다.
+
+SRM 어플라이언스에 SRA를 구성하면 SRA 자격 증명이 SRM 어플라이언스에 저장됩니다.
+
+.단계
+. putty를 사용하여 SRM 어플라이언스에 관리자 계정을 사용하여 로그인합니다.
+. 'u root' 명령을 사용하여 root 사용자로 전환합니다
+. 로그 위치에 명령을 입력하여 SRA docker PS-l에서 사용하는 docker ID를 가져옵니다
+. 컨테이너 ID에 로그인하려면 docker exec -it -u SRM <컨테이너 ID>sh' 명령을 입력합니다
+. "perl command.pl -i <va-ip> administrator <va-password>" 명령을 사용하여 VSC, VASA Provider 및 SRA IP 주소와 암호를 위한 가상 어플라이언스로 SRM을 구성합니다
++
+스토리지 자격 증명이 저장되었음을 확인하는 성공 메시지가 표시됩니다. SRA는 제공된 IP 주소, 포트 및 자격 증명을 사용하여 SRA 서버와 통신할 수 있습니다.
+
+

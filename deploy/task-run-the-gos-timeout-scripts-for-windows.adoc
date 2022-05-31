@@ -1,0 +1,30 @@
+---
+permalink: deploy/task-run-the-gos-timeout-scripts-for-windows.html 
+sidebar: sidebar 
+keywords: setting, timeout, values, windows, guest, operating, systems, 
+summary: '게스트 운영 체제(OS) 시간 초과 스크립트는 Windows 게스트 운영 체제에 대한 SCSI 입출력 시간 초과 설정을 설정합니다. 60초 제한 시간 또는 190초 제한 시간을 지정할 수 있습니다. 설정을 적용하려면 Windows 게스트 OS를 재부팅해야 합니다.' 
+---
+= Windows 게스트 운영 체제에 대한 시간 초과 값을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+게스트 운영 체제(OS) 시간 초과 스크립트는 Windows 게스트 운영 체제에 대한 SCSI 입출력 시간 초과 설정을 설정합니다. 60초 제한 시간 또는 190초 제한 시간을 지정할 수 있습니다. 설정을 적용하려면 Windows 게스트 OS를 재부팅해야 합니다.
+
+Windows 스크립트를 포함하는 ISO 이미지를 마운트해야 합니다.
+
+.단계
+. Windows 가상 머신의 콘솔에 액세스하고 관리자 권한이 있는 계정으로 로그인합니다.
+. 스크립트가 자동으로 시작되지 않으면 CD 드라이브를 연 다음 "windows_gos_timeout.reg" 스크립트를 실행합니다.
++
+레지스트리 편집기 대화 상자가 표시됩니다.
+
+. 계속하려면 * 예 * 를 클릭하십시오.
++
+"D:\WINDOWS_Gos_TIMEOUT.reg에 포함된 키와 값이 레지스트리에 추가되었습니다."라는 메시지가 표시됩니다
+
+. Windows 게스트 OS를 재부팅합니다.
+. ISO 이미지를 마운트 해제합니다.
+

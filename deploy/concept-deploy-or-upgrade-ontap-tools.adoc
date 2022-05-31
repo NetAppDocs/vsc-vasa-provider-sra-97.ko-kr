@@ -1,0 +1,18 @@
+---
+permalink: deploy/concept-deploy-or-upgrade-ontap-tools.html 
+sidebar: sidebar 
+keywords: deploying, virtual, appliance, deploying, upgrading, vsc, vasa, provider, sra, 
+summary: VMware vSphere 환경에서 VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하여 배포한 다음 VSC, VASA Provider, SRAVSC, VASA Provider, SRA를 사용하여 수행할 작업을 기준으로 필요한 애플리케이션을 구성해야 합니다. 
+---
+= VSC, VASA Provider, SRA를 구축 또는 업그레이드합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere 환경에서 VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하여 배포한 다음 VSC, VASA Provider, SRAVSC, VASA Provider, SRA를 사용하여 수행할 작업을 기준으로 필요한 애플리케이션을 구성해야 합니다.
+
+* 관련 정보 *
+
+xref:task-enable-vasa-provider-for-configuring-virtual-datastores.adoc[가상 데이터 저장소를 구성하기 위해 VASA Provider를 설정합니다]

@@ -1,0 +1,25 @@
+---
+permalink: deploy/reference-vsc-and-vasa-provider-services-restart-in-scaled-environments.html 
+sidebar: sidebar 
+keywords: vsc, and vasa, provider, services, restart, highly, scaled, environments, 
+summary: 확장성이 뛰어난 환경에서 VSC 및 VASA Provider 서비스가 다시 시작됩니다 
+---
+= 확장성이 뛰어난 환경에서 VSC 및 VASA Provider 서비스가 다시 시작됩니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 문제
+
+VSC, VASA Provider, SRA를 위한 가상 어플라이언스는 확장성이 높은 환경에서 최적의 성능을 발휘하지 못할 수 있으며, VSC 및 VASA Provider 서비스를 자주 다시 시작하는 등의 문제가 있을 수 있습니다.
+
+
+
+== 수정 조치
+
+VSC, VASA Provider 및 SRA에 대한 가상 어플라이언스의 RAM 및 힙 메모리 요구 사항을 수정합니다.
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/tune_memory_settings_of_VM_VSC%2C_VASA_Provider%2C_and_SRA_for_scale_and_performance[]

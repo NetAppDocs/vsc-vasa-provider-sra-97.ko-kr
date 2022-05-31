@@ -1,0 +1,47 @@
+---
+permalink: manage/reference-error-deleting-a-datastore-after-network-settings-are-changed.html 
+sidebar: sidebar 
+keywords: delete, datastore,troubleshooting errors 
+summary: 네트워크 설정을 변경한 후 데이터 저장소를 삭제하는 동안 오류가 발생했습니다 
+---
+= 네트워크 설정을 변경한 후 데이터 저장소를 삭제하는 동안 오류가 발생했습니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 문제
+
+VSC, VASA Provider, SRA용 가상 어플라이언스의 IP 주소를 변경하면 VSC 인터페이스를 사용하여 특정 작업을 수행하는 동안 오류가 표시됩니다. 예를 들어, 데이터 저장소를 삭제하거나 ESXi 호스트에서 VASA Provider 서버를 액세스하려고 할 수 있습니다.
+
+
+
+== 원인
+
+vCenter Server는 업데이트된 IP 주소를 사용하지 않으며 VASA Provider를 호출하기 위해 이전 IP 주소를 계속 사용합니다.
+
+
+
+== 수정 조치
+
+VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 IP 주소가 변경되면 다음 작업을 수행해야 합니다.
+
+. vCenter Server에서 VSC 등록을 취소합니다.
+. https://<vcenter_ip>/mob` 액세스합니다.
+. 메뉴 클릭: Content [Extension Manager > Unregister Extension > Unregister All com.netapp.extensions].
+. putty를 사용하여 vCenter Server에 루트로 로그인합니다.
+. 'cd /etc/vmware/vsphere-client/vc-packages/vsphere-client-environment'를 사용하여 vSphere-client-environment 디렉토리로 변경합니다.
+. "vSphere-client stop"을 사용하여 vSphere Client:서비스를 중지합니다.
+. UI 확장자 rm-rf com.netapp*` 가 포함된 디렉토리를 삭제한다
+. vSphere-client start를 사용하여 vSphere Client:서비스를 시작합니다.
++
+이 작업은 vSphere Client를 다시 시작하고 올바르게 초기화하는 데 몇 분 정도 걸릴 수 있습니다.
+
+. '/etc/vmware/vsphere-ui/vc-packages/vsphere-client-en레니티/'를 사용하여 vSphere-UI 세레니티 디렉토리로 변경합니다.
+. vSphere-UI stop을 사용하여 vSphere UI: 서비스를 중지합니다.
+. UI 확장자 rm-rf com.netapp*` 가 포함된 디렉토리를 삭제한다
+. 'service-control--start vSphere-UI'를 사용하여 vSphere UI를 시작합니다.
+

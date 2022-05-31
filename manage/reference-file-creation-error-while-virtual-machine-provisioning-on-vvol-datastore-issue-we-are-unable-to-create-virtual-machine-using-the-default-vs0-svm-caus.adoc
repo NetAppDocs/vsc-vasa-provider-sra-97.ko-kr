@@ -1,0 +1,37 @@
+---
+permalink: manage/reference-file-creation-error-while-virtual-machine-provisioning-on-vvol-datastore-issue-we-are-unable-to-create-virtual-machine-using-the-default-vs0-svm-caus.html 
+sidebar: sidebar 
+keywords: error, provisioning, virtual, machine, troubleshooting, error, 
+summary: VVOL 데이터 저장소에서 가상 머신을 프로비저닝하는 동안 파일 생성 오류가 발생했습니다 
+---
+= VVOL 데이터 저장소에서 가상 머신을 프로비저닝하는 동안 파일 생성 오류가 발생했습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 문제
+
+IPv6 및 IPv4 데이터 LIFS가 모두 구성된 기본 SVM(Storage Virtual Machine) 또는 혼합 SVM(Storage Virtual Machine)을 사용하여 가상 머신을 생성할 수 없습니다.
+
+
+
+== 원인
+
+이 문제는 기본 vs0에 IPv6 및 IPv4 데이터 LIF가 둘 다 있으며 순수 IPv4 데이터 저장소가 아니기 때문에 발생합니다.
+
+
+
+== 수정 조치
+
+다음 단계를 사용하여 vs0을 사용하여 가상 시스템을 프로비저닝할 수 있습니다.
+
+. System Manager 애플리케이션을 사용하여 모든 IPv6 LIF를 해제합니다.
+. 클러스터를 다시 검색합니다.
+. 프로비저닝이 실패한 VVOL 데이터 저장소에서 가상 머신을 프로비저닝합니다.
++
+가상 시스템이 성공적으로 프로비저닝되었습니다.
+
+

@@ -1,0 +1,29 @@
+---
+permalink: manage/reference-datastore-inaccessible-when-volume-status-is-changed-to-offline.html 
+sidebar: sidebar 
+keywords: datastore, inaccessible, when, volume, status, is, changed, to, offline, 
+summary: 볼륨 상태가 오프라인으로 변경되면 데이터 저장소에 액세스할 수 없습니다 
+---
+= 볼륨 상태가 오프라인으로 변경되면 데이터 저장소에 액세스할 수 없습니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 문제
+
+데이터 저장소의 볼륨이 오프라인 상태가 되면 데이터 저장소를 액세스할 수 없습니다. 볼륨을 온라인으로 전환하는 경우에도 VSC에서 데이터 저장소를 검색하지 못합니다. vSphere Client에서 데이터 저장소를 마우스 오른쪽 버튼으로 클릭하면 VSC 작업을 사용할 수 없습니다.
+
+
+
+== 원인
+
+클러스터에서 볼륨이 오프라인 상태가 되면 먼저 볼륨이 마운트 해제된 다음 오프라인 또는 제한된 상태로 됩니다. 볼륨이 오프라인 상태가 되고 데이터 저장소에 액세스할 수 없게 되면 접합 경로가 제거됩니다. 볼륨이 온라인으로 설정되는 경우 기본적으로 접합 경로는 사용할 수 없으며 에 마운트되지 않습니다. 이것은 ONTAP 동작입니다.
+
+
+
+== 수정 조치
+
+볼륨을 온라인으로 전환한 다음 이전과 동일한 접합 경로로 볼륨을 수동으로 마운트해야 합니다. 스토리지 검색을 실행하여 데이터 저장소가 검색되고 데이터 저장소에 대한 작업을 사용할 수 있는지 확인할 수 있습니다.

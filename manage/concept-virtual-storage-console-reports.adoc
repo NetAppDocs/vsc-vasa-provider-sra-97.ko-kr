@@ -1,0 +1,14 @@
+---
+permalink: manage/concept-virtual-storage-console-reports.html 
+sidebar: sidebar 
+keywords: understanding, virtual, storage, console, reports, 
+summary: 'VSC(Virtual Storage Console) 보고서 메뉴를 사용하면 특정 vCenter Server에서 선택한 VSC 인스턴스에서 관리하는 모든 데이터 저장소에 대한 사전 정의된 보고서를 볼 수 있습니다. 보고서 정렬 및 내보내기 등의 작업을 수행할 수 있습니다.' 
+---
+= Virtual Storage Console 보고서 이해
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(Virtual Storage Console) * Reports * 메뉴를 사용하여 특정 vCenter Server에서 선택한 VSC 인스턴스에서 관리하는 모든 데이터 저장소에 대한 사전 정의된 보고서를 볼 수 있습니다. 보고서 정렬 및 내보내기 등의 작업을 수행할 수 있습니다.

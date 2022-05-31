@@ -1,0 +1,30 @@
+---
+permalink: manage/concept-configure-replication-for-vvols-datastore.html 
+sidebar: sidebar 
+keywords: configuring, replication, for, vvols, datastore, 
+summary: 'VSC, VASA Provider, SRA용 가상 어플라이언스를 사용하여 VVOL 데이터 저장소의 복제를 구성할 수 있습니다. VVOL 복제의 주요 목적은 VMware SRM(Site Recovery Manager)을 사용하여 재해 복구 중에 중요한 가상 시스템을 보호하는 것입니다.' 
+---
+= VVOL 데이터 저장소에 대한 복제를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC, VASA Provider, SRA용 가상 어플라이언스를 사용하여 VVOL 데이터 저장소의 복제를 구성할 수 있습니다. VVOL 복제의 주요 목적은 VMware SRM(Site Recovery Manager)을 사용하여 재해 복구 중에 중요한 가상 시스템을 보호하는 것입니다.
+
+하지만 VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 대한 VVol 복제를 구성하려면 VASA Provider 기능 및 VVol 복제를 활성화해야 합니다. VASA Provider는 VSC, VASA Provider, SRA를 위한 가상 어플라이언스에서 기본적으로 활성화됩니다. 스토리지 기반 복제는 FlexVol 레벨에서 수행됩니다. 각 VVOL 데이터 저장소는 하나 이상의 FlexVol 볼륨으로 구성된 스토리지 컨테이너에 매핑됩니다. FlexVol 볼륨은 ONTAP의 SnapMirror로 사전 구성해야 합니다.
+
+[NOTE]
+====
+보호 및 보호되지 않는 가상 머신을 단일 VVol 데이터 저장소에 함께 구성해서는 안 됩니다. 페일오버 후 재보호 작업을 수행하면 보호되지 않은 가상 머신이 삭제됩니다. 복제를 사용할 때 VVOL 데이터 저장소의 모든 가상 머신을 보호해야 합니다.
+
+====
+VVOL 데이터 저장소에서 각 FlexVol 볼륨에 대한 워크플로우를 생성하는 동안 복제 그룹이 생성됩니다. VVol 복제를 사용하려면 복제 상태 및 일정과 저장소 기능 프로필을 포함하는 VM 저장소 정책을 만들어야 합니다. 복제 그룹에는 대상 사이트에 대한 재해 복구의 일부로 복제되는 가상 시스템이 포함됩니다. SRM 콘솔을 사용하여 보호 그룹 및 복구 계획으로 복제 그룹을 DR 워크플로우에 구성할 수 있습니다.
+
+[NOTE]
+====
+VVOL 데이터 저장소에 대한 재해 복구를 사용하는 경우 VASA Provider 기능이 VVOL 복제를 지원하도록 향상되어 SRA(Storage Replication Adapter)를 별도로 구성할 필요가 없습니다.
+
+====
+image::../media/vvols-replication.png[VVOL 복제]

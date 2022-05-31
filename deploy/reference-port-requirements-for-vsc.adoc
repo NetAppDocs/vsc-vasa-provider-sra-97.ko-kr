@@ -1,0 +1,60 @@
+---
+permalink: deploy/reference-port-requirements-for-vsc.html 
+sidebar: sidebar 
+keywords: port, requirements, vsc 
+summary: '기본적으로(VSC)에서는 지정된 포트를 사용하여 스토리지 시스템과 VMware vCenter Server를 포함한 구성 요소 간 통신을 지원합니다. 방화벽이 활성화되어 있는 경우, 방화벽을 예외 허용으로 설정해야 합니다.' 
+---
+= VSC용 포트 요구사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+기본적으로(VSC)에서는 지정된 포트를 사용하여 스토리지 시스템과 VMware vCenter Server를 포함한 구성 요소 간 통신을 지원합니다. 방화벽이 활성화되어 있는 경우, 방화벽을 예외 허용으로 설정해야 합니다.
+
+Windows 이외의 방화벽의 경우 VSC에서 사용하는 특정 포트에 대한 액세스를 수동으로 부여해야 합니다. 이러한 포트에 대한 액세스 권한을 부여하지 않으면 다음과 같은 오류 메시지가 표시됩니다.
+
+_ 서버와 통신할 수 없습니다 _
+
+VSC는 다음과 같은 기본 양방향 TCP 포트를 사용합니다.
+
+[cols="1a,1a"]
+|===
+| 기본 포트 번호입니다 | 설명 
+
+
+ a| 
+9083
+ a| 
+VASA Provider와 SRA(Storage Replication Adapter)가 모두 활성화되면 이 포트를 사용하여 vCenter Server와 통신합니다. 이 포트는 TCP/IP 설정을 얻는 데도 필요합니다.
+
+
+
+ a| 
+443
+ a| 
+자격 증명을 구성한 방법에 따라 VMware vCenter Server와 스토리지 시스템은 이 포트에서 보안 통신을 수신합니다.
+
+
+
+ a| 
+8143
+ a| 
+VSC는 이 포트에서 보안 통신을 수신합니다.
+
+
+
+ a| 
+7
+ a| 
+VSC는 내성을 확인하기 위해 ONTAP에 에코 요청을 전송하며 스토리지 시스템을 추가할 때만 필요하며 나중에 비활성화할 수 있습니다.
+
+|===
+[NOTE]
+====
+VSC, VASA Provider 및 SRA용 가상 어플라이언스를 구축하기 전에 ICMP(Internet Control Message Protocol)를 활성화해야 합니다.
+
+ICMP가 비활성화되어 있으면 VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 초기 구성에 실패하고 VSC 및 VASA Provider 서비스는 구축 후 시작될 수 없습니다. 구축 후에는 VSC 및 VASA Provider 서비스를 수동으로 설정해야 합니다.
+
+====

@@ -1,0 +1,18 @@
+---
+permalink: deploy/concept-vcenter-server-role-based-access-control-features-in-vsc-for-vmware-vsphere.html 
+sidebar: sidebar 
+keywords: vcenter, server, role-based, access, control, features, vsc, vmware, vsphere, 
+summary: 'vCenter Server는 vSphere 객체에 대한 액세스를 제어할 수 있도록 역할 기반 액세스 제어(RBAC)를 제공합니다. VMware vSphere용 가상 스토리지 콘솔에서 vCenter Server RBAC는 ONTAP RBAC와 함께 사용하여 특정 사용자가 특정 스토리지 시스템의 개체에 대해 수행할 수 있는 VSC 작업을 결정합니다.' 
+---
+= VMware vSphere용 VSC의 vCenter Server 역할 기반 액세스 제어 기능
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vCenter Server는 vSphere 객체에 대한 액세스를 제어할 수 있도록 역할 기반 액세스 제어(RBAC)를 제공합니다. VMware vSphere용 가상 스토리지 콘솔에서 vCenter Server RBAC는 ONTAP RBAC와 함께 사용하여 특정 사용자가 특정 스토리지 시스템의 개체에 대해 수행할 수 있는 VSC 작업을 결정합니다.
+
+작업을 성공적으로 완료하려면 적절한 vCenter Server RBAC 권한이 있어야 합니다. 작업 중에 VSC는 사용자의 ONTAP 권한을 확인하기 전에 사용자의 vCenter Server 권한을 확인합니다.
+
+루트 객체(루트 폴더라고도 함)에 vCenter Server 권한을 설정할 수 있습니다. 그런 다음 이러한 권한이 필요하지 않은 자식 엔터티를 제한하여 보안을 강화할 수 있습니다.

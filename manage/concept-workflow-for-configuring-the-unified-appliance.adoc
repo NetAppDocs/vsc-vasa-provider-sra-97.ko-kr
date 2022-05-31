@@ -1,0 +1,16 @@
+---
+permalink: manage/concept-workflow-for-configuring-the-unified-appliance.html 
+sidebar: sidebar 
+keywords: workflow, for, configuring, the, virtual, appliance, for, vsc, vasa, provider, and, sra, 
+summary: VSC, VASA Provider, SRA를 위한 가상 머신을 구성하려면 스토리지 시스템을 구성하고, 스토리지 기능 프로필을 생성하고, 데이터 저장소를 프로비저닝하며, 재해 복구를 위해 SRA를 선택적으로 구성해야 합니다. 
+---
+= VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구성 워크플로우
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC, VASA Provider, SRA를 위한 가상 머신을 구성하려면 스토리지 시스템을 구성하고, 스토리지 기능 프로필을 생성하고, 데이터 저장소를 프로비저닝하며, 재해 복구를 위해 SRA를 선택적으로 구성해야 합니다.
+
+image::../media/use-case-vsc-users.gif[사용 사례 VSC 사용자]

@@ -1,0 +1,75 @@
+---
+permalink: manage/task-configure-array-manager.html 
+sidebar: sidebar 
+keywords: configuring, sra, using, array, manager, 
+summary: 'SRM(Site Recovery Manager)의 Array Manager 마법사를 사용하여 SRA(Storage Replication Adapter)를 구성하여 SRM과 SVM(Storage Virtual Machine) 간의 상호 작용을 활성화할 수 있습니다.' 
+---
+= Array Manager를 사용하여 SRA를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SRM(Site Recovery Manager)의 * Array Manager * 마법사를 사용하여 SRA(Storage Replication Adapter)를 구성하여 SRM과 SVM(Storage Virtual Machine) 간의 상호 작용을 활성화할 수 있습니다.
+
+.시작하기 전에
+* SRM에서 보호 사이트 및 복구 사이트를 페어링해야 합니다.
+* 스토리지 관리자를 구성하기 전에 스토리지를 구성해야 합니다.
+* 보호 사이트와 복구 사이트 간에 SnapMirror 관계를 구성하고 복제해야 합니다.
+* 멀티 테넌시를 사용하려면 SVM 관리 LIF가 활성화되어 있어야 합니다.
+
+
+SRA는 클러스터 수준 관리 및 SVM 수준 관리를 지원합니다. 클러스터 수준에서 스토리지를 추가할 경우 클러스터의 모든 SVM에서 작업을 검색 및 수행할 수 있습니다. SVM 레벨에서 스토리지를 추가할 경우 해당 SVM만 관리할 수 있습니다.
+
+[NOTE]
+====
+VMware는 SRM에 대해 NFS4.1 프로토콜을 지원하지 않습니다.
+
+====
+.단계
+. SRM에서 * Array Managers * 를 클릭한 다음 * Add Array Manager * 를 클릭합니다.
+. SRM의 어레이를 설명하는 다음 정보를 입력합니다.
++
+.. Display Name* 필드에 어레이 관리자를 식별할 이름을 입력하십시오.
+.. SRA Type * 필드에서 * ONTAP * 용 NetApp 스토리지 복제 어댑터를 선택합니다.
+.. 클러스터 또는 SVM에 연결할 정보를 입력합니다.
++
+*** 클러스터에 연결하려면 클러스터 관리 LIF를 입력해야 합니다.
+*** SVM에 직접 연결하는 경우 SVM 관리 LIF의 IP 주소를 입력해야 합니다.
++
+[NOTE]
+====
+Array Manager를 구성할 때는 Virtual Storage Console의 * Storage Systems * 메뉴에서 스토리지 시스템을 추가하는 데 사용된 스토리지 시스템에 대해 동일한 접속 및 자격 증명을 사용해야 합니다. 예를 들어, 어레이 관리자 구성의 범위가 SVM인 경우 SVM 레벨에서 VSC 지원 스토리지를 추가해야 합니다.
+
+====
+
+
+.. 클러스터에 연결하려면 SVM 이름 * 필드에 SVM 이름을 입력합니다.
++
+이 필드를 비워 둘 수도 있습니다.
+
+.. * 선택 사항: * 볼륨 포함 목록 * 필드에 검색할 볼륨을 입력합니다.
++
+보호 사이트의 소스 볼륨 및 복구 사이트의 복제된 대상 볼륨을 입력할 수 있습니다. 전체 볼륨 이름 또는 부분 볼륨 이름을 입력할 수 있습니다.
+
++
+예를 들어 volume_dst_vol1_과 SnapMirror 관계에 있는 volume_src_vol1_을 검색하려면 보호 사이트 필드에 _src_vol1_을 지정하고 복구 사이트 필드에 _dst_vol1_을 지정해야 합니다.
+
+.. * 선택 사항: * 볼륨 제외 목록 * 필드에 검색에서 제외할 볼륨을 입력합니다.
++
+보호 사이트의 소스 볼륨 및 복구 사이트의 복제된 대상 볼륨을 입력할 수 있습니다. 전체 볼륨 이름 또는 부분 볼륨 이름을 입력할 수 있습니다.
+
++
+예를 들어 volume_dst_vol1_과 SnapMirror 관계에 있는 volume_src_vol1_을 제외하려면 보호 사이트 필드에 _src_vol1_을 지정하고 복구 사이트 필드에 _dst_vol1_을 지정해야 합니다.
+
+.. 클러스터 레벨 계정 또는 SVM 레벨 계정의 사용자 이름을 * Username * 필드에 입력합니다.
+.. 암호 * 필드에 사용자 계정의 암호를 입력합니다.
+
+
+. 다음 * 을 클릭합니다.
+. 어레이가 검색되고 * Add Array Manager * (배열 관리자 추가 *) 창 하단에 표시되는지 확인합니다.
+. 마침 * 을 클릭합니다.
+
+
+적절한 SVM 관리 IP 주소와 자격 증명을 사용하여 복구 사이트에 대해 동일한 단계를 수행할 수 있습니다. Add Array Manager* 마법사의 * Enable Array Pairs* 화면에서 올바른 배열 쌍이 선택되었는지 확인하고 사용할 준비가 되었음을 표시해야 합니다.

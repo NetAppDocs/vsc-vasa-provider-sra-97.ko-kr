@@ -1,0 +1,25 @@
+---
+permalink: manage/reference-vasa-provider-storage-provider-status-show-offline-in-vcenter-gui.html 
+sidebar: sidebar 
+keywords: vasa, provider, status, shows, as, Offline, in, vcenter, server, gui, 
+summary: 'VASA 공급자 서비스를 다시 시작하면 vCenter Server GUI에서 VASA Provider for ONTAP의 상태가 "오프라인"으로 표시될 수 있습니다.' 
+---
+= VASA 공급자 상태는 vCenter Server GUI에서 "오프라인"으로 표시됩니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VASA 공급자 서비스를 다시 시작하면 vCenter Server GUI에서 VASA Provider for ONTAP의 상태가 "오프라인"으로 나타날 수 있습니다.
+
+
+
+== 해결 방법
+
+. 가상 스토리지 콘솔(VSC), VASA 공급자, SRA(스토리지 복제 어댑터)에 대한 가상 어플라이언스에서 VASA Provider의 상태를 확인하고 VASA Provider가 활성 상태인지 확인합니다.
+. vCenter Server의 VSC 페이지에서 Configuration[Manage Extensions] 메뉴로 이동하여 VASA Provider가 활성화되어 있는지 확인합니다.
+. vCenter Server에서 VASA Provider와의 연결 오류가 있는지 '/var/log/vmware/vmware-SPS/SPS.log' 파일을 확인합니다.
+. 오류가 있으면 ""VMware-SPS"" 서비스를 다시 시작합니다.
+

@@ -1,0 +1,38 @@
+---
+permalink: manage/reference-authentication-failure-status-is-displayed-with-ipv6-as-the-cluster-ip-even-if-cluster-is-added-with-ipv4.html 
+sidebar: sidebar 
+keywords: authentication, failure, for,, storage system, troubleshooting, error, 
+summary: IPv4를 사용하여 스토리지 시스템을 추가하면 스토리지 시스템 그리드에서 IPv6 상태의 인증 오류가 발생합니다 
+---
+= 스토리지 시스템 그리드의 IPv6 상태에서 IPv4를 사용하여 스토리지 시스템을 추가하면 인증 오류가 발생합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 문제
+
+스토리지 시스템이 IPv4 주소로 추가된 경우에도 스토리지 시스템의 IPv6 주소로 인증 실패 상태가 표시됩니다.
+
+
+
+== 원인
+
+IPv4 및 IPv6 LIF가 있는 이중 스택 스토리지 시스템을 IPv4 LIF로 추가한 다음, 정기 검색 프로세스 중에 VSC에서 IPv6 LIF를 검색할 수 있습니다. IPv6 LIF가 명시적으로 추가되지 않기 때문에 인증 오류로 인해 이 IPv6 검색이 실패합니다. 이 오류는 스토리지 시스템에 대해 수행된 작업에 영향을 미치지 않습니다.
+
+
+
+== 수정 조치
+
+다음을 수행해야 합니다.
+
+. VSC 홈 페이지에서 * 스토리지 시스템 * 을 클릭합니다.
+. IPv6 주소를 사용하여 알 수 없는 상태의 스토리지 시스템을 클릭합니다.
+. 설정된 기본 자격 증명을 사용하여 IP 주소를 IPv4로 변경합니다.
+. 목록 * 으로 돌아가기 * 를 클릭한 다음 * 모두 다시 검색 * 을 클릭합니다.
++
+스토리지 시스템 목록의 오래된 IPv6 항목이 삭제되고 인증 오류 없이 스토리지 시스템이 검색됩니다.
+
+

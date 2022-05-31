@@ -1,0 +1,73 @@
+---
+permalink: deploy/task-upgrade-to-the-9-7-1-virtual-appliance-for-vsc-vasa-provider-and-sra.html 
+sidebar: sidebar 
+keywords: virtual, storage, console, storage, replication, adapter, upgrading, to, the, 9.7.1, virtual, appliance, for, vsc, vasa, provider, sra, 
+summary: 여기에 제공된 지침에 따라 기존 9.7 설정에서 VSC, VASA Provider 및 SRA용 가상 어플라이언스의 9.7.1 릴리스로 직접 업그레이드할 수 있습니다. 
+---
+= VSC, VASA Provider, SRA를 위한 9.7.1 가상 어플라이언스로 업그레이드하십시오
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+여기에 제공된 지침에 따라 기존 9.7 설정에서 VSC, VASA Provider 및 SRA용 가상 어플라이언스의 9.7.1 릴리스로 직접 업그레이드할 수 있습니다.
+
+.시작하기 전에
+* VSC, VASA Provider, SRA용 가상 어플라이언스의 9.7.1 릴리스에 대한 '.iso' 파일을 다운로드해야 합니다.
+* 업그레이드 후 최적의 상태로 작동하도록 VSC, VASA 공급자 및 SRA를 위해 가상 어플라이언스에 최소 12GB RAM을 예약해야 합니다.
+* vSphere Client 브라우저 캐시를 정리해야 합니다.
++
+xref:task-clean-the-vsphere-cached-downloaded-plug-in-packages.adoc[vSphere 캐시된 다운로드 플러그인 패키지를 청소합니다]
+
+
+
+기존 구축 환경에서 VASA Provider의 상태는 업그레이드 후 유지됩니다. 업그레이드 후 요구 사항에 따라 VASA Provider를 수동으로 설정하거나 해제해야 합니다. 하지만 VVol(VMware Virtual Volumes)을 사용하지 않는 경우에도 VASA Provider를 활성화하는 것이 가장 좋습니다. 이를 통해 기존 데이터 저장소 용량 할당 및 스토리지 알람을 위한 스토리지 용량 프로필을 사용할 수 있기 때문입니다.
+
+[NOTE]
+====
+9.7 이전 릴리즈에서 9.7P2 이상으로 직접 업그레이드하는 것은 VSC, VASA Provider 및 SRA용 가상 어플라이언스에서 지원되지 않습니다. 이후 릴리즈로 업그레이드하기 전에 VSC, VASA Provider, SRA를 위한 가상 어플라이언스 9.7 릴리즈로 기존 설정을 업그레이드해야 합니다. VSC, VASA Provider, SRA용 가상 어플라이언스의 9.7.1 릴리즈로 업그레이드하고 VVOL 복제를 사용하려는 경우 SRM(Site Recovery Manager)이 설치된 가상 어플라이언스로 vCenter Server를 하나 더 설정해야 합니다.
+
+====
+.단계
+. 다운로드한 '.iso' 파일을 가상 어플라이언스에 마운트합니다.
++
+.. 메뉴: 편집 설정 [DVD/CD-ROM Drive] 을 클릭합니다.
+.. 드롭다운 목록에서 * Datastore ISO * 파일을 선택합니다.
+.. 다운로드한 '.iso' 파일을 찾아 선택한 다음 * 전원을 켤 때 연결 * 확인란을 선택합니다.
+
+
+. 구축된 가상 어플라이언스의 * 요약 * 탭에 액세스합니다.
+. 를 클릭합니다image:../media/launch-maintenance-console.gif[""]를 눌러 유지보수 콘솔을 시작합니다.
+. "Main Menu" 프롬프트에서 * System Configuration * 에 대한 옵션 2를 입력한 다음 * Upgrade * 에 대한 옵션 8을 입력합니다.
++
+업그레이드가 완료되면 가상 어플라이언스가 다시 시작됩니다. VSC, VASA Provider, SRA를 위한 가상 어플라이언스는 업그레이드 전과 동일한 IP 주소를 사용하여 vCenter Server에 등록됩니다.
+
+. VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 IPv6 주소로 vCenter Server에 등록하려면 다음을 수행해야 합니다.
++
+.. VSC, VASA Provider 및 SRA를 위한 가상 어플라이언스의 등록을 취소합니다.
+.. VSC, VASA Provider 및 SRA를 위한 가상 어플라이언스의 IPv6 주소를 * Register * 페이지를 사용하여 vCenter Server에 등록합니다.
+.. 등록 후 VSC 및 VASA 공급자 인증서를 다시 생성합니다.
+
+
++
+[NOTE]
+====
+IPv6은 vCenter Server 6.7 이상에서만 지원됩니다.
+
+====
+. VSC, VASA Provider, SRA를 위해 구축된 가상 어플라이언스를 보려면 vSphere Client에서 로그아웃하고 다시 로그인하십시오.
++
+.. 기존 vSphere 웹 클라이언트 또는 vSphere Client에서 로그아웃하고 창을 닫습니다.
+.. vSphere Client에 로그인합니다.
++
+vSphere Client에서 플러그인을 업데이트하는 데 몇 분 정도 걸릴 수 있습니다.
+
+
+
+
+
+* 관련 정보 *
+
+xref:task-enable-vasa-provider-for-configuring-virtual-datastores.adoc[가상 데이터 저장소를 구성하기 위해 VASA Provider를 설정합니다]

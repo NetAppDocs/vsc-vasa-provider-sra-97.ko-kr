@@ -1,0 +1,124 @@
+---
+permalink: deploy/reference-esx-host-values-set-by-vsc-for-vmware-vsphere.html 
+sidebar: sidebar 
+keywords: esxi, host, values, set, using, virtual, storage, console, vmware, vsphere, 
+summary: '최상의 성능과 성공적인 페일오버를 보장하기 위해 VMware vSphere용 Virtual Storage Console을 사용하여 ESXi 호스트에서 시간 초과 및 기타 값을 설정할 수 있습니다. VSC(Virtual Storage Console) 세트는 내부 테스트를 기반으로 합니다.' 
+---
+= VMware vSphere용 Virtual Storage Console을 사용하여 설정된 ESXi 호스트 값
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+최상의 성능과 성공적인 페일오버를 보장하기 위해 VMware vSphere용 Virtual Storage Console을 사용하여 ESXi 호스트에서 시간 초과 및 기타 값을 설정할 수 있습니다. VSC(Virtual Storage Console) 세트는 내부 테스트를 기반으로 합니다.
+
+ESXi 호스트에서 다음 값을 설정할 수 있습니다.
+
+
+
+== ESXi 고급 구성
+
+* * VMFS3.HardwareAcceleratedLocking *
++
+이 값을 1로 설정해야 합니다.
+
+* * VMFS3.EnableBlockDelete *
++
+이 값을 0으로 설정해야 합니다.
+
+
+
+
+
+== NFS 설정
+
+* * Net.TcpipHeapSize *
++
+vSphere 6.0 이상을 사용하는 경우 이 값을 32로 설정해야 합니다.
+
+* * Net.TcpipHeapMax *
++
+vSphere 6.0 이상을 사용하는 경우 이 값을 1536으로 설정해야 합니다.
+
+* * NFS.MaxVolumes *
++
+vSphere 6.0 이상을 사용하는 경우 이 값을 256으로 설정해야 합니다.
+
+* * NFS41.MaxVolumes *
++
+vSphere 6.0 이상을 사용하는 경우 이 값을 256으로 설정해야 합니다.
+
+* NFS.MaxQueueDepth *
++
+vSphere 6.0 이상 버전의 ESXi 호스트를 사용하는 경우 큐 병목 현상을 방지하려면 이 값을 128 이상으로 설정해야 합니다.
+
++
+vSphere 6.0 이전 버전의 경우 이 값을 64로 설정해야 합니다.
+
+* * nfs.HeartbeatMaxFailures *
++
+모든 NFS 구성에 대해 이 값을 10으로 설정해야 합니다.
+
+* * nfs.HeartbeatFrequency * 를 선택합니다
++
+모든 NFS 구성에 대해 이 값을 12로 설정해야 합니다.
+
+* * nfs.HeartbeatTimeout *
++
+모든 NFS 구성에 대해 이 값을 5로 설정해야 합니다.
+
+
+
+
+
+== FC/FCoE 설정
+
+* * 경로 선택 정책 *
++
+ALUA를 사용하는 FC 경로를 사용할 때는 이 값을 ""RR"(라운드 로빈)으로 설정해야 합니다.
+
++
+다른 모든 설정에 대해 이 값을 ""고정""으로 설정해야 합니다.
+
++
+이 값을 ""rr""로 설정하면 모든 활성/최적화 경로에 대한 로드 밸런싱을 제공하는 데 도움이 됩니다. 값 ""FIXED""는 이전 비 ALUA 구성에 사용되며 프록시 I/O를 방지하는 데 도움이 됩니다
+
+* * Disk.QFullSampleSize *
++
+모든 설정에 대해 이 값을 32로 설정해야 합니다. 이 값을 설정하면 I/O 오류가 발생하지 않습니다.
+
+* * Disk.QFullThreshold *
++
+모든 설정에 대해 이 값을 8로 설정해야 합니다. 이 값을 설정하면 I/O 오류가 방지됩니다.
+
+* * Emulex FC HBA 시간 초과 *
++
+기본값을 사용합니다.
+
+* * QLogic FC HBA 시간 초과 *
++
+기본값을 사용합니다.
+
+
+
+
+
+== iSCSI 설정
+
+* * 경로 선택 정책 *
++
+모든 iSCSI 경로에 대해 이 값을 ""rr""로 설정해야 합니다.
+
++
+이 값을 ""rr""로 설정하면 모든 활성/최적화 경로에 대한 로드 밸런싱을 제공하는 데 도움이 됩니다.
+
+* * Disk.QFullSampleSize *
++
+모든 설정에 대해 이 값을 32로 설정해야 합니다. 이 값을 설정하면 I/O 오류가 발생하지 않습니다.
+
+* * Disk.QFullThreshold *
++
+모든 설정에 대해 이 값을 8로 설정해야 합니다. 이 값을 설정하면 I/O 오류가 방지됩니다.
+
+

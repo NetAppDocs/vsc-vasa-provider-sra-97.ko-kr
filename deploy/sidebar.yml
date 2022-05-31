@@ -1,0 +1,163 @@
+---
+section: deploy
+title: 배포 및 업그레이드
+entries:
+- title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스 개요
+  url: "/deploy/concept-virtual-storage-console-overview.html"
+- title: VSC, VASA Provider, SRA 가상 어플라이언스 신규 사용자를 위한 구축 워크플로우
+  url: "/deploy/concept-installation-workflow-for-new-users.html"
+  entries:
+  - title: 기존 VSC, VASA Provider, SRA 사용자를 위한 구축 워크플로우
+    url: "/deploy/concept-installation-workflow-for-existing-users-of-vsc.html"
+- title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 요구사항
+  url: "/deploy/concept-requirements-for-deploying-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html"
+  entries:
+  - title: VSC용 포트 요구사항
+    url: "/deploy/reference-port-requirements-for-vsc.html"
+  - title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 공간 및 크기 요구사항
+    url: "/deploy/concept-space-and-size-requirements-for-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html"
+  - title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 스토리지 시스템, 라이센스 및 애플리케이션을 지원합니다
+    url: "/deploy/concept-supported-storage-system-and-applications.html"
+  - title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 시 고려 사항 및 요구 사항
+    url: "/deploy/reference-considerations-for-deploying-virtual-appliance-for-vsc-vasa-provider-and-sra.html"
+- title: VSC, VASA Provider, SRA를 구축 또는 업그레이드합니다
+  url: "/deploy/concept-deploy-or-upgrade-ontap-tools.html"
+  entries:
+  - title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하는 방법
+    url: "/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+  - title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축합니다
+    url: "/deploy/task-deploy-ontap-tools.html"
+    entries:
+    - title: 배포 사용자 지정 고려 사항
+      url: "/deploy/reference-deploment-customization-requirements.html"
+  - title: 가상 데이터 저장소를 구성하기 위해 VASA Provider를 설정합니다
+    url: "/deploy/task-enable-vasa-provider-for-configuring-virtual-datastores.html"
+    entries:
+    - title: VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 등록하십시오
+      url: "/deploy/task-register-oncommand-api-services-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html"
+  - title: NFS VAAI 플러그인을 설치합니다
+    url: "/deploy/task-install-the-nfs-vaai-plug-in.html"
+  - title: 스토리지 복제 어댑터를 활성화합니다
+    url: "/deploy/task-enable-storage-replication-adapter.html"
+    entries:
+    - title: SRM 어플라이언스에서 SRA를 구성합니다
+      url: "/deploy/task-configure-sra-on-srm-appliance.html"
+    - title: SRA(Storage Replication Adapter) 자격 증명을 업데이트합니다
+      url: "/deploy/task-update-sra-credentials.html"
+  - title: Windows SRM에서 SRM 어플라이언스로 마이그레이션
+    url: "/deploy/concept-migration-of-disaster-recovery-setup-from-windows-to-appliance.html"
+  - title: VSC, VASA Provider, SRA를 위한 9.7.1 가상 어플라이언스로 업그레이드하십시오
+    url: "/deploy/task-upgrade-to-the-9-7-1-virtual-appliance-for-vsc-vasa-provider-and-sra.html"
+  - title: 스토리지 복제 어댑터를 업그레이드합니다
+    url: "/deploy/task-upgrade-storage-replication-adapter.html"
+- title: VMware vSphere 환경을 위한 Virtual Storage Console을 구성합니다
+  url: "/deploy/concept-configure-vsc-for-vmware-vsphere-environment.html"
+  entries:
+  - title: ESXi 서버 경로 다중화 및 시간 초과 설정을 구성합니다
+    url: "/deploy/task-configure-esx-server-multipathing-and-timeout-settings.html"
+    entries:
+    - title: VMware vSphere용 Virtual Storage Console을 사용하여 설정된 ESXi 호스트 값
+      url: "/deploy/reference-esx-host-values-set-by-vsc-for-vmware-vsphere.html"
+    - title: 게스트 운영 체제 스크립트를 구성합니다
+      url: "/deploy/reference-configure-guest-operating-system-scripts.html"
+      entries:
+      - title: Windows 게스트 운영 체제에 대한 시간 초과 값을 설정합니다
+        url: "/deploy/task-run-the-gos-timeout-scripts-for-windows.html"
+      - title: Solaris 게스트 운영 체제에 대한 시간 초과 값을 설정합니다
+        url: "/deploy/task-run-the-gos-timeout-scripts-for-solaris.html"
+      - title: Linux 게스트 운영 체제에 대한 시간 제한 값을 설정합니다
+        url: "/deploy/task-run-the-gos-timeout-scripts-for-rhel4-or-sles9.html"
+  - title: 에 대한 SSL 인증서를 다시 생성합니다
+    url: "/deploy/task-regenerate-an-ssl-certificate-for-vsc.html"
+  - title: 여러 vCenter Server 환경에 VSC를 등록하기 위한 요구 사항
+    url: "/deploy/concept-requirements-for-registering-vsc-in-multiple-vcenter-servers-environment.html"
+  - title: VSC 기본 설정 파일을 구성합니다
+    url: "/deploy/reference-configure-the-vsc-preferences-files.html"
+    entries:
+    - title: IPv4 또는 IPv6를 설정합니다
+      url: "/deploy/reference-set-ipv4-or-ipv6.html"
+  - title: 서로 다른 서브넷에 데이터 저장소 마운트를 설정합니다
+    url: "/deploy/task-enable-datastore-mounting-across-different-subnets.html"
+  - title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 유지보수 콘솔 옵션에 액세스합니다
+    url: "/deploy/task-access-virtual-appliance-maiintenance-console-options.html"
+  - title: 관리자 암호를 변경합니다
+    url: "/deploy/task-change-the-administrative-password.html"
+  - title: VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 대한 고가용성을 구성합니다
+    url: "/deploy/concept-configure-high-availability-for-virtual-appliance-for-vsc-vasa-provider-and-sra.html"
+    entries:
+    - title: VMware vSphere HA
+      url: "/deploy/concept-vmware-high-availability-for-vcenter-server.html"
+    - title: VMware vSphere 내결함성
+      url: "/deploy/concept-vmware-fault-tolerance-for-vcenter-server.html"
+  - title: VSC, VASA 공급자, SRA를 위한 가상 어플라이언스가 지원하는 MetroCluster 구성
+    url: "/deploy/reference-metrocluster-configurations-supported-by-virtual-appliance-for-vsc-vasa-provider-and-sra.html"
+- title: VMware vSphere 스토리지 시스템 환경을 위한 Virtual Storage Console을 구성합니다
+  url: "/deploy/concept-configure-your-storage-system-environment.html"
+  entries:
+  - title: 스토리지 시스템에 대한 기본 자격 증명을 설정합니다
+    url: "/deploy/task-set-default-credentials-for-storage-systems.html"
+  - title: VSC에 스토리지 시스템 추가
+    url: "/deploy/task-add-storage-systems.html"
+  - title: 스토리지 시스템 및 호스트를 검색합니다
+    url: "/deploy/task-discover-storage-systems-and-hosts.html"
+  - title: 스토리지 시스템 디스플레이를 새로 고칩니다
+    url: "/deploy/task-refresh-the-storage-system-display.html"
+- title: VMware vSphere용 VSC의 vCenter Server 역할 기반 액세스 제어 기능
+  url: "/deploy/concept-vcenter-server-role-based-access-control-features-in-vsc-for-vmware-vsphere.html"
+  entries:
+  - title: vCenter Server 권한의 구성 요소입니다
+    url: "/deploy/reference-components-that-make-up-vcenter-server-permissions.html"
+  - title: vCenter Server에 대한 권한을 할당하고 수정하는 방법에 대한 핵심 사항
+    url: "/deploy/reference-key-points-about-assigning-and-modifying-permissions.html"
+  - title: VSC, VASA Provider, SRA를 위해 가상 어플라이언스와 함께 패키지로 제공되는 표준 역할입니다
+    url: "/deploy/concept-standard-roles-packaged-with-virtual-appliance-for-vsc-vp-and-sra.html"
+    entries:
+    - title: VSC 표준 역할 사용 지침
+      url: "/deploy/concept-guidelines-for-using-vsc-standard-roles.html"
+  - title: VSC 작업에 필요한 권한입니다
+    url: "/deploy/concept-privileges-required-for-vsc-tasks.html"
+    entries:
+    - title: VMware vSphere용 VSC에 필요한 제품 레벨 권한
+      url: "/deploy/reference-product-level-privilege-required-by-vsc-for-vmware-vsphere.html"
+    - title: VSC, VASA 공급자, SRA를 위한 가상 어플라이언스에 대한 ONTAP 역할 기반 액세스 제어
+      url: "/deploy/concept-ontap-role-based-access-control-feature-for-virtual-appliance.html"
+    - title: VMware vSphere용 VSC를 사용할 때의 권장 ONTAP 역할
+      url: "/deploy/concept-recommended-ontap-roles-when-using-vsc-for-vmware-vsphere.html"
+    - title: VMware vSphere용 VSC에 대한 ONTAP 역할 기반 액세스 제어를 구성하는 방법
+      url: "/deploy/concept-how-to-configure-data-ontap-role-based-access-control-for-vsc-for-vmware-vsphere.html"
+    - title: 사용자 역할 및 권한을 구성합니다
+      url: "/deploy/task-configure-user-role-and-privileges.html"
+- title: 재해 복구를 위해 스토리지 복제 어댑터를 구성합니다
+  url: "/deploy/concept-configure-storage-replication-adapter-for-disaster-recovery.html"
+  entries:
+  - title: SAN 환경에 대한 스토리지 복제 어댑터를 구성합니다
+    url: "/deploy/task-configure-storage-replication-adapter-for-san-environment.html"
+  - title: NAS 환경에 대한 스토리지 복제 어댑터를 구성합니다
+    url: "/deploy/reference-configure-storage-replication-adapter-for-nas-environment.html"
+  - title: 확장성이 뛰어난 환경을 위한 스토리지 복제 어댑터 구성
+    url: "/deploy/reference-configure-storage-replication-adapter-for-highly-scaled-environment.html"
+- title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다
+  url: "/deploy/concept-troubleshoot-issues-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html"
+  entries:
+  - title: vSphere 캐시된 다운로드 플러그인 패키지를 청소합니다
+    url: "/deploy/task-clean-the-vsphere-cached-downloaded-plug-in-packages.html"
+  - title: 을 제거해도 표준 VSC 역할은 제거되지 않습니다
+    url: "/deploy/reference-uninstall-does-not-remove-standard-vsc-roles.html"
+  - title: VSC 및 VASA 공급자 로그 파일
+    url: "/deploy/concept-virtual-storage-console-and-vasa-provider-log-files.html"
+  - title: 확장성이 뛰어난 환경에서 VSC 및 VASA Provider 서비스가 다시 시작됩니다
+    url: "/deploy/reference-vsc-and-vasa-provider-services-restart-in-scaled-environments.html"
+  - title: SSH와 함께 작동하도록 VASA Provider를 구성합니다
+    url: "/deploy/task-configure-vasa-provider-to-work-with-ssh.html"
+  - title: 원격 diag 액세스에 SSH를 사용하도록 VSC, VASA Provider 및 SRA를 위한 가상 어플라이언스를 구성합니다
+    url: "/deploy/task-configure-vasa-provider-to-use-ssh-for-remote-diag-access.html"
+  - title: SRA 설치가 스크립트 오류와 함께 실패합니다
+    url: "/deploy/reference-sra-adapter-installation-fails-with-script-error.html"
+  - title: SRA는 확장성이 높은 환경에서 최적의 성능을 발휘하지 못합니다
+    url: "/deploy/reference-sra-fails-to-perform-optimally-in-a-highly-scaled-environment.html"
+  - title: SRA 플러그인을 설치할 수 없습니다
+    url: "/deploy/reference-unable-to-install-sra-plug-in-due-to-winhttp-proxy-settings.html"
+  - title: ONTAP용 NetApp 스토리지 복제 어댑터가 사이트 복구 관리자 어플라이언스에 나타나지 않습니다
+    url: "/deploy/reference-srm-does-not-work-after-sra-installation.html"
+  - title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 새로 구축하는 동안 오류가 발생했습니다
+    url: "/deploy/reference-error-during-fresh-deployment-of-virtual-appliance-for-vsc-vasa-provider-and-sra.html"

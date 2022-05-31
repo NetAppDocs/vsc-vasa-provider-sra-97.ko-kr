@@ -1,0 +1,62 @@
+---
+permalink: manage/task-edit-esxi-host-settings.html 
+sidebar: sidebar 
+keywords: editing, esxi, host, settings, for, vsc, vasa, provider, and, sra, 
+summary: 'VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스의 대시보드를 사용하여 ESXi 호스트 설정을 편집할 수 있습니다.' 
+---
+= VSC, VASA Provider 및 SRA에 대한 ESXi 호스트 설정을 편집합니다
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스의 대시보드를 사용하여 ESXi 호스트 설정을 편집할 수 있습니다.
+
+vCenter Server 인스턴스에 대해 ESXi 호스트 시스템을 구성해야 합니다.
+
+ESXi 호스트 설정에 문제가 있는 경우 대시보드의 ESXi 호스트 시스템 포틀릿에 문제가 표시됩니다. 문제를 클릭하여 문제가 있는 ESXi 호스트의 호스트 이름 또는 IP 주소를 볼 수 있습니다.
+
+.단계
+. vSphere Client * Home * 페이지에서 * Virtual Storage Console * 을 클릭합니다.
+. ESXi 호스트 설정을 편집합니다.
++
+[cols="1a,1a"]
+|===
+| 에서 ESXi 호스트 설정을 편집하려는 경우... | 수행할 작업... 
+
+
+ a| 
+문제가 표시됩니다
+ a| 
+.. ESXi 호스트 시스템 윈도우에서 문제를 클릭합니다.
+.. 설정을 수정할 ESXi 호스트 이름을 클릭합니다.
+.. ESXi 호스트 이름을 마우스 오른쪽 버튼으로 클릭하고 menu:NetApp VSC [Set Recommended Values] 를 클릭합니다.
+.. 필요한 설정을 수정한 다음 * 확인 * 을 클릭합니다.
+
+
+
+
+ a| 
+vSphere Client 홈 페이지입니다
+ a| 
+.. 메뉴 [호스트 및 클러스터] 를 클릭합니다.
+.. 필요한 ESXi 호스트를 마우스 오른쪽 버튼으로 클릭하고 NetApp VSC [Set Recommended Value] 메뉴를 선택합니다.
+.. 확인 * 을 클릭합니다.
+
+
+
+
+ a| 
+ESXi 호스트 시스템 포틀릿입니다
+ a| 
+.. VSC의 개요 섹션에서 * 기존 대시보드 * 탭을 클릭합니다.
+.. Edit ESXi Host Settings * 를 클릭합니다.
+.. 호스트 설정 및 상태 탭에서 설정을 수정할 ESXi 호스트 이름을 선택하고 * NEXT * 를 클릭합니다.
+.. 권장 호스트 설정 탭에서 필요한 설정을 선택한 후 * 다음 * 을 클릭합니다.
+.. 요약 탭에서 선택한 내용을 검토한 다음 * 마침 * 을 클릭합니다.
+
+
+|===
+

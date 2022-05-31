@@ -1,0 +1,22 @@
+---
+permalink: manage/concept-configure-protected-and-recovery-site-resources.html 
+sidebar: sidebar 
+keywords: configuring, protected, and, recovery, site, resources, 
+summary: 보호 사이트의 각 리소스를 복구 사이트의 적절한 리소스에 매핑하도록 두 사이트의 VM 네트워크, ESXi 호스트 및 폴더와 같은 리소스 매핑을 구성해야 합니다. 
+---
+= 보호 및 복구 사이트 리소스를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+보호 사이트의 각 리소스를 복구 사이트의 적절한 리소스에 매핑하도록 두 사이트의 VM 네트워크, ESXi 호스트 및 폴더와 같은 리소스 매핑을 구성해야 합니다.
+
+다음 리소스 구성을 완료해야 합니다.
+
+* 네트워크 매핑
+* 폴더 매핑
+* 리소스 매핑
+* 자리 표시자 데이터 저장소
+

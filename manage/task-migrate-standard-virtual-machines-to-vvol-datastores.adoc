@@ -1,0 +1,25 @@
+---
+permalink: manage/task-migrate-standard-virtual-machines-to-vvol-datastores.html 
+sidebar: sidebar 
+keywords: migrate, traditional, virtual, machines, datastores, 
+summary: '기존 데이터 저장소에서 VVol(Virtual Volumes) 데이터 저장소로 가상 머신을 마이그레이션하여 정책 기반 VM 관리 및 기타 VVol 기능을 활용할 수 있습니다. VVOL 데이터 저장소를 사용하면 증가하는 워크로드 요구사항을 충족할 수 있습니다.' 
+---
+= 기존 가상 머신을 VVol 데이터 저장소로 마이그레이션합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+기존 데이터 저장소에서 VVol(Virtual Volumes) 데이터 저장소로 가상 머신을 마이그레이션하여 정책 기반 VM 관리 및 기타 VVol 기능을 활용할 수 있습니다. VVOL 데이터 저장소를 사용하면 증가하는 워크로드 요구사항을 충족할 수 있습니다.
+
+마이그레이션하려는 가상 머신에서 VASA Provider가 실행되고 있지 않은지 확인해야 합니다. VASA Provider를 실행하는 가상 머신을 VVol 데이터 저장소로 마이그레이션할 경우, VVOL 데이터 저장소에 있는 가상 머신의 전원을 켜는 것을 포함하여 관리 작업을 수행할 수 없습니다.
+
+기존 데이터 저장소에서 VVOL 데이터 저장소로 마이그레이션할 때 vCenter Server는 VMFS 데이터 저장소에서 데이터를 이동할 때 VAAI(vStorage APIs for Array Integration) 오프로드를 사용하지만 NFS VMDK 파일에서 이동하지 않습니다. VAAI 오프로드는 일반적으로 호스트의 부하를 줄입니다.
+
+.단계
+. 마이그레이션할 가상 컴퓨터를 마우스 오른쪽 단추로 클릭한 다음 * 마이그레이션 * 을 클릭합니다.
+. 스토리지 전용 변경 * 을 선택한 후 * 다음 * 을 클릭합니다.
+. 마이그레이션할 데이터 저장소의 기능과 일치하는 가상 디스크 형식, VM 스토리지 정책 및 VVOL 데이터 저장소를 선택한 후 * Next * 를 클릭합니다.
+. 설정을 검토한 다음 * 마침 * 을 클릭합니다.
+

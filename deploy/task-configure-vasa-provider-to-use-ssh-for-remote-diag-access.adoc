@@ -1,0 +1,39 @@
+---
+permalink: deploy/task-configure-vasa-provider-to-use-ssh-for-remote-diag-access.html 
+sidebar: sidebar 
+keywords: configuring, virtual, appliance, vsc, vasa, provider, sra, use, ssh, for, remote, diag, access, 
+summary: '가상 스토리지 콘솔(VSC), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구성하여 diag 사용자에 대한 SSH 액세스를 지원할 수 있습니다.' 
+---
+= 원격 diag 액세스에 SSH를 사용하도록 VSC, VASA Provider 및 SRA를 위한 가상 어플라이언스를 구성합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+가상 스토리지 콘솔(VSC), VASA 공급자, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구성하여 diag 사용자에 대한 SSH 액세스를 지원할 수 있습니다.
+
+vCenter Server 인스턴스에 대해 VASA Provider 확장을 설정해야 합니다.
+
+SSH를 사용하여 diag 사용자에 액세스하는 경우 다음과 같은 제한이 있습니다.
+
+* SSH의 활성화당 하나의 로그인만 허용됩니다.
+* 다음 중 하나가 발생하면 diag 사용자에 대한 SSH 액세스가 비활성화됩니다.
++
+** 시간이 만료됩니다.
++
+로그인 세션은 다음 날 자정까지만 유효합니다.
+
+** SSH를 사용하여 diag 사용자로 다시 로그인합니다.
+
+
+
+
+.단계
+. vCenter Server에서 콘솔을 열고 VASA Provider로 이동합니다.
+. maint 사용자로 로그인합니다.
+. '4'를 입력하여 * 지원 및 진단 * 을 선택합니다.
+. "3"을 입력하여 * 원격 진단 액세스 활성화 * 를 선택합니다.
+. 원격 진단 액세스를 활성화하려면 * Confirmation * (확인 *) 대화 상자에 'y'를 입력합니다.
+. 원격 진단 액세스를 위한 암호를 입력합니다.
+

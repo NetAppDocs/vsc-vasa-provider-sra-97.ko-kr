@@ -1,0 +1,136 @@
+---
+section: manage
+title: 관리
+entries:
+- title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구성 워크플로우
+  url: "/manage/concept-workflow-for-configuring-the-unified-appliance.html"
+- title: VSC, VASA Provider, SRA를 위한 스토리지 시스템을 구성합니다
+  url: "/manage/concept-configure-storage-systems-for-vsc-vasa-provider-and-sra.html"
+  entries:
+  - title: VSC에 스토리지 시스템 추가
+    url: "/manage/task-add-storage-systems.html"
+  - title: 스토리지 시스템에 대한 기본 자격 증명을 설정합니다
+    url: "/manage/task-set-default-credentials-for-storage-systems.html"
+  - title: 알람 임계값을 구성합니다
+    url: "/manage/task-configure-alarm-thresholds.html"
+- title: 스토리지 용량 프로필을 생성합니다
+  url: "/manage/concept-configure-storage-capability-profiles.html"
+  entries:
+  - title: 스토리지 용량에 대한 내용을 설명합니다
+    url: "/manage/concept-what-storage-capabilities-are.html"
+  - title: 스토리지 용량 프로파일을 생성 및 편집할 때의 고려 사항
+    url: "/manage/concept-considerations-for-creating-and-editing-storage-capability-profiles.html"
+  - title: 스토리지 용량 프로필을 구성합니다
+    url: "/manage/task-create-storage-capability-profiles.html"
+- title: 기존 데이터 저장소 및 가상 머신을 구성합니다
+  url: "/manage/concept-configure-traditional-datastores.html"
+  entries:
+  - title: 데이터 저장소를 프로비저닝합니다
+    url: "/manage/task-provision-datastores.html"
+  - title: 스토리지 용량 프로필에 데이터 저장소를 매핑합니다
+    url: "/manage/task-map-storage-to-storage-capability-profiles.html"
+  - title: 스토리지 기능 프로필을 자동으로 생성합니다
+    url: "/manage/task-automatically-generate-scps.html"
+  - title: 데이터 저장소가 매핑된 스토리지 용량 프로파일을 준수하는지 확인합니다
+    url: "/manage/task-check-for-datastore-compliance-with-the-mapped-storage-capability-profile.html"
+  - title: 기존 대시보드를 사용하여 데이터 저장소와 가상 머신을 모니터링합니다
+    url: "/manage/task-monitor-datastores-using-the-traditional-dashboard.html"
+  - title: VSC, VASA Provider 및 SRA에 대한 ESXi 호스트 설정을 편집합니다
+    url: "/manage/task-edit-esxi-host-settings.html"
+- title: VVOL 데이터 저장소를 구성합니다
+  url: "/manage/concept-configure-vvols-datastores.html"
+  entries:
+  - title: VVOL 데이터 저장소에 대한 복제를 구성합니다
+    url: "/manage/concept-configure-replication-for-vvols-datastore.html"
+  - title: VVOL 데이터 저장소를 프로비저닝합니다
+    url: "/manage/task-provision-vvol-datastores.html"
+  - title: VVOL 대시보드를 사용하여 VVOL 데이터 저장소 및 가상 머신을 모니터링합니다
+    url: "/manage/task-monitor-vvols-datastores-and-virtual-machines-using-vvols-dashboard.html"
+    entries:
+    - title: VVOL 대시보드 데이터 요구사항
+      url: "/manage/reference-verify-vvol-dashboard-data-requirements.html"
+- title: Site Recovery Manager를 사용하여 재해 복구 설정을 관리합니다
+  url: "/manage/concept-manage-disaster-recovery-setup-using-srm.html"
+  entries:
+  - title: VM 스토리지 정책을 구성합니다
+    url: "/manage/task-configure-vm-storage-policies.html"
+  - title: 보호 그룹을 구성합니다
+    url: "/manage/task-configure-protection-groups.html"
+  - title: 보호 사이트와 복구 사이트 페어링
+    url: "/manage/task-pair-protected-and-recovery-sites.html"
+  - title: 보호 및 복구 사이트 리소스를 구성합니다
+    url: "/manage/concept-configure-protected-and-recovery-site-resources.html"
+    entries:
+    - title: 네트워크 매핑을 구성합니다
+      url: "/manage/task-configure-network-mappings.html"
+    - title: 폴더 매핑을 구성합니다
+      url: "/manage/task-configure-folder-mappings.html"
+    - title: 리소스 매핑을 구성합니다
+      url: "/manage/task-configure-resource-mappings.html"
+    - title: 스토리지 정책을 매핑합니다
+      url: "/manage/task-map-storage-policies.html"
+    - title: 자리 표시자 데이터 저장소를 구성합니다
+      url: "/manage/task-configure-placeholder-datastores.html"
+    - title: Array Manager를 사용하여 SRA를 구성합니다
+      url: "/manage/task-configure-array-manager.html"
+  - title: 복제된 스토리지 시스템을 확인합니다
+    url: "/manage/task-verify-the-replicated-storage-environment.html"
+  - title: 보호되지 않는 가상 머신을 보호합니다
+    url: "/manage/task-protect-non-protected-virtual-machines.html"
+- title: 기존 및 VVOL 데이터 저장소를 관리합니다
+  url: "/manage/concept-manage-datastore.html"
+  entries:
+  - title: 추가 호스트에 데이터 저장소를 마운트합니다
+    url: "/manage/task-mount-datastores-on-host.html"
+  - title: 데이터 저장소 크기 조정
+    url: "/manage/task-resize-datastores.html"
+  - title: VVOL 데이터 저장소를 편집합니다
+    url: "/manage/task-edit-a-vvol-datastore.html"
+  - title: VVOL 데이터 저장소에 스토리지를 AD 중입니다
+    url: "/manage/task-add-storage-to-a-vvol-datastore.html"
+  - title: VVOL 데이터 저장소에서 스토리지를 원격 이동합니다
+    url: "/manage/task-remove-storage-from-a-vvols-datastore.html"
+  - title: VVOL 데이터 저장소를 마운트합니다
+    url: "/manage/task-mount-a-vvol-datastore.html"
+  - title: 가상 머신의 마이그레이션 또는 클론 생성 시 고려 사항
+    url: "/manage/reference-considerations-for-migrating-virtual-machines.html"
+  - title: 기존 가상 머신을 VVol 데이터 저장소로 마이그레이션합니다
+    url: "/manage/task-migrate-standard-virtual-machines-to-vvol-datastores.html"
+  - title: 이전 스토리지 기능 프로파일이 있는 가상 시스템을 마이그레이션합니다
+    url: "/manage/task-migrate-existing-virtual-machines-to-7-1-virtual-appliance.html"
+- title: Virtual Storage Console 보고서 이해
+  url: "/manage/concept-virtual-storage-console-reports.html"
+  entries:
+  - title: 보고서의 기능
+    url: "/manage/concept-what-reports-do.html"
+  - title: 데이터 저장소 보고서
+    url: "/manage/concept-datastore-reports.html"
+  - title: VVOL 보고서
+    url: "/manage/concept-what-vasa-provider-reports-do.html"
+- title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다
+  url: "/manage/concept-troubleshoot-issues-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra-test.html"
+  entries:
+  - title: 로그 파일을 수집합니다
+    url: "/manage/task-collect-the-log-files.html"
+  - title: 많은 수의 볼륨에서 VVOL 데이터 저장소 프로비저닝이 실패합니다
+    url: "/manage/reference-vvol-datastore-provision-fails-with-large-number-of-volumes.html"
+  - title: 업그레이드 후 VM 스토리지 정책을 편집하는 동안 문제가 발생했습니다
+    url: "/manage/reference-edit-vm-storage-policies-after-upgrade-throws-error-message.html"
+  - title: VASA 공급자 상태는 vCenter Server GUI에서 "오프라인"으로 표시됩니다
+    url: "/manage/reference-vasa-provider-storage-provider-status-show-offline-in-vcenter-gui.html"
+  - title: 가상 어플라이언스의 VSC 요약 페이지에 액세스하는 동안 오류가 발생했습니다
+    url: "/manage/reference-error-while-accessing-the-vsc-summary-page-of-virtual-appliance.html"
+  - title: 네트워크 설정을 변경한 후 데이터 저장소를 삭제하는 동안 오류가 발생했습니다
+    url: "/manage/reference-error-deleting-a-datastore-after-network-settings-are-changed.html"
+  - title: 가상 시스템 프로비저닝이 정의되지 않은 오류로 실패합니다
+    url: "/manage/reference-vm-provision-fails-with-undefined-error.html"
+  - title: ONTAP 9.4 스토리지 시스템에서 VVOL의 일반 프로비저닝이 실패합니다
+    url: "/manage/reference-thick-provision-fails-for-vvol-datastores-on-ontap-9-4.html"
+  - title: 볼륨 상태가 오프라인으로 변경되면 데이터 저장소에 액세스할 수 없습니다
+    url: "/manage/reference-datastore-inaccessible-when-volume-status-is-changed-to-offline.html"
+  - title: 스토리지 시스템 그리드의 IPv6 상태에서 IPv4를 사용하여 스토리지 시스템을 추가하면 인증 오류가 발생합니다
+    url: "/manage/reference-authentication-failure-status-is-displayed-with-ipv6-as-the-cluster-ip-even-if-cluster-is-added-with-ipv4.html"
+  - title: VVOL 데이터 저장소에서 가상 머신을 프로비저닝하는 동안 파일 생성 오류가 발생했습니다
+    url: "/manage/reference-file-creation-error-while-virtual-machine-provisioning-on-vvol-datastore-issue-we-are-unable-to-create-virtual-machine-using-the-default-vs0-svm-caus.html"
+  - title: SRM의 SRA에 대해 잘못된 상태 '장애 조치 진행 중'이 보고됩니다
+    url: "/manage/reference-failover-in-progress-status-is-reported-inappropriately-for-sra.html"

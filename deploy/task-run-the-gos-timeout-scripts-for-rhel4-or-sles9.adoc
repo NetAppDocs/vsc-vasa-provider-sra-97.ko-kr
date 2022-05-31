@@ -1,0 +1,86 @@
+---
+permalink: deploy/task-run-the-gos-timeout-scripts-for-rhel4-or-sles9.html 
+sidebar: sidebar 
+keywords: setting, timeout, values, linux, guest, operating, systems, 
+summary: '게스트 운영 체제(OS) 시간 제한 스크립트는 Red Hat Enterprise Linux 버전 4, 5, 6, 7과 SUSE Linux Enterprise Server 버전 9, 10 및 11에 대한 SCSI I/O 시간 초과 설정을 설정합니다. 60초 제한 시간 또는 190초 제한 시간을 지정할 수 있습니다. 새 버전의 Linux로 업그레이드할 때마다 스크립트를 실행해야 합니다.' 
+---
+= Linux 게스트 운영 체제에 대한 시간 제한 값을 설정합니다
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+게스트 운영 체제(OS) 시간 제한 스크립트는 Red Hat Enterprise Linux 버전 4, 5, 6, 7과 SUSE Linux Enterprise Server 버전 9, 10 및 11에 대한 SCSI I/O 시간 초과 설정을 설정합니다. 60초 제한 시간 또는 190초 제한 시간을 지정할 수 있습니다. 새 버전의 Linux로 업그레이드할 때마다 스크립트를 실행해야 합니다.
+
+Linux 스크립트를 포함하는 ISO 이미지를 마운트해야 합니다.
+
+.단계
+. Linux 가상 머신의 콘솔에 액세스하고 루트 권한이 있는 계정으로 로그인합니다.
+. Linux_gos_timeout-install.sh 스크립트를 실행합니다.
++
+Red Hat Enterprise Linux 4 또는 SUSE Linux Enterprise Server 9의 경우 다음과 유사한 메시지가 표시됩니다.
+
++
+[listing]
+----
+Restarting udev... this may take a few seconds.
+----
++
+[listing]
+----
+Setting I/O Timeout (60s) for /dev/sda - SUCCESS!
+----
++
+Red Hat Enterprise Linux 5, Red Hat Enterprise Linux 6 및 Red Hat Enterprise Linux 7의 경우 다음과 유사한 메시지가 표시됩니다.
+
++
+[listing]
+----
+patching file /etc/udev/rules.d/50-udev.rules
+----
++
+[listing]
+----
+Hunk #1 succeeded at 333 (offset 13 lines).
+----
++
+[listing]
+----
+Restarting udev... this may take a few seconds.
+----
++
+[listing]
+----
+Starting udev: [ OK ]
+----
++
+[listing]
+----
+Setting I/O Timeout (60s) for /dev/sda - SUCCESS!
+----
++
+SUSE Linux Enterprise Server 10 또는 SUSE Linux Enterprise Server 11의 경우 다음과 유사한 메시지가 표시됩니다.
+
++
+[listing]
+----
+patching file /etc/udev/rules.d/50-udev-default.rules
+----
++
+[listing]
+----
+Hunk #1 succeeded at 114 (offset 1 line).
+----
++
+[listing]
+----
+Restarting udev ...this may take a few seconds.
+----
++
+[listing]
+----
+Updating all available device nodes in /dev:   done
+----
+. ISO 이미지를 마운트 해제합니다.
+
