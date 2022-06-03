@@ -133,7 +133,7 @@ entries:
   - title: SAN 환경에 대한 스토리지 복제 어댑터를 구성합니다
     url: "/deploy/task-configure-storage-replication-adapter-for-san-environment.html"
   - title: NAS 환경에 대한 스토리지 복제 어댑터를 구성합니다
-    url: "/deploy/reference-configure-storage-replication-adapter-for-nas-environment.html"
+    url: "/deploy/task-configure-storage-replication-adapter-for-nas-environment.html"
   - title: 확장성이 뛰어난 환경을 위한 스토리지 복제 어댑터 구성
     url: "/deploy/reference-configure-storage-replication-adapter-for-highly-scaled-environment.html"
 - title: VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다
