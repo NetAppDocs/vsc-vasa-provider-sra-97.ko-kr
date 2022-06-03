@@ -12,9 +12,9 @@ sidebar:
   - title: VSC, VASA Provider, SRA 문서가 제공됩니다
     url: "/index.html"
   - title: 릴리스 정보
-    url: release-notes.html
+    url: "/release-notes.html"
   - title: 빠른 시작
-    url: qsg.html
+    url: "/qsg.html"
   - section: deploy
   - section: manage
   - title: 법적 고지
