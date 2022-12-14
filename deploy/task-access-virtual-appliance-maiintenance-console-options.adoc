@@ -13,6 +13,7 @@ summary: 'VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication A
 [role="lead"]
 VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스의 유지보수 콘솔을 사용하여 애플리케이션, 시스템, 네트워크 구성을 관리할 수 있습니다. 관리자 암호 및 유지보수 암호를 변경할 수 있습니다. 또한 지원 번들을 생성하고, 다양한 로그 수준을 설정하고, TLS 구성을 확인 및 관리하고, 원격 진단을 시작할 수 있습니다.
 
+.시작하기 전에
 VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축한 후에는 VMware 툴을 설치해야 합니다.
 
 .이 작업에 대해

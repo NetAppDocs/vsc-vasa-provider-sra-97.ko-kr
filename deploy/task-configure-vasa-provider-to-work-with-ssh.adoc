@@ -13,6 +13,7 @@ summary: 'VSC(가상 스토리지 콘솔), VASA Provider, SRA(스토리지 복�
 [role="lead"]
 VSC(가상 스토리지 콘솔), VASA Provider, SRA(스토리지 복제 어댑터)용 가상 어플라이언스를 구성하여 보안 액세스를 위해 SSH를 사용하도록 VASA Provider를 설정할 수 있습니다.
 
+.이 작업에 대해
 SSH를 구성할 때는 유지보수 사용자로 로그인해야 합니다. 이는 VASA Provider에 대한 루트 액세스가 비활성화되었기 때문입니다. 다른 로그인 자격 증명을 사용하는 경우 SSH를 사용하여 VASA Provider에 액세스할 수 없습니다.
 
 .단계

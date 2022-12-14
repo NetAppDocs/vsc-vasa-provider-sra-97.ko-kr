@@ -13,6 +13,7 @@ summary: 'VMware vCenter SRM(Site Recovery Manager)용 SRA(Storage Replication A
 [role="lead"]
 VMware vCenter SRM(Site Recovery Manager)용 SRA(Storage Replication Adapter)를 실행하기 전에 스토리지 시스템을 구성해야 합니다.
 
+.시작하기 전에
 보호 사이트 및 복구 사이트에 다음 프로그램을 설치해야 합니다.
 
 * SRM

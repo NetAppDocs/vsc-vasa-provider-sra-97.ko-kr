@@ -270,13 +270,6 @@
   <block id="b7f418bed0ff64314736c2b82cd31de1" category="summary">VSC, VASA Provider, SRA를 위한 가상 머신을 구성하려면 스토리지 시스템을 구성하고, 스토리지 기능 프로필을 생성하고, 데이터 저장소를 프로비저닝하며, 재해 복구를 위해 SRA를 선택적으로 구성해야 합니다.</block>
   <block id="da6a60b04c416d0ddb2b7a0964fb618f" category="doc">VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구성 워크플로우</block>
   <block id="c0a4c824306cfda9618646e00bc84fcc" category="image-alt">사용 사례 VSC 사용자</block>
-  <block id="456a31391b752801562536d0f9695aad" category="paragraph">Copyright © 2020 NetApp, Inc. All rights reserved. 미국에서 인쇄됨</block>
-  <block id="2275e007ee598cef266c877f9c52ee25" category="paragraph">본 문서의 어떤 부분도 저작권 소유자의 사전 서면 승인 없이는 어떠한 형식이나 수단(그래픽, 전자 또는 기계 등)으로도 저작권 소유자의 사전 서면 승인 없이 전자 검색 시스템에 저장 또는 저장.</block>
-  <block id="ce4ad2236c56cc11a838f29c8c261bf7" category="paragraph">NetApp이 저작권을 가진 자료에 있는 소프트웨어에는 아래의 라이센스와 고지 사항이 적용됩니다.</block>
-  <block id="b110bc9db113b3149cb9e2ed905d4c6c" category="paragraph">본 소프트웨어는 NetApp에 의해 "있는 그대로" 제공되며 상품성 및 특정 목적에 대한 적합성에 대한 명시적 또는 묵시적 보증을 포함하여 이에 제한되지 않고, 어떠한 보증도 하지 않습니다. NetApp은 대체품 또는 대체 서비스의 조달, 사용 불능, 데이터 손실, 이익 손실, 또는 파생적 손해(소계 물품 또는 서비스의 조달, 사용 손실, 데이터 또는 수익 손실, 계약, 엄격한 책임 또는 불법 행위(과실 또는 그렇지 않은 경우)에 관계없이 어떠한 책임도 지지 않으며, 이는 이러한 손해의 가능성을 사전에 알고 있던 경우에도 마찬가지입니다.</block>
-  <block id="4fc9b260d15698bbd988f76ca839c5b6" category="paragraph">NetApp은 본 문서에 설명된 제품을 언제든지 예고 없이 변경할 권리를 보유합니다. NetApp은 NetApp의 명시적인 서면 동의를 받은 경우를 제외하고 본 문서에 설명된 제품을 사용하여 발생하는 어떠한 문제에도 책임을 지지 않습니다. 본 제품의 사용 또는 구입의 경우 NetApp에서는 어떠한 특허권, 상표권 또는 기타 지적 재산권이 적용되는 라이센스도 제공하지 않습니다.</block>
-  <block id="87bfcb691f34a9e3fdda83480f0acf78" category="paragraph">본 설명서에 설명된 제품은 하나 이상의 미국 특허 또는 해외 특허, 해외 특허, 해외 특허, 해외 특허, 해외 특허, 해외 특허, 해외 특허, 미국 출원 중인 특허로 보호됩니다.</block>
-  <block id="464821ce353b86f770de0d09b5f5aabe" category="paragraph">여기에 포함된 데이터는 상업용 품목(FAR 2.101에 정의)에 해당하며 NetApp, Inc의 독점 자산입니다 정부는 데이터가 제공된 미국 계약과 관련하여 해당 계약을 지원하는 데에만 데이터에 대한 전 세계적으로 비독점적이고 양도할 수 없으며 재사용이 불가능하며 데이터를 제공한 정부 계약입니다. 여기에 제공된 경우를 제외하고 데이터는 사용, 공개, 재생산, 수정, 수행 등의 할 수 또는 NetApp, Inc.의 사전 서면 승인 없이 표시됩니다. 미국 국방부에 대한 정부 라이선스는 DFARS 조항 252.227-7015(b)에 명시된 권한으로 제한됩니다.</block>
   <block id="d52f9f42182f285613bc320b561ee1bc" category="summary">VMware vSphere용 Virtual Storage Console을 사용하여 vCenter Server의 스토리지 시스템에 대한 기본 자격 증명을 설정할 수 있습니다.</block>
   <block id="3cabeb9f2dfaeed94f3553f24bb6697f" category="doc">스토리지 시스템에 대한 기본 자격 증명을 설정합니다</block>
   <block id="79709e46ab199855d00cbacbb6cc6473" category="paragraph">기본 자격 증명을 생성하는 데 사용할 vCenter Server를 선택해야 합니다.</block>
@@ -587,9 +580,6 @@
   <block id="b55c53d33f614ac9e6dbd3a7cbf0f01a" category="doc">Site Recovery Manager를 사용하여 재해 복구 설정을 관리합니다</block>
   <block id="17163e93f2b0d1056dcda630949bc031" category="paragraph">SRM(Site Recovery Manager)과 VMware의 SRM(Site Recovery Manager)을 함께 사용하여 vCenter Server에서 재해 복구 설정을 생성하고 관리할 수 있습니다.</block>
   <block id="bf4181724f8c5fc5f2115f5429d68d61" category="paragraph">이번 VASA Provider 릴리즈는 이제 SRA(Storage Repliaction Adapter)의 기능과 함께 기본 제공됩니다. 데이터 센터에서 VVOL 데이터 저장소를 구성한 경우 VVOL 데이터 저장소의 복구를 위해 SRA를 별도로 설치할 필요가 없습니다. SRM(Site Recovery Manager)에서는 보호 사이트와 복구 사이트를 페어링해야 합니다. 사이트 페어링이 발생한 후 SRM 구성의 다음 부분에서는 SRM이 스토리지 시스템과 통신하여 디바이스 및 디바이스 복제를 검색할 수 있도록 스토리지 쌍을 설정하는 작업을 수행합니다. 스토리지 쌍을 구성하려면 먼저 SRM에서 사이트 쌍을 만들어야 합니다.</block>
-  <block id="b1ff5704b48e42d700d43961dd415064" category="summary">상표</block>
-  <block id="4ab288371dd14cece38e8f9340ade316" category="inline-link">NetApp 상표</block>
-  <block id="437762eaaab99247d8d5c83cef602eae" category="paragraph"><block ref="437762eaaab99247d8d5c83cef602eae" category="inline-link-rx"></block></block>
   <block id="194dc7d35caa1e246b54270c343448ee" category="summary">SRA(Storage Replication Adapter)를 구성한 후 보호 사이트 및 복구 사이트가 성공적으로 페어링되었는지 확인해야 합니다. 보호된 사이트와 복구 사이트에서 복제된 스토리지 시스템을 검색할 수 있어야 합니다.</block>
   <block id="79d8a92408e3c5cb0a892432af2c8045" category="doc">복제된 스토리지 시스템을 확인합니다</block>
   <block id="2b1273fdbdece1c6daffff8f43659d36" category="list-text">스토리지 시스템을 구성해야 합니다.</block>
@@ -1309,7 +1299,6 @@
   <block id="e704730b9615f5aac277195b83434fd7" category="list-text">시스템 구성 * 을 선택하려면 "3"을 입력합니다.</block>
   <block id="145d7ffcbcc4e33328fd9d5fd4fe51c4" category="list-text">"6"을 입력하여 * SSH 액세스 활성화 * 를 선택합니다.</block>
   <block id="f055cf863289d0d7eb6da567696d8191" category="list-text">확인 대화 상자에 y를 입력합니다.</block>
-  <block id="f434e67fe7c948db94749474e31b44c4" category="summary">저작권 및 상표</block>
   <block id="8ee3c551def9605191601bd42f707060" category="summary">VMware vSphere 환경에서 VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하여 배포한 다음 VSC, VASA Provider, SRAVSC, VASA Provider, SRA를 사용하여 수행할 작업을 기준으로 필요한 애플리케이션을 구성해야 합니다.</block>
   <block id="2271baa7829b1c018068423da0b8a758" category="doc">VSC, VASA Provider, SRA를 구축 또는 업그레이드합니다</block>
   <block id="a74e9310b5543e4babe74be14ba35d13" category="paragraph"><block ref="a74e9310b5543e4babe74be14ba35d13" category="inline-xref-macro-rx"></block></block>
@@ -1405,9 +1394,6 @@
   <block id="b74bb3e7dfc6e02d8ff50587ced2b158" category="list-text">VSC 서비스가 시작되면 VSC는 자동 백그라운드 검색 프로세스를 시작합니다.</block>
   <block id="ca6e9b3c667504b22809b042ee4b01f4" category="list-text">스토리지 시스템 페이지 또는 호스트 또는 데이터 센터에서 * 모두 다시 검색 * 버튼을 클릭하여 * 작업 * 메뉴(메뉴: 작업 [NetApp VSC &gt; 호스트 및 스토리지 데이터 업데이트])에서 선택할 수 있습니다. 개요 섹션의 시작하기 탭에서 * 검색 * 을 클릭할 수도 있습니다.</block>
   <block id="c62bb22aec88a0c9ce10597b8a469f0b" category="paragraph">모든 VSC 기능을 사용하려면 작업을 수행하기 위한 특정 권한이 필요합니다. ONTAP 역할과 연결된 자격 증명을 기준으로 사용자가 수행할 수 있는 작업을 제한할 수 있습니다. 스토리지 시스템 사용자 이름과 암호 쌍이 같은 모든 사용자는 동일한 스토리지 시스템 자격 증명 세트를 공유하며 동일한 작업을 수행할 수 있습니다.</block>
-  <block id="8d65b5ac8abb867ba3202bc84caf1d3a" category="paragraph">NetApp, NetApp 로고, * NetApp 상표 * 페이지에 나열된 마크는 NetApp Inc.의 상표입니다. 기타 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.</block>
-  <block id="714341d9339756588d1dc724991c2b9a" category="inline-link">여기를 클릭하십시오</block>
-  <block id="59b5615ba3ed863a014133a54f68f4ab" category="paragraph"><block ref="59b5615ba3ed863a014133a54f68f4ab" category="inline-link-rx"></block></block>
   <block id="4d986d61933a9708b0a89553850354b6" category="summary">VSC, VASA Provider 및 SRA용 가상 어플라이언스를 구축 또는 업그레이드한 후 플러그인이 자동으로 업데이트되지 않는 경우 vCenter Server 플러그인 문제를 해결하려면 브라우저와 vCenter Server에서 캐시된 다운로드 플러그인 패키지를 정리해야 합니다.</block>
   <block id="feb4037176a43ecc564646b0e449704a" category="doc">vSphere 캐시된 다운로드 플러그인 패키지를 청소합니다</block>
   <block id="e00e497c6868adff4d7ea4df0a846ad4" category="paragraph">VSC, VASA Provider, SRA용 가상 어플라이언스를 구축 또는 업그레이드한 후 플러그인이 자동으로 업데이트되지 않는 경우 vCenter Server 플러그인 문제를 해결하려면 브라우저와 vCenter Server에서 캐시된 다운로드 플러그인 패키지를 정리해야 합니다.</block>
@@ -1868,7 +1854,8 @@
   <block id="252487cd0b2a2e5781422a4764d47e57" category="sidebar">VVOL 데이터 저장소에서 스토리지를 원격 이동합니다</block>
   <block id="ddf0ffd29c8b5fdb28671568df171be4" category="sidebar">많은 수의 볼륨에서 VVOL 데이터 저장소 프로비저닝이 실패합니다</block>
   <block id="dec3e9da01f86a71bed912a019fad778" category="sidebar">VASA 공급자 상태는 vCenter Server GUI에서 "오프라인"으로 표시됩니다</block>
-  <block id="b74ab2582dce89d478a834957aa9a0e4" category="sidebar"><strong>가상 데이터 저장소를 구성하기 위해 VASA Provider를 설정합니다</strong></block>
   <block id="07a4e02530218bb020bf2b5915f43cde" category="sidebar">게스트 운영 체제 스크립트를 구성합니다</block>
   <block id="d036f2c382984088af9c7b41532db232" category="sidebar">여러 vCenter Server 환경에 VSC를 등록하기 위한 요구 사항</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">작업을 마친 후</block>
+  <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">결과</block>
 </blocks>

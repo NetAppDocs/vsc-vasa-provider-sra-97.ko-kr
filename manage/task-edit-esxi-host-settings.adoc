@@ -14,8 +14,10 @@ summary: 'VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication A
 [role="lead"]
 VSC(Virtual Storage Console), VASA Provider, SRA(Storage Replication Adapter)용 가상 어플라이언스의 대시보드를 사용하여 ESXi 호스트 설정을 편집할 수 있습니다.
 
+.시작하기 전에
 vCenter Server 인스턴스에 대해 ESXi 호스트 시스템을 구성해야 합니다.
 
+.이 작업에 대해
 ESXi 호스트 설정에 문제가 있는 경우 대시보드의 ESXi 호스트 시스템 포틀릿에 문제가 표시됩니다. 문제를 클릭하여 문제가 있는 ESXi 호스트의 호스트 이름 또는 IP 주소를 볼 수 있습니다.
 
 .단계

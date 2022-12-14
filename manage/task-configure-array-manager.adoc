@@ -20,6 +20,7 @@ SRM(Site Recovery Manager)의 * Array Manager * 마법사를 사용하여 SRA(St
 * 멀티 테넌시를 사용하려면 SVM 관리 LIF가 활성화되어 있어야 합니다.
 
 
+.이 작업에 대해
 SRA는 클러스터 수준 관리 및 SVM 수준 관리를 지원합니다. 클러스터 수준에서 스토리지를 추가할 경우 클러스터의 모든 SVM에서 작업을 검색 및 수행할 수 있습니다. SVM 레벨에서 스토리지를 추가할 경우 해당 SVM만 관리할 수 있습니다.
 
 [NOTE]
@@ -72,4 +73,5 @@ Array Manager를 구성할 때는 Virtual Storage Console의 * Storage Systems *
 . 마침 * 을 클릭합니다.
 
 
+.작업을 마친 후
 적절한 SVM 관리 IP 주소와 자격 증명을 사용하여 복구 사이트에 대해 동일한 단계를 수행할 수 있습니다. Add Array Manager* 마법사의 * Enable Array Pairs* 화면에서 올바른 배열 쌍이 선택되었는지 확인하고 사용할 준비가 되었음을 표시해야 합니다.
