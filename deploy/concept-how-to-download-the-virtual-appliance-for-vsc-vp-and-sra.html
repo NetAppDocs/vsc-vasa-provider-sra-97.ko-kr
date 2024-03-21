@@ -1,0 +1,3111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head class="at-element-marker">
+  <title>VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하는 방법</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하는 방법" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+	<meta property="og:description" content="가상 스토리지 콘솔, VASA 공급자 및 스토리지 복제 어댑터용 가상 어플라이언스에 대한 .ova 파일을 에서 다운로드할 수 있습니다." />
+  <meta property="og:image" content="https://docs.netapp.com/ko-kr/vsc-vasa-provider-sra-97/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="가상 스토리지 콘솔, VASA 공급자 및 스토리지 복제 어댑터용 가상 어플라이언스에 대한 .ova 파일을 에서 다운로드할 수 있습니다.">
+  <meta name="keywords" content=" download, the, virtual, appliance, vsc, vasa, provider, sra,"><!-- Icons -->
+  <link rel="icon" href="/ko-kr/vsc-vasa-provider-sra-97/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/ko-kr/vsc-vasa-provider-sra-97/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/ko-kr/vsc-vasa-provider-sra-97/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ko-kr/vsc-vasa-provider-sra-97/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ko-kr/vsc-vasa-provider-sra-97/js/na-search.js'></script><script src='/ko-kr/vsc-vasa-provider-sra-97/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/ko-kr/vsc-vasa-provider-sra-97/js/custom-dropdown.js'></script>
+  <script src='/ko-kr/vsc-vasa-provider-sra-97/js/FileSaver.min.js'></script>
+  <script src='/ko-kr/vsc-vasa-provider-sra-97/js/jszip-utils.min.js'></script>
+  <script src='/ko-kr/vsc-vasa-provider-sra-97/js/jszip.min.js'></script><script src='/ko-kr/vsc-vasa-provider-sra-97/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/ko-kr/vsc-vasa-provider-sra-97/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/kr">
+                <image id="ie-header-logo" src="/ko-kr/vsc-vasa-provider-sra-97/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">문서</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/ko-kr/vsc-vasa-provider-sra-97/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">한국어</span>
+                    <img src="/ko-kr/vsc-vasa-provider-sra-97/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ko-kr/vsc-vasa-provider-sra-97/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/ko-kr/vsc-vasa-provider-sra-97/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">모든 NetApp</span>
+                    <img src="/ko-kr/vsc-vasa-provider-sra-97/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ko-kr/vsc-vasa-provider-sra-97/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">지원</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">기술 자료</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/ko/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">교육</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/ko-kr/vsc-vasa-provider-sra-97/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">모든 문서</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/ko-kr/vsc-vasa-provider-sra-97/">-->
+      VSC, VASA Provider, and SRA 9.7
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/ko-kr/vsc-vasa-provider-sra-97/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/ko-kr/vsc-vasa-provider-sra-97/search.html" 
+        data-type="widget"
+        data-placeholder="설명서 검색"
+        data-no-results-found="{query}에 대한 결과를 찾을 수 없습니다"
+        data-did-you-mean="{suggestion}을(를) 검색하십시오."
+        data-no-results-found-did-you-mean="{query}에 대한 결과가 없습니다. {suggestion}을(를) 찾고 계시는 건가요?"
+        data-results-found="{hitCount}개의 결과를 찾았습니다"
+        data-error-message="오류가 발생했습니다. 다시 시도해 주십시오."
+        data-error-reset="검색 재설정"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA 문서가 제공됩니다"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/vsc-vasa-provider-sra-97/index.html">
+        VSC, VASA Provider, SRA 문서가 제공됩니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="릴리스 정보"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/release-notes.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/vsc-vasa-provider-sra-97/release-notes.html">
+        릴리스 정보
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="빠른 시작"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/qsg.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/vsc-vasa-provider-sra-97/qsg.html">
+        빠른 시작
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="배포 및 업그레이드"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 배포 및 업그레이드</div>-->
+         배포 및 업그레이드
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스 개요"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-virtual-storage-console-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-virtual-storage-console-overview.html">
+        VSC, VASA Provider, SRA를 위한 가상 어플라이언스 개요
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA 가상 어플라이언스 신규 사용자를 위한 구축 워크플로우"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-installation-workflow-for-new-users.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-installation-workflow-for-new-users.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC, VASA Provider, SRA 가상 어플라이언스 신규 사용자를 위한 구축 워크플로우</div>-->
+         VSC, VASA Provider, SRA 가상 어플라이언스 신규 사용자를 위한 구축 워크플로우
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="기존 VSC, VASA Provider, SRA 사용자를 위한 구축 워크플로우"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-installation-workflow-for-existing-users-of-vsc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-installation-workflow-for-existing-users-of-vsc.html">
+        기존 VSC, VASA Provider, SRA 사용자를 위한 구축 워크플로우
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 요구사항"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-requirements-for-deploying-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-requirements-for-deploying-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 요구사항</div>-->
+         VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 요구사항
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC용 포트 요구사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-port-requirements-for-vsc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-port-requirements-for-vsc.html">
+        VSC용 포트 요구사항
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 공간 및 크기 요구사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-space-and-size-requirements-for-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-space-and-size-requirements-for-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html">
+        VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 공간 및 크기 요구사항
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 스토리지 시스템, 라이센스 및 애플리케이션을 지원합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-supported-storage-system-and-applications.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-supported-storage-system-and-applications.html">
+        VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 스토리지 시스템, 라이센스 및 애플리케이션을 지원합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 시 고려 사항 및 요구 사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-considerations-for-deploying-virtual-appliance-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-considerations-for-deploying-virtual-appliance-for-vsc-vasa-provider-and-sra.html">
+        VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 시 고려 사항 및 요구 사항
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 구축 또는 업그레이드합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-deploy-or-upgrade-ontap-tools.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-deploy-or-upgrade-ontap-tools.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC, VASA Provider, SRA를 구축 또는 업그레이드합니다</div>-->
+         VSC, VASA Provider, SRA를 구축 또는 업그레이드합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하는 방법"
+      data-li-level="3#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html">
+        VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하는 방법
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축합니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-deploy-ontap-tools.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-deploy-ontap-tools.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축합니다</div>-->
+         VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="배포 사용자 지정 고려 사항"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-deploment-customization-requirements.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-deploment-customization-requirements.html">
+        배포 사용자 지정 고려 사항
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="가상 데이터 저장소를 구성하기 위해 VASA Provider를 설정합니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-enable-vasa-provider-for-configuring-virtual-datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-enable-vasa-provider-for-configuring-virtual-datastores.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 가상 데이터 저장소를 구성하기 위해 VASA Provider를 설정합니다</div>-->
+         가상 데이터 저장소를 구성하기 위해 VASA Provider를 설정합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 등록하십시오"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-register-oncommand-api-services-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-register-oncommand-api-services-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html">
+        VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 등록하십시오
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NFS VAAI 플러그인을 설치합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-install-the-nfs-vaai-plug-in.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-install-the-nfs-vaai-plug-in.html">
+        NFS VAAI 플러그인을 설치합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 복제 어댑터를 활성화합니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-enable-storage-replication-adapter.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-enable-storage-replication-adapter.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 스토리지 복제 어댑터를 활성화합니다</div>-->
+         스토리지 복제 어댑터를 활성화합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SRM 어플라이언스에서 SRA를 구성합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-configure-sra-on-srm-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-configure-sra-on-srm-appliance.html">
+        SRM 어플라이언스에서 SRA를 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SRA(Storage Replication Adapter) 자격 증명을 업데이트합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-update-sra-credentials.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-update-sra-credentials.html">
+        SRA(Storage Replication Adapter) 자격 증명을 업데이트합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows SRM에서 SRM 어플라이언스로 마이그레이션"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-migration-of-disaster-recovery-setup-from-windows-to-appliance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-migration-of-disaster-recovery-setup-from-windows-to-appliance.html">
+        Windows SRM에서 SRM 어플라이언스로 마이그레이션
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 9.7.1 가상 어플라이언스로 업그레이드하십시오"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-upgrade-to-the-9-7-1-virtual-appliance-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-upgrade-to-the-9-7-1-virtual-appliance-for-vsc-vasa-provider-and-sra.html">
+        VSC, VASA Provider, SRA를 위한 9.7.1 가상 어플라이언스로 업그레이드하십시오
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 복제 어댑터를 업그레이드합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-upgrade-storage-replication-adapter.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-upgrade-storage-replication-adapter.html">
+        스토리지 복제 어댑터를 업그레이드합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere 환경을 위한 Virtual Storage Console을 구성합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-configure-vsc-for-vmware-vsphere-environment.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-configure-vsc-for-vmware-vsphere-environment.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VMware vSphere 환경을 위한 Virtual Storage Console을 구성합니다</div>-->
+         VMware vSphere 환경을 위한 Virtual Storage Console을 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ESXi 서버 경로 다중화 및 시간 초과 설정을 구성합니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-configure-esx-server-multipathing-and-timeout-settings.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-configure-esx-server-multipathing-and-timeout-settings.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ESXi 서버 경로 다중화 및 시간 초과 설정을 구성합니다</div>-->
+         ESXi 서버 경로 다중화 및 시간 초과 설정을 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere용 Virtual Storage Console을 사용하여 설정된 ESXi 호스트 값"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-esx-host-values-set-by-vsc-for-vmware-vsphere.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-esx-host-values-set-by-vsc-for-vmware-vsphere.html">
+        VMware vSphere용 Virtual Storage Console을 사용하여 설정된 ESXi 호스트 값
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="게스트 운영 체제 스크립트를 구성합니다"
+      data-li-level="4" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-configure-guest-operating-system-scripts.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-configure-guest-operating-system-scripts.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 게스트 운영 체제 스크립트를 구성합니다</div>-->
+         게스트 운영 체제 스크립트를 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows 게스트 운영 체제에 대한 시간 초과 값을 설정합니다"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-run-the-gos-timeout-scripts-for-windows.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-run-the-gos-timeout-scripts-for-windows.html">
+        Windows 게스트 운영 체제에 대한 시간 초과 값을 설정합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Solaris 게스트 운영 체제에 대한 시간 초과 값을 설정합니다"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-run-the-gos-timeout-scripts-for-solaris.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-run-the-gos-timeout-scripts-for-solaris.html">
+        Solaris 게스트 운영 체제에 대한 시간 초과 값을 설정합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Linux 게스트 운영 체제에 대한 시간 제한 값을 설정합니다"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-run-the-gos-timeout-scripts-for-rhel4-or-sles9.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-run-the-gos-timeout-scripts-for-rhel4-or-sles9.html">
+        Linux 게스트 운영 체제에 대한 시간 제한 값을 설정합니다
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="에 대한 SSL 인증서를 다시 생성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-regenerate-an-ssl-certificate-for-vsc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-regenerate-an-ssl-certificate-for-vsc.html">
+        에 대한 SSL 인증서를 다시 생성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="여러 vCenter Server 환경에 VSC를 등록하기 위한 요구 사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-requirements-for-registering-vsc-in-multiple-vcenter-servers-environment.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-requirements-for-registering-vsc-in-multiple-vcenter-servers-environment.html">
+        여러 vCenter Server 환경에 VSC를 등록하기 위한 요구 사항
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC 기본 설정 파일을 구성합니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-configure-the-vsc-preferences-files.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-configure-the-vsc-preferences-files.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC 기본 설정 파일을 구성합니다</div>-->
+         VSC 기본 설정 파일을 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="IPv4 또는 IPv6를 설정합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-set-ipv4-or-ipv6.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-set-ipv4-or-ipv6.html">
+        IPv4 또는 IPv6를 설정합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="서로 다른 서브넷에 데이터 저장소 마운트를 설정합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-enable-datastore-mounting-across-different-subnets.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-enable-datastore-mounting-across-different-subnets.html">
+        서로 다른 서브넷에 데이터 저장소 마운트를 설정합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 유지보수 콘솔 옵션에 액세스합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-access-virtual-appliance-maiintenance-console-options.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-access-virtual-appliance-maiintenance-console-options.html">
+        VSC, VASA Provider, SRA를 위한 가상 어플라이언스의 유지보수 콘솔 옵션에 액세스합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="관리자 암호를 변경합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-change-the-administrative-password.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-change-the-administrative-password.html">
+        관리자 암호를 변경합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 대한 고가용성을 구성합니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-configure-high-availability-for-virtual-appliance-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-configure-high-availability-for-virtual-appliance-for-vsc-vasa-provider-and-sra.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 대한 고가용성을 구성합니다</div>-->
+         VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 대한 고가용성을 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere HA"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-vmware-high-availability-for-vcenter-server.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-vmware-high-availability-for-vcenter-server.html">
+        VMware vSphere HA
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere 내결함성"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-vmware-fault-tolerance-for-vcenter-server.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-vmware-fault-tolerance-for-vcenter-server.html">
+        VMware vSphere 내결함성
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA 공급자, SRA를 위한 가상 어플라이언스가 지원하는 MetroCluster 구성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-metrocluster-configurations-supported-by-virtual-appliance-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-metrocluster-configurations-supported-by-virtual-appliance-for-vsc-vasa-provider-and-sra.html">
+        VSC, VASA 공급자, SRA를 위한 가상 어플라이언스가 지원하는 MetroCluster 구성
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere 스토리지 시스템 환경을 위한 Virtual Storage Console을 구성합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-configure-your-storage-system-environment.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-configure-your-storage-system-environment.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VMware vSphere 스토리지 시스템 환경을 위한 Virtual Storage Console을 구성합니다</div>-->
+         VMware vSphere 스토리지 시스템 환경을 위한 Virtual Storage Console을 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 시스템에 대한 기본 자격 증명을 설정합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-set-default-credentials-for-storage-systems.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-set-default-credentials-for-storage-systems.html">
+        스토리지 시스템에 대한 기본 자격 증명을 설정합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC에 스토리지 시스템 추가"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-add-storage-systems.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-add-storage-systems.html">
+        VSC에 스토리지 시스템 추가
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 시스템 및 호스트를 검색합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-discover-storage-systems-and-hosts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-discover-storage-systems-and-hosts.html">
+        스토리지 시스템 및 호스트를 검색합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 시스템 디스플레이를 새로 고칩니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-refresh-the-storage-system-display.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-refresh-the-storage-system-display.html">
+        스토리지 시스템 디스플레이를 새로 고칩니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere용 VSC의 vCenter Server 역할 기반 액세스 제어 기능"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-vcenter-server-role-based-access-control-features-in-vsc-for-vmware-vsphere.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-vcenter-server-role-based-access-control-features-in-vsc-for-vmware-vsphere.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VMware vSphere용 VSC의 vCenter Server 역할 기반 액세스 제어 기능</div>-->
+         VMware vSphere용 VSC의 vCenter Server 역할 기반 액세스 제어 기능
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vCenter Server 권한의 구성 요소입니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-components-that-make-up-vcenter-server-permissions.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-components-that-make-up-vcenter-server-permissions.html">
+        vCenter Server 권한의 구성 요소입니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vCenter Server에 대한 권한을 할당하고 수정하는 방법에 대한 핵심 사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-key-points-about-assigning-and-modifying-permissions.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-key-points-about-assigning-and-modifying-permissions.html">
+        vCenter Server에 대한 권한을 할당하고 수정하는 방법에 대한 핵심 사항
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위해 가상 어플라이언스와 함께 패키지로 제공되는 표준 역할입니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-standard-roles-packaged-with-virtual-appliance-for-vsc-vp-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-standard-roles-packaged-with-virtual-appliance-for-vsc-vp-and-sra.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC, VASA Provider, SRA를 위해 가상 어플라이언스와 함께 패키지로 제공되는 표준 역할입니다</div>-->
+         VSC, VASA Provider, SRA를 위해 가상 어플라이언스와 함께 패키지로 제공되는 표준 역할입니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC 표준 역할 사용 지침"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-guidelines-for-using-vsc-standard-roles.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-guidelines-for-using-vsc-standard-roles.html">
+        VSC 표준 역할 사용 지침
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC 작업에 필요한 권한입니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-privileges-required-for-vsc-tasks.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-privileges-required-for-vsc-tasks.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC 작업에 필요한 권한입니다</div>-->
+         VSC 작업에 필요한 권한입니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere용 VSC에 필요한 제품 레벨 권한"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-product-level-privilege-required-by-vsc-for-vmware-vsphere.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-product-level-privilege-required-by-vsc-for-vmware-vsphere.html">
+        VMware vSphere용 VSC에 필요한 제품 레벨 권한
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA 공급자, SRA를 위한 가상 어플라이언스에 대한 ONTAP 역할 기반 액세스 제어"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-ontap-role-based-access-control-feature-for-virtual-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-ontap-role-based-access-control-feature-for-virtual-appliance.html">
+        VSC, VASA 공급자, SRA를 위한 가상 어플라이언스에 대한 ONTAP 역할 기반 액세스 제어
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere용 VSC를 사용할 때의 권장 ONTAP 역할"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-recommended-ontap-roles-when-using-vsc-for-vmware-vsphere.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-recommended-ontap-roles-when-using-vsc-for-vmware-vsphere.html">
+        VMware vSphere용 VSC를 사용할 때의 권장 ONTAP 역할
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere용 VSC에 대한 ONTAP 역할 기반 액세스 제어를 구성하는 방법"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-how-to-configure-data-ontap-role-based-access-control-for-vsc-for-vmware-vsphere.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-how-to-configure-data-ontap-role-based-access-control-for-vsc-for-vmware-vsphere.html">
+        VMware vSphere용 VSC에 대한 ONTAP 역할 기반 액세스 제어를 구성하는 방법
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="사용자 역할 및 권한을 구성합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-configure-user-role-and-privileges.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-configure-user-role-and-privileges.html">
+        사용자 역할 및 권한을 구성합니다
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="재해 복구를 위해 스토리지 복제 어댑터를 구성합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-configure-storage-replication-adapter-for-disaster-recovery.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-configure-storage-replication-adapter-for-disaster-recovery.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 재해 복구를 위해 스토리지 복제 어댑터를 구성합니다</div>-->
+         재해 복구를 위해 스토리지 복제 어댑터를 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SAN 환경에 대한 스토리지 복제 어댑터를 구성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-configure-storage-replication-adapter-for-san-environment.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-configure-storage-replication-adapter-for-san-environment.html">
+        SAN 환경에 대한 스토리지 복제 어댑터를 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NAS 환경에 대한 스토리지 복제 어댑터를 구성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-configure-storage-replication-adapter-for-nas-environment.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-configure-storage-replication-adapter-for-nas-environment.html">
+        NAS 환경에 대한 스토리지 복제 어댑터를 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="확장성이 뛰어난 환경을 위한 스토리지 복제 어댑터 구성"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-configure-storage-replication-adapter-for-highly-scaled-environment.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-configure-storage-replication-adapter-for-highly-scaled-environment.html">
+        확장성이 뛰어난 환경을 위한 스토리지 복제 어댑터 구성
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-troubleshoot-issues-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-troubleshoot-issues-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다</div>-->
+         VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vSphere 캐시된 다운로드 플러그인 패키지를 청소합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-clean-the-vsphere-cached-downloaded-plug-in-packages.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-clean-the-vsphere-cached-downloaded-plug-in-packages.html">
+        vSphere 캐시된 다운로드 플러그인 패키지를 청소합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="을 제거해도 표준 VSC 역할은 제거되지 않습니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-uninstall-does-not-remove-standard-vsc-roles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-uninstall-does-not-remove-standard-vsc-roles.html">
+        을 제거해도 표준 VSC 역할은 제거되지 않습니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC 및 VASA 공급자 로그 파일"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/concept-virtual-storage-console-and-vasa-provider-log-files.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-virtual-storage-console-and-vasa-provider-log-files.html">
+        VSC 및 VASA 공급자 로그 파일
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="확장성이 뛰어난 환경에서 VSC 및 VASA Provider 서비스가 다시 시작됩니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-vsc-and-vasa-provider-services-restart-in-scaled-environments.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-vsc-and-vasa-provider-services-restart-in-scaled-environments.html">
+        확장성이 뛰어난 환경에서 VSC 및 VASA Provider 서비스가 다시 시작됩니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SSH와 함께 작동하도록 VASA Provider를 구성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-configure-vasa-provider-to-work-with-ssh.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-configure-vasa-provider-to-work-with-ssh.html">
+        SSH와 함께 작동하도록 VASA Provider를 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="원격 diag 액세스에 SSH를 사용하도록 VSC, VASA Provider 및 SRA를 위한 가상 어플라이언스를 구성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/task-configure-vasa-provider-to-use-ssh-for-remote-diag-access.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/task-configure-vasa-provider-to-use-ssh-for-remote-diag-access.html">
+        원격 diag 액세스에 SSH를 사용하도록 VSC, VASA Provider 및 SRA를 위한 가상 어플라이언스를 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SRA 설치가 스크립트 오류와 함께 실패합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-sra-adapter-installation-fails-with-script-error.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-sra-adapter-installation-fails-with-script-error.html">
+        SRA 설치가 스크립트 오류와 함께 실패합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SRA는 확장성이 높은 환경에서 최적의 성능을 발휘하지 못합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-sra-fails-to-perform-optimally-in-a-highly-scaled-environment.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-sra-fails-to-perform-optimally-in-a-highly-scaled-environment.html">
+        SRA는 확장성이 높은 환경에서 최적의 성능을 발휘하지 못합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SRA 플러그인을 설치할 수 없습니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-unable-to-install-sra-plug-in-due-to-winhttp-proxy-settings.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-unable-to-install-sra-plug-in-due-to-winhttp-proxy-settings.html">
+        SRA 플러그인을 설치할 수 없습니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP용 NetApp 스토리지 복제 어댑터가 사이트 복구 관리자 어플라이언스에 나타나지 않습니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-srm-does-not-work-after-sra-installation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-srm-does-not-work-after-sra-installation.html">
+        ONTAP용 NetApp 스토리지 복제 어댑터가 사이트 복구 관리자 어플라이언스에 나타나지 않습니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 새로 구축하는 동안 오류가 발생했습니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/deploy/reference-error-during-fresh-deployment-of-virtual-appliance-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/deploy/reference-error-during-fresh-deployment-of-virtual-appliance-for-vsc-vasa-provider-and-sra.html">
+        VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 새로 구축하는 동안 오류가 발생했습니다
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="관리"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 관리</div>-->
+         관리
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구성 워크플로우"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-workflow-for-configuring-the-unified-appliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-workflow-for-configuring-the-unified-appliance.html">
+        VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구성 워크플로우
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 스토리지 시스템을 구성합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-configure-storage-systems-for-vsc-vasa-provider-and-sra.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-configure-storage-systems-for-vsc-vasa-provider-and-sra.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC, VASA Provider, SRA를 위한 스토리지 시스템을 구성합니다</div>-->
+         VSC, VASA Provider, SRA를 위한 스토리지 시스템을 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC에 스토리지 시스템 추가"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-add-storage-systems.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-add-storage-systems.html">
+        VSC에 스토리지 시스템 추가
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 시스템에 대한 기본 자격 증명을 설정합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-set-default-credentials-for-storage-systems.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-set-default-credentials-for-storage-systems.html">
+        스토리지 시스템에 대한 기본 자격 증명을 설정합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="알람 임계값을 구성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-configure-alarm-thresholds.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-configure-alarm-thresholds.html">
+        알람 임계값을 구성합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 용량 프로필을 생성합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-configure-storage-capability-profiles.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-configure-storage-capability-profiles.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 스토리지 용량 프로필을 생성합니다</div>-->
+         스토리지 용량 프로필을 생성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 용량에 대한 내용을 설명합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-what-storage-capabilities-are.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-what-storage-capabilities-are.html">
+        스토리지 용량에 대한 내용을 설명합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 용량 프로파일을 생성 및 편집할 때의 고려 사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-considerations-for-creating-and-editing-storage-capability-profiles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-considerations-for-creating-and-editing-storage-capability-profiles.html">
+        스토리지 용량 프로파일을 생성 및 편집할 때의 고려 사항
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 용량 프로필을 구성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-create-storage-capability-profiles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-create-storage-capability-profiles.html">
+        스토리지 용량 프로필을 구성합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="기존 데이터 저장소 및 가상 머신을 구성합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-configure-traditional-datastores.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-configure-traditional-datastores.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 기존 데이터 저장소 및 가상 머신을 구성합니다</div>-->
+         기존 데이터 저장소 및 가상 머신을 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="데이터 저장소를 프로비저닝합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-provision-datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-provision-datastores.html">
+        데이터 저장소를 프로비저닝합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 용량 프로필에 데이터 저장소를 매핑합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-map-storage-to-storage-capability-profiles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-map-storage-to-storage-capability-profiles.html">
+        스토리지 용량 프로필에 데이터 저장소를 매핑합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 기능 프로필을 자동으로 생성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-automatically-generate-scps.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-automatically-generate-scps.html">
+        스토리지 기능 프로필을 자동으로 생성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="데이터 저장소가 매핑된 스토리지 용량 프로파일을 준수하는지 확인합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-check-for-datastore-compliance-with-the-mapped-storage-capability-profile.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-check-for-datastore-compliance-with-the-mapped-storage-capability-profile.html">
+        데이터 저장소가 매핑된 스토리지 용량 프로파일을 준수하는지 확인합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="기존 대시보드를 사용하여 데이터 저장소와 가상 머신을 모니터링합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-monitor-datastores-using-the-traditional-dashboard.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-monitor-datastores-using-the-traditional-dashboard.html">
+        기존 대시보드를 사용하여 데이터 저장소와 가상 머신을 모니터링합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider 및 SRA에 대한 ESXi 호스트 설정을 편집합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-edit-esxi-host-settings.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-edit-esxi-host-settings.html">
+        VSC, VASA Provider 및 SRA에 대한 ESXi 호스트 설정을 편집합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 데이터 저장소를 구성합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-configure-vvols-datastores.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-configure-vvols-datastores.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VVOL 데이터 저장소를 구성합니다</div>-->
+         VVOL 데이터 저장소를 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 데이터 저장소에 대한 복제를 구성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-configure-replication-for-vvols-datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-configure-replication-for-vvols-datastore.html">
+        VVOL 데이터 저장소에 대한 복제를 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 데이터 저장소를 프로비저닝합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-provision-vvol-datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-provision-vvol-datastores.html">
+        VVOL 데이터 저장소를 프로비저닝합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 대시보드를 사용하여 VVOL 데이터 저장소 및 가상 머신을 모니터링합니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-monitor-vvols-datastores-and-virtual-machines-using-vvols-dashboard.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-monitor-vvols-datastores-and-virtual-machines-using-vvols-dashboard.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VVOL 대시보드를 사용하여 VVOL 데이터 저장소 및 가상 머신을 모니터링합니다</div>-->
+         VVOL 대시보드를 사용하여 VVOL 데이터 저장소 및 가상 머신을 모니터링합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 대시보드 데이터 요구사항"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-verify-vvol-dashboard-data-requirements.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-verify-vvol-dashboard-data-requirements.html">
+        VVOL 대시보드 데이터 요구사항
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Site Recovery Manager를 사용하여 재해 복구 설정을 관리합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-manage-disaster-recovery-setup-using-srm.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-manage-disaster-recovery-setup-using-srm.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Site Recovery Manager를 사용하여 재해 복구 설정을 관리합니다</div>-->
+         Site Recovery Manager를 사용하여 재해 복구 설정을 관리합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VM 스토리지 정책을 구성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-configure-vm-storage-policies.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-configure-vm-storage-policies.html">
+        VM 스토리지 정책을 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="보호 그룹을 구성합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-configure-protection-groups.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-configure-protection-groups.html">
+        보호 그룹을 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="보호 사이트와 복구 사이트 페어링"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-pair-protected-and-recovery-sites.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-pair-protected-and-recovery-sites.html">
+        보호 사이트와 복구 사이트 페어링
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="보호 및 복구 사이트 리소스를 구성합니다"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-configure-protected-and-recovery-site-resources.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-configure-protected-and-recovery-site-resources.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 보호 및 복구 사이트 리소스를 구성합니다</div>-->
+         보호 및 복구 사이트 리소스를 구성합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="네트워크 매핑을 구성합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-configure-network-mappings.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-configure-network-mappings.html">
+        네트워크 매핑을 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="폴더 매핑을 구성합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-configure-folder-mappings.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-configure-folder-mappings.html">
+        폴더 매핑을 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="리소스 매핑을 구성합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-configure-resource-mappings.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-configure-resource-mappings.html">
+        리소스 매핑을 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 정책을 매핑합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-map-storage-policies.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-map-storage-policies.html">
+        스토리지 정책을 매핑합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="자리 표시자 데이터 저장소를 구성합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-configure-placeholder-datastores.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-configure-placeholder-datastores.html">
+        자리 표시자 데이터 저장소를 구성합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Array Manager를 사용하여 SRA를 구성합니다"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-configure-array-manager.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-configure-array-manager.html">
+        Array Manager를 사용하여 SRA를 구성합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="복제된 스토리지 시스템을 확인합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-verify-the-replicated-storage-environment.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-verify-the-replicated-storage-environment.html">
+        복제된 스토리지 시스템을 확인합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="보호되지 않는 가상 머신을 보호합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-protect-non-protected-virtual-machines.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-protect-non-protected-virtual-machines.html">
+        보호되지 않는 가상 머신을 보호합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="기존 및 VVOL 데이터 저장소를 관리합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-manage-datastore.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-manage-datastore.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 기존 및 VVOL 데이터 저장소를 관리합니다</div>-->
+         기존 및 VVOL 데이터 저장소를 관리합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="추가 호스트에 데이터 저장소를 마운트합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-mount-datastores-on-host.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-mount-datastores-on-host.html">
+        추가 호스트에 데이터 저장소를 마운트합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="데이터 저장소 크기 조정"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-resize-datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-resize-datastores.html">
+        데이터 저장소 크기 조정
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 데이터 저장소를 편집합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-edit-a-vvol-datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-edit-a-vvol-datastore.html">
+        VVOL 데이터 저장소를 편집합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 데이터 저장소에 스토리지를 AD 중입니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-add-storage-to-a-vvol-datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-add-storage-to-a-vvol-datastore.html">
+        VVOL 데이터 저장소에 스토리지를 AD 중입니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 데이터 저장소에서 스토리지를 원격 이동합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-remove-storage-from-a-vvols-datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-remove-storage-from-a-vvols-datastore.html">
+        VVOL 데이터 저장소에서 스토리지를 원격 이동합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 데이터 저장소를 마운트합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-mount-a-vvol-datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-mount-a-vvol-datastore.html">
+        VVOL 데이터 저장소를 마운트합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="가상 머신의 마이그레이션 또는 클론 생성 시 고려 사항"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-considerations-for-migrating-virtual-machines.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-considerations-for-migrating-virtual-machines.html">
+        가상 머신의 마이그레이션 또는 클론 생성 시 고려 사항
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="기존 가상 머신을 VVol 데이터 저장소로 마이그레이션합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-migrate-standard-virtual-machines-to-vvol-datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-migrate-standard-virtual-machines-to-vvol-datastores.html">
+        기존 가상 머신을 VVol 데이터 저장소로 마이그레이션합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="이전 스토리지 기능 프로파일이 있는 가상 시스템을 마이그레이션합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-migrate-existing-virtual-machines-to-7-1-virtual-appliance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-migrate-existing-virtual-machines-to-7-1-virtual-appliance.html">
+        이전 스토리지 기능 프로파일이 있는 가상 시스템을 마이그레이션합니다
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Virtual Storage Console 보고서 이해"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-virtual-storage-console-reports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-virtual-storage-console-reports.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Virtual Storage Console 보고서 이해</div>-->
+         Virtual Storage Console 보고서 이해
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="보고서의 기능"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-what-reports-do.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-what-reports-do.html">
+        보고서의 기능
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="데이터 저장소 보고서"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-datastore-reports.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-datastore-reports.html">
+        데이터 저장소 보고서
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 보고서"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-what-vasa-provider-reports-do.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-what-vasa-provider-reports-do.html">
+        VVOL 보고서
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/concept-troubleshoot-issues-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra-test.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/concept-troubleshoot-issues-with-the-virtual-appliance-for-vsc-vasa-provider-and-sra-test.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ko-kr/vsc-vasa-provider-sra-97/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다</div>-->
+         VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="로그 파일을 수집합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/task-collect-the-log-files.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/task-collect-the-log-files.html">
+        로그 파일을 수집합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="많은 수의 볼륨에서 VVOL 데이터 저장소 프로비저닝이 실패합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-vvol-datastore-provision-fails-with-large-number-of-volumes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-vvol-datastore-provision-fails-with-large-number-of-volumes.html">
+        많은 수의 볼륨에서 VVOL 데이터 저장소 프로비저닝이 실패합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="업그레이드 후 VM 스토리지 정책을 편집하는 동안 문제가 발생했습니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-edit-vm-storage-policies-after-upgrade-throws-error-message.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-edit-vm-storage-policies-after-upgrade-throws-error-message.html">
+        업그레이드 후 VM 스토리지 정책을 편집하는 동안 문제가 발생했습니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VASA 공급자 상태는 vCenter Server GUI에서 "오프라인"으로 표시됩니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-vasa-provider-storage-provider-status-show-offline-in-vcenter-gui.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-vasa-provider-storage-provider-status-show-offline-in-vcenter-gui.html">
+        VASA 공급자 상태는 vCenter Server GUI에서 "오프라인"으로 표시됩니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="가상 어플라이언스의 VSC 요약 페이지에 액세스하는 동안 오류가 발생했습니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-error-while-accessing-the-vsc-summary-page-of-virtual-appliance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-error-while-accessing-the-vsc-summary-page-of-virtual-appliance.html">
+        가상 어플라이언스의 VSC 요약 페이지에 액세스하는 동안 오류가 발생했습니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="네트워크 설정을 변경한 후 데이터 저장소를 삭제하는 동안 오류가 발생했습니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-error-deleting-a-datastore-after-network-settings-are-changed.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-error-deleting-a-datastore-after-network-settings-are-changed.html">
+        네트워크 설정을 변경한 후 데이터 저장소를 삭제하는 동안 오류가 발생했습니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="가상 시스템 프로비저닝이 정의되지 않은 오류로 실패합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-vm-provision-fails-with-undefined-error.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-vm-provision-fails-with-undefined-error.html">
+        가상 시스템 프로비저닝이 정의되지 않은 오류로 실패합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP 9.4 스토리지 시스템에서 VVOL의 일반 프로비저닝이 실패합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-thick-provision-fails-for-vvol-datastores-on-ontap-9-4.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-thick-provision-fails-for-vvol-datastores-on-ontap-9-4.html">
+        ONTAP 9.4 스토리지 시스템에서 VVOL의 일반 프로비저닝이 실패합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="볼륨 상태가 오프라인으로 변경되면 데이터 저장소에 액세스할 수 없습니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-datastore-inaccessible-when-volume-status-is-changed-to-offline.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-datastore-inaccessible-when-volume-status-is-changed-to-offline.html">
+        볼륨 상태가 오프라인으로 변경되면 데이터 저장소에 액세스할 수 없습니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="스토리지 시스템 그리드의 IPv6 상태에서 IPv4를 사용하여 스토리지 시스템을 추가하면 인증 오류가 발생합니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-authentication-failure-status-is-displayed-with-ipv6-as-the-cluster-ip-even-if-cluster-is-added-with-ipv4.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-authentication-failure-status-is-displayed-with-ipv6-as-the-cluster-ip-even-if-cluster-is-added-with-ipv4.html">
+        스토리지 시스템 그리드의 IPv6 상태에서 IPv4를 사용하여 스토리지 시스템을 추가하면 인증 오류가 발생합니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 데이터 저장소에서 가상 머신을 프로비저닝하는 동안 파일 생성 오류가 발생했습니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-file-creation-error-while-virtual-machine-provisioning-on-vvol-datastore-issue-we-are-unable-to-create-virtual-machine-using-the-default-vs0-svm-caus.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-file-creation-error-while-virtual-machine-provisioning-on-vvol-datastore-issue-we-are-unable-to-create-virtual-machine-using-the-default-vs0-svm-caus.html">
+        VVOL 데이터 저장소에서 가상 머신을 프로비저닝하는 동안 파일 생성 오류가 발생했습니다
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SRM의 SRA에 대해 잘못된 상태 '장애 조치 진행 중'이 보고됩니다"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/manage/reference-failover-in-progress-status-is-reported-inappropriately-for-sra.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ko-kr/vsc-vasa-provider-sra-97/manage/reference-failover-in-progress-status-is-reported-inappropriately-for-sra.html">
+        SRM의 SRA에 대해 잘못된 상태 '장애 조치 진행 중'이 보고됩니다
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="법적 고지"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ko-kr/vsc-vasa-provider-sra-97/legal-notices.html">
+        법적 고지
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/ko-kr/vsc-vasa-provider-sra-97"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/ko-kr/vsc-vasa-provider-sra-97"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/ko-kr/vsc-vasa-provider-sra-97/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 본 한국어 번역은 사용자 편의를 위해 제공되는 기계 번역입니다. 영어 버전과 한국어 버전이 서로 어긋나는 경우에는 언제나 영어 버전이 우선합니다. </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하는 방법</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2022-05-31 19:53:18 +0000">05/31/2022</time>
+        
+    
+    
+        <span>기여자
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/ko-kr/vsc-vasa-provider-sra-97/images/discuss-sm.svg" alt="" class="github-icon" />변경 제안</span>
+        <img src="/ko-kr/vsc-vasa-provider-sra-97/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/ko-kr/vsc-vasa-provider-sra-97/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/vsc-vasa-provider-sra-97.ko-kr/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/ko-kr/vsc-vasa-provider-sra-97/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.html&page-title=VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 다운로드하는 방법" class="page-nav-contribute-link" role="button">문서 변경사항 요청</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/vsc-vasa-provider-sra-97/blob/main/deploy/concept-how-to-download-the-virtual-appliance-for-vsc-vp-and-sra.adoc" class="page-nav-contribute-link" role="button">이 페이지 편집</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >기여하는 방법 알아보기</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/ko-kr/vsc-vasa-provider-sra-97/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/fullsite-sidebar/VSC__VASA_공급자__SRA_문서.pdf" >
+                    <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>이 문서 사이트의 PDF</a>
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/배포_및_업그레이드.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            배포 및 업그레이드
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC__VASA_Provider__SRA_가상_어플라이언스_신규_사용자를_위한_구축_워크플로우.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC, VASA Provider, SRA 가상 어플라이언스 신규 사용자를 위한 구축 워크플로우
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC__VASA_Provider__SRA를_위한_가상_어플라이언스_구축_요구사항.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 요구사항
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC__VASA_Provider__SRA를_구축_또는_업그레이드합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC, VASA Provider, SRA를 구축 또는 업그레이드합니다
+          </a>
+          
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC__VASA_Provider__SRA를_위한_가상_어플라이언스를_구축합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC, VASA Provider, SRA를 위한 가상 어플라이언스를 구축합니다
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/가상_데이터_저장소를_구성하기_위해_VASA_Provider를_설정합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            가상 데이터 저장소를 구성하기 위해 VASA Provider를 설정합니다
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/스토리지_복제_어댑터를_활성화합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            스토리지 복제 어댑터를 활성화합니다
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VMware_vSphere_환경을_위한_Virtual_Storage_Console을_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VMware vSphere 환경을 위한 Virtual Storage Console을 구성합니다
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/ESXi_서버_경로_다중화_및_시간_초과_설정을_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ESXi 서버 경로 다중화 및 시간 초과 설정을 구성합니다
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/게스트_운영_체제_스크립트를_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            게스트 운영 체제 스크립트를 구성합니다
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC_기본_설정_파일을_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC 기본 설정 파일을 구성합니다
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC__VASA_Provider__SRA를_위해_가상_어플라이언스에_대한_고가용성을_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC, VASA Provider, SRA를 위해 가상 어플라이언스에 대한 고가용성을 구성합니다
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VMware_vSphere_스토리지_시스템_환경을_위한_Virtual_Storage_Console을_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VMware vSphere 스토리지 시스템 환경을 위한 Virtual Storage Console을 구성합니다
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VMware_vSphere용_VSC의_vCenter_Server_역할_기반_액세스_제어_기능.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VMware vSphere용 VSC의 vCenter Server 역할 기반 액세스 제어 기능
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC__VASA_Provider__SRA를_위해_가상_어플라이언스와_함께_패키지로_제공되는_표준_역할입니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC, VASA Provider, SRA를 위해 가상 어플라이언스와 함께 패키지로 제공되는 표준 역할입니다
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC_작업에_필요한_권한입니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC 작업에 필요한 권한입니다
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/재해_복구를_위해_스토리지_복제_어댑터를_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            재해 복구를 위해 스토리지 복제 어댑터를 구성합니다
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC__VASA_Provider__SRA를_위한_가상_어플라이언스_관련_문제를_해결합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/관리.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            관리
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC__VASA_Provider__SRA를_위한_스토리지_시스템을_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC, VASA Provider, SRA를 위한 스토리지 시스템을 구성합니다
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/스토리지_용량_프로필을_생성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            스토리지 용량 프로필을 생성합니다
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/기존_데이터_저장소_및_가상_머신을_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            기존 데이터 저장소 및 가상 머신을 구성합니다
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VVOL_데이터_저장소를_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VVOL 데이터 저장소를 구성합니다
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VVOL_대시보드를_사용하여_VVOL_데이터_저장소_및_가상_머신을_모니터링합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VVOL 대시보드를 사용하여 VVOL 데이터 저장소 및 가상 머신을 모니터링합니다
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/Site_Recovery_Manager를_사용하여_재해_복구_설정을_관리합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Site Recovery Manager를 사용하여 재해 복구 설정을 관리합니다
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/보호_및_복구_사이트_리소스를_구성합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            보호 및 복구 사이트 리소스를 구성합니다
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/기존_및_VVOL_데이터_저장소를_관리합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            기존 및 VVOL 데이터 저장소를 관리합니다
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/Virtual_Storage_Console_보고서_이해.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Virtual Storage Console 보고서 이해
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ko-kr/vsc-vasa-provider-sra-97/pdfs/sidebar/VSC__VASA_Provider__SRA를_위한_가상_어플라이언스_관련_문제를_해결합니다.pdf" 
+            
+          >
+            <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-icon.png" alt="" width="16" height="16"/>
+            VSC, VASA Provider, SRA를 위한 가상 어플라이언스 관련 문제를 해결합니다
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/ko-kr/vsc-vasa-provider-sra-97/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>별도의 PDF 문서 모음<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div class="paragraph lead">
+<p>가상 스토리지 콘솔, VASA 공급자 및 스토리지 복제 어댑터용 가상 어플라이언스에 대한 '.ova' 파일을 에서 다운로드할 수 있습니다.</p>
+</div>
+<div class="paragraph">
+<p>'.ova' 파일에는 VSC, VASA 공급자, SRA가 포함됩니다. 배포가 완료되면 세 가지 제품이 모두 사용자 환경에 설치됩니다. 기본적으로 VSC는 후속 구축 모델을 결정하고 요구사항에 따라 VASA Provider 및 SRA를 사용할지 여부를 선택하는 즉시 작동합니다.</p>
+</div>
+<div class="paragraph">
+<p>에서 VSC, VASA 공급자, SRA용 가상 어플라이언스를 다운로드할 수 있습니다 <a href="https://mysupport.netapp.com/site/products/all/details/vsc/downloads-tab" target="_blank" rel="noopener">"NetApp Support 사이트"</a> 소프트웨어 다운로드 페이지를 사용합니다.</p>
+</div>
+<div class="paragraph">
+<p>VSC, VASA Provider, SRA를 위한 가상 어플라이언스 구축 시 SRA를 활성화하려면 SRM(Site Recovery Manager) 서버에 SRA 플러그인을 설치해야 합니다. 소프트웨어 다운로드 * 섹션의 * ONTAP * 용 스토리지 복제 어댑터 메뉴에서 SRA 플러그인의 설치 파일을 다운로드할 수 있습니다.</p>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/ko-kr/vsc-vasa-provider-sra-97/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/ko-kr/vsc-vasa-provider-sra-97/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">이 페이지에서</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">이용 약관</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">개인 정보 보호 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">쿠키 정책</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">쿠키 설정</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">이 페이지에 대한 피드백 보내기</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ko-kr/vsc-vasa-provider-sra-97/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ko-kr/vsc-vasa-provider-sra-97/js/prism.js'></script>
+      <script type="text/javascript" src='/ko-kr/vsc-vasa-provider-sra-97/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ko-kr/vsc-vasa-provider-sra-97/js/ie-tabbed-blocks.js'></script>
+    <script src='/ko-kr/vsc-vasa-provider-sra-97/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
