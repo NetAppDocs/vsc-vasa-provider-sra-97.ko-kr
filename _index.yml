@@ -1,0 +1,31 @@
+---
+indexpage:
+  title: VSC, VASA 공급자, SRA 문서
+  summary: VMware vSphere용 Virtual Storage Console, VSC 문서, VSC 설명서에 대한 설명서
+  keywords: vsc, vasa provider, sra, netapp, configuration, workflow, unified, appliance,
+    deploy, upgrade, vmware, vsphere
+  lead: VSC, VASA Provider 및 SRA용 Virtual Storage Console을 사용하면 vCenter Server 환경에서
+    가상 데이터 저장소를 구성, 관리, 보호할 수 있습니다.
+  tiles:
+  - title: 시작하십시오
+    links:
+    - title: 릴리스 정보
+      url: "/release-notes.html"
+    - title: 빠른 시작
+      url: "/qsg.html"
+    - title: 배포 및 업그레이드
+      url: "/deploy/concept-virtual-storage-console-overview.html"
+    - title: 관리
+      url: "/manage/concept-workflow-for-configuring-the-unified-appliance.html"
+  - title: 더 많은 리소스
+    links:
+    - title: 이전 버전의 VSC, VASA Provider, SRA 관련 문서
+      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30048
+    - title: VMware vSphere용 ONTAP 툴 설명서
+      url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html
+    - title: NetApp 기술 자료 - VSC, VASA 공급자, SRA를 지원합니다
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
+    - title: NetApp 가져오기 유틸리티 - 비디오
+      url: https://www.youtube.com/watch?v=CEQmIEzNVfA
+    - title: NetApp 커뮤니티 - VSC, VASA 공급자, SRA를 지원합니다
+      url: https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions

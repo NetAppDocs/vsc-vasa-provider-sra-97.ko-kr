@@ -5,18 +5,15 @@ keywords: qsg, ontap tools for vmware vsphere, quick start guide, installing
 summary: 구축 요구 사항에 대한 개요와 Virtual Storage Console, VASA Provider 및 VMware vSphere용 스토리지 복제 어댑터를 구축하기 위한 단계별 지침을 제공합니다. 
 ---
 = 빠른 시작
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
 :experimental: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
