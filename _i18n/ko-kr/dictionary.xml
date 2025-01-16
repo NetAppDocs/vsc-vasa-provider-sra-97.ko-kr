@@ -100,10 +100,6 @@
   <block id="259cedcdf843966e8740b7f0e51fafd8" category="list-text">VSC, VASA Provider, SRA용 가상 어플라이언스의 IP 주소와 관리자 암호를 입력한 다음 * Apply * 를 클릭합니다.</block>
   <block id="1adf4c1e290e6f5445df86eb0104591c" category="paragraph">추가 구성, 스토리지 시스템 추가 및 vSphere 객체에 대한 역할 기반 액세스 제어 설정에 대한 자세한 내용은 Virtual Storage Console, VASA Provider 및 Storage Replication Adapter for VMware vSphere Deployment and Setup Guide를 참조하십시오.</block>
   <block id="4bb047f8c530785002e490ef17fa725e" category="section-title">추가 정보를 찾을 수 있는 위치</block>
-  <block id="3ea4ab2f5fab2dacf4a221214853828b" category="inline-link">Virtual Storage Console, VASA Provider 및 Storage Replication Adapter for VMware vSphere Resources 페이지 를 참조하십시오</block>
-  <block id="23e9ed7607a8e89bc902626acfaa452f" category="list-text"><block ref="264082a1a46fa242ffc28ead5ece2e0e" category="inline-link-rx"></block></block>
-  <block id="f2393044488cad2cb09b4d9cf5da8ad8" category="inline-link">Virtual Storage Console, VASA Provider 및 Storage Replication Adapter for VMware vSphere 설명서 를 참조하십시오</block>
-  <block id="ca5bc9879bd121851e787f01340dace0" category="list-text"><block ref="ca5bc9879bd121851e787f01340dace0" category="inline-link-rx"></block></block>
   <block id="00052dec7afcab84145fb95e7525c5f5" category="inline-link">VMware 사이트 복구 관리자 8.2</block>
   <block id="7e6bb57f09cc81cf29e541b0a3598654" category="list-text"><block ref="7e6bb57f09cc81cf29e541b0a3598654" category="inline-link-rx"></block></block>
   <block id="5358757de9216cc29d688612a3d72fe1" category="inline-link">ONTAP 9 설명서</block>
@@ -1860,4 +1856,6 @@
   <block id="59b25b58a320cb1bd7e03ff77563a7d1" category="sidebar">VSC, VASA Provider 및 SRA용 Virtual Storage Console을 사용하면 vCenter Server 환경에서 가상 데이터 저장소를 구성, 관리, 보호할 수 있습니다.</block>
   <block id="457ec720234469b4fc2740e0d3e8b0bc" category="sidebar">VMware vSphere용 Virtual Storage Console, VSC 문서, VSC 설명서에 대한 설명서</block>
   <block id="43fe6507a14726ae86f2c7d411f9b929" category="sidebar">VMware vSphere용 ONTAP 툴 설명서</block>
+  <block id="26ffc687a7267f96a389530199971cd1" category="inline-link">VMware vSphere용 ONTAP 툴 설명서</block>
+  <block id="eddf7820ea4e2a78603e1bff3aa3bbb6" category="list-text"><block ref="eddf7820ea4e2a78603e1bff3aa3bbb6" category="inline-link-rx"></block></block>
 </blocks>

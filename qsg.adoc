@@ -248,8 +248,7 @@ NOTE: VASA Provider는 기본적으로 설정되어 있습니다. VVOL 데이터
 
 == 추가 정보를 찾을 수 있는 위치
 
-* https://www.netapp.com/support-and-training/documentation/ontap-tools-for-vmware-vsphere-documentation/?&access=a["Virtual Storage Console, VASA Provider 및 Storage Replication Adapter for VMware vSphere Resources 페이지 를 참조하십시오"^]
-* https://docs.netapp.com/vapp-97/index.jsp["Virtual Storage Console, VASA Provider 및 Storage Replication Adapter for VMware vSphere 설명서 를 참조하십시오"^]
+* https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/index.html["VMware vSphere용 ONTAP 툴 설명서"^]
 * https://docs.vmware.com/en/Site-Recovery-Manager/8.2/com.vmware.srm.install_config.doc/GUID-B3A49FFF-E3B9-45E3-AD35-093D896596A0.html["VMware 사이트 복구 관리자 8.2"^]
 * https://docs.netapp.com/us-en/ontap/["ONTAP 9 설명서"^]
 
